@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Packages — Zentrevo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .pkg-card {
+      background: var(--navy-mid);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+    }
+    .pkg-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+    .pkg-card.featured { border-color: var(--gold); }
+    .pkg-badge {
+      position: absolute;
+      top: 16px; right: 16px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 4px;
+    }
+    .pkg-img {
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+      background: linear-gradient(135deg, var(--navy-light), #112236);
+    }
+    .pkg-body { padding: 24px; }
+    .pkg-tag { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .pkg-title { font-family: var(--font-serif); font-size: 22px; color: var(--cream); margin-bottom: 8px; }
+    .pkg-sub { font-size: 13px; color: var(--cream-dim); margin-bottom: 16px; line-height: 1.65; }
+    .pkg-includes {
+      list-style: none;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .pkg-includes li {
+      font-size: 13px;
+      color: var(--cream-dim);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pkg-includes li::before { content: '✓'; color: var(--gold); font-weight: 500; }
+    .pkg-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 0.5px solid var(--gold-dim);
+    }
+    .pkg-price { font-family: var(--font-serif); font-size: 22px; color: var(--gold); }
+    .pkg-per { font-size: 11px; color: var(--cream-dim); }
+    .pkg-days { font-size: 12px; color: var(--cream-dim); margin-bottom: 16px; }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .why-box {
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--navy-mid);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 12px;
+    }
+    .why-icon { font-size: 32px; margin-bottom: 12px; }
+    .why-title { font-family: var(--font-serif); font-size: 16px; color: var(--cream); margin-bottom: 8px; }
+    .why-desc { font-size: 12px; color: var(--cream-dim); line-height: 1.65; }
+
+    .custom-banner {
+      background: linear-gradient(135deg, #0d2040, #152a50);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 16px;
+      padding: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 48px;
+      gap: 40px;
+    }
+    .custom-banner h2 { font-family: var(--font-serif); font-size: 32px; margin-bottom: 12px; }
+    .custom-banner p { color: var(--cream-dim); font-size: 15px; max-width: 400px; line-height: 1.7; }
+    .custom-btns { display: flex; gap: 12px; flex-shrink: 0; flex-direction: column; }
+  </style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+<div class="page-content">
+
+  <nav>
+    <a href="index.html" class="logo">ZENTR<span>EVO</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="packages.html" class="active">Packages</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-btn">Book Now</a>
+  </nav>
+
+  <div class="page-hero">
+    <div class="section-tag fade-in">Curated Journeys</div>
+    <h1 class="section-title fade-in" style="font-size:48px;">Tour <em style="font-style:italic;color:var(--gold);">Packages</em></h1>
+    <p class="section-sub fade-in">All-inclusive travel packages designed to give you the perfect journey — from flights to fine dining, every detail sorted.</p>
+  </div>
+
+  <section class="section">
+    <div class="section-tag fade-in">Most Popular</div>
+    <div class="section-title fade-in" style="margin-bottom:36px;">Signature Packages</div>
+    <div class="grid-3">
+
+      <div class="pkg-card fade-in">
+        <div class="pkg-badge">Bestseller</div>
+        <div class="pkg-img">🏝</div>
+        <div class="pkg-body">
+          <div class="pkg-tag">Beach Escape</div>
+          <div class="pkg-title">Bali Bliss</div>
+          <div class="pkg-days">🕐 7 Days · 6 Nights</div>
+          <div class="pkg-sub">From Ubud's rice terraces to Seminyak's sunset beach clubs — the definitive Bali experience.</div>
+          <ul class="pkg-includes">
+            <li>Return flights from major Indian cities</li>
+            <li>5-star resort accommodation</li>
+            <li>Daily breakfast & 3 dinners</li>
+            <li>Private guided temple tours</li>
+            <li>Airport transfers & visa assistance</li>
+          </ul>
+          <div class="pkg-footer">
+            <div><div class="pkg-price">₹65,000</div><div class="pkg-per">per person (twin sharing)</div></div>
+            <a href="contact.html" class="btn-primary" style="padding:10px 20px;font-size:12px;">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pkg-card featured fade-in">
+        <div class="pkg-badge">Featured</div>
+        <div class="pkg-img">🌍</div>
+        <div class="pkg-body">
+          <div class="pkg-tag">Luxury Europe</div>
+          <div class="pkg-title">Grand Europe Tour</div>
+          <div class="pkg-days">🕐 14 Days · 13 Nights</div>
+          <div class="pkg-sub">Paris, Swiss Alps, Rome, and Amsterdam — four iconic destinations in one legendary journey.</div>
+          <ul class="pkg-includes">
+            <li>Return flights from India</li>
+            <li>4-star hotels throughout</li>
+            <li>Europass train travel included</li>
+            <li>Daily breakfast & city tours</li>
+            <li>Dedicated bilingual guide</li>
+            <li>Travel insurance included</li>
+          </ul>
+          <div class="pkg-footer">
+            <div><div class="pkg-price">₹1,95,000</div><div class="pkg-per">per person (twin sharing)</div></div>
+            <a href="contact.html" class="btn-primary" style="padding:10px 20px;font-size:12px;">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pkg-card fade-in">
+        <div class="pkg-img">🕌</div>
+        <div class="pkg-body">
+          <div class="pkg-tag">Desert Luxury</div>
+          <div class="pkg-title">Dubai Deluxe</div>
+          <div class="pkg-days">🕐 5 Days · 4 Nights</div>
+          <div class="pkg-sub">Burj Khalifa, desert safari, yacht cruise — Dubai's most iconic experiences all in one package.</div>
+          <ul class="pkg-includes">
+            <li>Return flights from India</li>
+            <li>5-star hotel on Sheikh Zayed Rd</li>
+            <li>Desert safari with BBQ dinner</li>
+            <li>Burj Khalifa At The Top tickets</li>
+            <li>Dubai Creek dhow cruise</li>
+          </ul>
+          <div class="pkg-footer">
+            <div><div class="pkg-price">₹85,000</div><div class="pkg-per">per person (twin sharing)</div></div>
+            <a href="contact.html" class="btn-primary" style="padding:10px 20px;font-size:12px;">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pkg-card fade-in">
+        <div class="pkg-img">🏖</div>
+        <div class="pkg-body">
+          <div class="pkg-tag">Island Paradise</div>
+          <div class="pkg-title">Maldives Overwater</div>
+          <div class="pkg-days">🕐 6 Days · 5 Nights</div>
+          <div class="pkg-sub">Private overwater villa, snorkelling reefs, sunset dinners on the pier — pure paradise.</div>
+          <ul class="pkg-includes">
+            <li>Return flights + seaplane transfer</li>
+            <li>Overwater bungalow accommodation</li>
+            <li>All meals (full board)</li>
+            <li>Snorkelling & water sports</li>
+            <li>Sunset fishing excursion</li>
+          </ul>
+          <div class="pkg-footer">
+            <div><div class="pkg-price">₹2,20,000</div><div class="pkg-per">per person (twin sharing)</div></div>
+            <a href="contact.html" class="btn-primary" style="padding:10px 20px;font-size:12px;">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pkg-card fade-in">
+        <div class="pkg-img">🗾</div>
+        <div class="pkg-body">
+          <div class="pkg-tag">Cultural Journey</div>
+          <div class="pkg-title">Japan Discovery</div>
+          <div class="pkg-days">🕐 10 Days · 9 Nights</div>
+          <div class="pkg-sub">Tokyo, Kyoto, Osaka and Hiroshima — a deep dive into Japan's ancient and modern soul.</div>
+          <ul class="pkg-includes">
+            <li>Return flights from India</li>
+            <li>4-star hotels + ryokan night</li>
+            <li>JR Rail Pass (7 days)</li>
+            <li>Tea ceremony & cooking class</li>
+            <li>Nara deer park day trip</li>
+          </ul>
+          <div class="pkg-footer">
+            <div><div class="pkg-price">₹1,45,000</div><div class="pkg-per">per person (twin sharing)</div></div>
+            <a href="contact.html" class="btn-primary" style="padding:10px 20px;font-size:12px;">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pkg-card fade-in">
+        <div class="pkg-img">🦁</div>
+        <div class="pkg-body">
+          <div class="pkg-tag">Safari Adventure</div>
+          <div class="pkg-title">African Safari</div>
+          <div class="pkg-days">🕐 9 Days · 8 Nights</div>
+          <div class="pkg-sub">Kenya & Tanzania — the Big Five, Maasai Mara, Serengeti, and Zanzibar beach finale.</div>
+          <ul class="pkg-includes">
+            <li>Return international flights</li>
+            <li>Luxury tented camps & lodges</li>
+            <li>All meals & park fees</li>
+            <li>Expert safari guides</li>
+            <li>Zanzibar beach extension (2N)</li>
+          </ul>
+          <div class="pkg-footer">
+            <div><div class="pkg-price">₹2,50,000</div><div class="pkg-per">per person (twin sharing)</div></div>
+            <a href="contact.html" class="btn-primary" style="padding:10px 20px;font-size:12px;">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHY ZENTREVO -->
+    <div class="why-grid">
+      <div class="why-box fade-in"><div class="why-icon">✈️</div><div class="why-title">All-Inclusive</div><div class="why-desc">Flights, hotels, meals, tours — everything bundled in one simple price.</div></div>
+      <div class="why-box fade-in"><div class="why-icon">🛡</div><div class="why-title">Fully Insured</div><div class="why-desc">Comprehensive travel insurance included in every Zentrevo package.</div></div>
+      <div class="why-box fade-in"><div class="why-icon">📞</div><div class="why-title">24/7 Support</div><div class="why-desc">Our travel desk is always on call — wherever you are in the world.</div></div>
+      <div class="why-box fade-in"><div class="why-icon">💳</div><div class="why-title">Easy EMI</div><div class="why-desc">Book now, pay later with 0% EMI options across all major banks.</div></div>
+    </div>
+
+    <!-- CUSTOM PACKAGE BANNER -->
+    <div class="custom-banner fade-in">
+      <div>
+        <h2>Can't Find Your Dream Trip?</h2>
+        <p>Tell us your dream destination, dates, and budget. Our experts will craft a custom package that's perfect for you — no templates, just pure personalisation.</p>
+      </div>
+      <div class="custom-btns">
+        <a href="contact.html" class="btn-primary">Build My Trip</a>
+        <a href="contact.html" class="btn-ghost">Talk to an Expert</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">ZENTR<span>EVO</span></div>
+        <div class="footer-desc">Crafting extraordinary travel experiences for curious souls around the globe.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="destinations.html">All Destinations</a></li>
+          <li><a href="packages.html">Tour Packages</a></li>
+          <li><a href="blog.html">Travel Blog</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Support</div>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@zentrevo.com">hello@zentrevo.com</a></li>
+          <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Zentrevo. All rights reserved.</span>
+      <span>Made with ❤ for travelers</span>
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

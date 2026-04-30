@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Zentrevo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+    .about-split.reverse { direction: rtl; }
+    .about-split.reverse > * { direction: ltr; }
+    .about-visual {
+      background: var(--navy-mid);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 16px;
+      height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-visual::before {
+      content: '';
+      position: absolute;
+      bottom: -40px; right: -40px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      border: 0.5px solid var(--gold-dim);
+    }
+
+    .stats-showcase {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      background: var(--gold-dim);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 80px;
+    }
+    .stat-box {
+      background: var(--navy-mid);
+      padding: 40px 28px;
+      text-align: center;
+      border-right: 0.5px solid var(--gold-dim);
+    }
+    .stat-box:last-child { border-right: none; }
+    .stat-big { font-family: var(--font-serif); font-size: 42px; color: var(--gold); font-weight: 700; margin-bottom: 6px; }
+    .stat-name { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--cream-dim); }
+
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .team-card {
+      background: var(--navy-mid);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+    .team-card:hover { border-color: var(--gold); }
+    .team-avatar {
+      width: 70px; height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy-light), #112236);
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 14px;
+    }
+    .team-name { font-family: var(--font-serif); font-size: 16px; color: var(--cream); margin-bottom: 4px; }
+    .team-role { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .team-bio { font-size: 12px; color: var(--cream-dim); line-height: 1.65; }
+
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .value-box {
+      background: var(--navy-mid);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 12px;
+      padding: 32px 28px;
+    }
+    .value-num { font-family: var(--font-serif); font-size: 40px; color: var(--gold-dim); font-weight: 700; margin-bottom: 8px; }
+    .value-title { font-family: var(--font-serif); font-size: 18px; color: var(--cream); margin-bottom: 10px; }
+    .value-desc { font-size: 13px; color: var(--cream-dim); line-height: 1.7; }
+
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px; bottom: 8px;
+      width: 0.5px;
+      background: var(--gold-dim);
+    }
+    .timeline-item {
+      position: relative;
+      padding-bottom: 40px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -44px; top: 6px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid var(--navy);
+    }
+    .timeline-year { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .timeline-title { font-family: var(--font-serif); font-size: 18px; color: var(--cream); margin-bottom: 6px; }
+    .timeline-desc { font-size: 13px; color: var(--cream-dim); line-height: 1.65; }
+  </style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+<div class="page-content">
+
+  <nav>
+    <a href="index.html" class="logo">ZENTR<span>EVO</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-btn">Book Now</a>
+  </nav>
+
+  <div class="page-hero">
+    <div class="section-tag fade-in">Our Story</div>
+    <h1 class="section-title fade-in" style="font-size:48px;">We Live to <em style="font-style:italic;color:var(--gold);">Travel</em></h1>
+    <p class="section-sub fade-in">Zentrevo was born from a simple belief — that travel is the greatest teacher, and everyone deserves to experience the world in all its wonder.</p>
+  </div>
+
+  <section class="section">
+    <!-- ABOUT SPLIT 1 -->
+    <div class="about-split fade-in">
+      <div class="about-visual">🌍</div>
+      <div>
+        <div class="section-tag">Who We Are</div>
+        <h2 class="section-title" style="font-size:32px;">Born from Wanderlust, Built on Trust</h2>
+        <p style="color:var(--cream-dim);font-size:15px;line-height:1.8;margin-bottom:20px;">Zentrevo was founded in 2015 by a group of passionate travelers who were tired of cookie-cutter tours and hidden fees. We set out to create something different — travel experiences that feel deeply personal, thoughtfully designed, and genuinely extraordinary.</p>
+        <p style="color:var(--cream-dim);font-size:15px;line-height:1.8;">Today, we're a team of 50+ travel specialists, local guides, and experience curators spread across 3 continents — all united by one mission: to make your journey unforgettable.</p>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-showcase fade-in">
+      <div class="stat-box"><div class="stat-big">50K+</div><div class="stat-name">Happy Travelers</div></div>
+      <div class="stat-box"><div class="stat-big">120+</div><div class="stat-name">Destinations</div></div>
+      <div class="stat-box"><div class="stat-big">10</div><div class="stat-name">Years of Excellence</div></div>
+      <div class="stat-box"><div class="stat-big">4.9★</div><div class="stat-name">Average Rating</div></div>
+    </div>
+
+    <!-- VALUES -->
+    <div class="section-tag fade-in">Our Values</div>
+    <div class="section-title fade-in" style="margin-bottom:32px;">What We Stand For</div>
+    <div class="values-grid">
+      <div class="value-box fade-in">
+        <div class="value-num">01</div>
+        <div class="value-title">Authenticity</div>
+        <div class="value-desc">We partner with local guides and communities to bring you genuine, off-the-beaten-path experiences that most travelers never find.</div>
+      </div>
+      <div class="value-box fade-in">
+        <div class="value-num">02</div>
+        <div class="value-title">Sustainability</div>
+        <div class="value-desc">We're committed to responsible travel. We offset carbon, support local economies, and choose partners who share our values.</div>
+      </div>
+      <div class="value-box fade-in">
+        <div class="value-num">03</div>
+        <div class="value-title">Excellence</div>
+        <div class="value-desc">From the first inquiry to the final farewell, every interaction with Zentrevo should feel like first-class service.</div>
+      </div>
+      <div class="value-box fade-in">
+        <div class="value-num">04</div>
+        <div class="value-title">Transparency</div>
+        <div class="value-desc">No hidden fees, no small print surprises. Our pricing is honest, our contracts clear, and our promises kept.</div>
+      </div>
+      <div class="value-box fade-in">
+        <div class="value-num">05</div>
+        <div class="value-title">Personalisation</div>
+        <div class="value-desc">No two travelers are the same. We listen deeply and craft journeys that reflect your unique dreams and desires.</div>
+      </div>
+      <div class="value-box fade-in">
+        <div class="value-num">06</div>
+        <div class="value-title">Safety</div>
+        <div class="value-desc">Your wellbeing is paramount. We vet every partner, carry full insurance, and have 24/7 emergency support everywhere.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section section-alt">
+    <div style="text-align:center;margin-bottom:40px;">
+      <div class="section-tag fade-in">The Team</div>
+      <div class="section-title fade-in">Meet Our Travel Experts</div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card fade-in">
+        <div class="team-avatar">👨‍✈️</div>
+        <div class="team-name">Vikram Sharma</div>
+        <div class="team-role">Founder & CEO</div>
+        <div class="team-bio">Visited 78 countries. Passionate about sustainable travel and local culture immersion.</div>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-avatar">👩‍💼</div>
+        <div class="team-name">Ananya Reddy</div>
+        <div class="team-role">Head of Experiences</div>
+        <div class="team-bio">Former luxury hotelier who now designs itineraries that feel truly once-in-a-lifetime.</div>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-avatar">👨‍🗺️</div>
+        <div class="team-name">Rohan Mehra</div>
+        <div class="team-role">Asia Pacific Lead</div>
+        <div class="team-bio">Born in Delhi, traveled Southeast Asia for 5 years. Knows every hidden gem in the region.</div>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-avatar">👩‍🌍</div>
+        <div class="team-name">Priya Nambiar</div>
+        <div class="team-role">Europe Specialist</div>
+        <div class="team-bio">Fluent in 4 languages. Lived in Paris, Rome, and Amsterdam. Your insider guide to Europe.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section">
+    <div class="section-tag fade-in">Our Journey</div>
+    <div class="section-title fade-in" style="margin-bottom:48px;">10 Years of Zentrevo</div>
+    <div style="max-width:600px;">
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <div class="timeline-year">2015</div>
+          <div class="timeline-title">The Beginning</div>
+          <div class="timeline-desc">Three travel-obsessed friends founded Zentrevo in a small Delhi office with a big dream: honest, extraordinary travel for everyone.</div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-year">2017</div>
+          <div class="timeline-title">First 1,000 Travelers</div>
+          <div class="timeline-desc">Reached our first milestone — 1,000 happy customers and our first perfect 5-star review on Google.</div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-year">2019</div>
+          <div class="timeline-title">Going International</div>
+          <div class="timeline-desc">Opened offices in Dubai and Singapore. Launched 50 new international destinations and the Zentrevo app.</div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-year">2022</div>
+          <div class="timeline-title">Award-Winning Travel</div>
+          <div class="timeline-desc">Won the National Tourism Excellence Award and the Times Travel Agency of the Year recognition.</div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-title">50,000 Journeys Strong</div>
+          <div class="timeline-desc">Today, we've helped over 50,000 travelers discover the world. And we're just getting started.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div style="background:linear-gradient(135deg,#0d2040,#152a50);border-top:0.5px solid var(--gold-dim);border-bottom:0.5px solid var(--gold-dim);padding:70px 60px;text-align:center;">
+    <div class="section-tag" style="display:inline-block;margin-bottom:10px;">Ready?</div>
+    <h2 class="section-title" style="margin-bottom:14px;">Start Your Zentrevo Journey</h2>
+    <p style="color:var(--cream-dim);margin-bottom:32px;">Let's plan the trip you've always dreamed about. Talk to our experts today.</p>
+    <div style="display:flex;gap:14px;justify-content:center;">
+      <a href="contact.html" class="btn-primary">Get in Touch</a>
+      <a href="packages.html" class="btn-ghost">View Packages</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">ZENTR<span>EVO</span></div>
+        <div class="footer-desc">Crafting extraordinary travel experiences for curious souls around the globe.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="destinations.html">All Destinations</a></li>
+          <li><a href="packages.html">Tour Packages</a></li>
+          <li><a href="blog.html">Travel Blog</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Support</div>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@zentrevo.com">hello@zentrevo.com</a></li>
+          <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Zentrevo. All rights reserved.</span>
+      <span>Made with ❤ for travelers</span>
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zentrevo — Explore the World</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── HOME HERO ── */
+    .home-hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 60px;
+      height: calc(100vh - 61px);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-left { max-width: 480px; position: relative; z-index: 5; }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 0.5px solid rgba(212,168,83,0.4);
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 22px;
+    }
+    .tag-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+    h1.hero-h1 {
+      font-family: var(--font-serif);
+      font-size: 52px;
+      line-height: 1.12;
+      margin-bottom: 18px;
+    }
+    h1.hero-h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub {
+      font-size: 15px;
+      color: var(--cream-dim);
+      line-height: 1.75;
+      margin-bottom: 32px;
+      max-width: 380px;
+    }
+    .hero-btns { display: flex; gap: 14px; align-items: center; margin-bottom: 36px; }
+    .hero-metrics { display: flex; gap: 32px; }
+    .met-num { font-family: var(--font-serif); font-size: 26px; color: var(--gold); font-weight: 700; }
+    .met-lbl { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(240,236,227,0.4); margin-top: 2px; }
+
+    .globe-wrap {
+      position: absolute;
+      right: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 560px;
+      height: 560px;
+      z-index: 3;
+    }
+    #globeCanvas { width: 100%; height: 100%; display: block; }
+    .glow-ring {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      border-radius: 50%;
+      border: 0.5px solid rgba(212,168,83,0.08);
+      pointer-events: none;
+    }
+    .ring1 { width: 490px; height: 490px; }
+    .ring2 { width: 560px; height: 560px; }
+
+    /* Bottom destinations strip */
+    .dest-strip {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      display: flex;
+      background: rgba(10,22,40,0.75);
+      backdrop-filter: blur(12px);
+      border-top: 0.5px solid rgba(212,168,83,0.15);
+      z-index: 10;
+    }
+    .strip-item {
+      flex: 1;
+      padding: 14px 22px;
+      border-right: 0.5px solid rgba(212,168,83,0.1);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .strip-item:last-child { border-right: none; }
+    .strip-item:hover { background: rgba(212,168,83,0.05); }
+    .strip-icon { font-size: 18px; }
+    .strip-name { font-size: 13px; font-weight: 500; color: var(--cream); }
+    .strip-info { font-size: 11px; color: var(--cream-dim); }
+
+    /* Features section */
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--gold-dim); border: 0.5px solid var(--gold-dim); border-radius: 12px; overflow: hidden; }
+    .feature-box {
+      background: var(--navy-mid);
+      padding: 36px 32px;
+      transition: background 0.2s;
+    }
+    .feature-box:hover { background: #112236; }
+    .feat-icon { font-size: 28px; margin-bottom: 16px; }
+    .feat-title { font-family: var(--font-serif); font-size: 20px; margin-bottom: 10px; color: var(--cream); }
+    .feat-desc { font-size: 13px; color: var(--cream-dim); line-height: 1.7; }
+
+    /* Testimonial */
+    .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .test-card {
+      background: var(--navy-mid);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 12px;
+      padding: 28px;
+    }
+    .test-stars { color: var(--gold); font-size: 13px; margin-bottom: 14px; }
+    .test-text { font-size: 14px; color: var(--cream-dim); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+    .test-author { font-size: 13px; font-weight: 500; color: var(--cream); }
+    .test-loc { font-size: 11px; color: var(--gold); letter-spacing: 1px; }
+
+    /* CTA banner */
+    .cta-banner {
+      background: linear-gradient(135deg, #0d2040, #152a50);
+      border-top: 0.5px solid var(--gold-dim);
+      border-bottom: 0.5px solid var(--gold-dim);
+      padding: 70px 60px;
+      text-align: center;
+    }
+    .cta-banner h2 { font-family: var(--font-serif); font-size: 40px; margin-bottom: 14px; }
+    .cta-banner p { color: var(--cream-dim); margin-bottom: 32px; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; }
+  </style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+<div class="page-content">
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">ZENTR<span>EVO</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-btn">Book Now</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="home-hero">
+    <div class="hero-left">
+      <div class="hero-tag"><span class="tag-dot"></span> World Class Travel</div>
+      <h1 class="hero-h1">Explore the World<br>with <em>Zentrevo</em></h1>
+      <p class="hero-sub">Discover hidden destinations, curated journeys, and unforgettable experiences crafted just for you.</p>
+      <div class="hero-btns">
+        <a href="destinations.html" class="btn-primary">Explore Destinations</a>
+        <a href="blog.html" class="btn-ghost">Read Blog →</a>
+      </div>
+      <div class="hero-metrics">
+        <div><div class="met-num">120+</div><div class="met-lbl">Destinations</div></div>
+        <div><div class="met-num">50K+</div><div class="met-lbl">Travelers</div></div>
+        <div><div class="met-num">4.9★</div><div class="met-lbl">Rating</div></div>
+      </div>
+    </div>
+
+    <div class="globe-wrap">
+      <div class="glow-ring ring1"></div>
+      <div class="glow-ring ring2"></div>
+      <canvas id="globeCanvas"></canvas>
+    </div>
+
+    <div class="dest-strip">
+      <a href="destinations.html" class="strip-item">
+        <span class="strip-icon">🏝</span>
+        <div><div class="strip-name">Bali, Indonesia</div><div class="strip-info">Beach & Culture · ₹45,000</div></div>
+      </a>
+      <a href="destinations.html" class="strip-item">
+        <span class="strip-icon">🏔</span>
+        <div><div class="strip-name">Swiss Alps</div><div class="strip-info">Adventure · ₹1,20,000</div></div>
+      </a>
+      <a href="destinations.html" class="strip-item">
+        <span class="strip-icon">🕌</span>
+        <div><div class="strip-name">Dubai, UAE</div><div class="strip-info">Luxury · ₹65,000</div></div>
+      </a>
+      <a href="destinations.html" class="strip-item">
+        <span class="strip-icon">🗼</span>
+        <div><div class="strip-name">Paris, France</div><div class="strip-info">Romance · ₹95,000</div></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div class="section-tag fade-in">Why Zentrevo</div>
+      <div class="section-title fade-in">Travel, Reimagined</div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-box fade-in">
+        <div class="feat-icon">🧭</div>
+        <div class="feat-title">Expert Curation</div>
+        <div class="feat-desc">Every itinerary is handcrafted by travel experts who've lived the journey — not just mapped it.</div>
+      </div>
+      <div class="feature-box fade-in">
+        <div class="feat-icon">🔒</div>
+        <div class="feat-title">Safe & Secure</div>
+        <div class="feat-desc">Your safety is our priority. 24/7 support, fully insured, and trusted partners worldwide.</div>
+      </div>
+      <div class="feature-box fade-in">
+        <div class="feat-icon">💎</div>
+        <div class="feat-title">Luxury for Less</div>
+        <div class="feat-desc">Premium experiences at honest prices. No hidden charges, no surprises — just pure travel joy.</div>
+      </div>
+      <div class="feature-box fade-in">
+        <div class="feat-icon">🌿</div>
+        <div class="feat-title">Sustainable Travel</div>
+        <div class="feat-desc">We partner with eco-conscious operators to ensure your journey leaves a positive footprint.</div>
+      </div>
+      <div class="feature-box fade-in">
+        <div class="feat-icon">✈️</div>
+        <div class="feat-title">Seamless Booking</div>
+        <div class="feat-desc">Flights, hotels, transfers — all in one place. Book in minutes, travel with peace of mind.</div>
+      </div>
+      <div class="feature-box fade-in">
+        <div class="feat-icon">🎒</div>
+        <div class="feat-title">Custom Packages</div>
+        <div class="feat-desc">Solo, couple, family, or group — we tailor every trip to match your dream perfectly.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED DESTINATIONS -->
+  <section class="section section-alt">
+    <div class="section-tag fade-in">Top Picks</div>
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px;">
+      <div class="section-title fade-in" style="margin-bottom:0;">Featured Destinations</div>
+      <a href="destinations.html" class="btn-ghost fade-in">View All →</a>
+    </div>
+    <div class="grid-3">
+      <div class="card fade-in">
+        <div class="card-img-placeholder">🏝</div>
+        <div class="card-body">
+          <div class="card-tag">Beach &amp; Culture</div>
+          <div class="card-title">Bali, Indonesia</div>
+          <div class="card-desc">Rice terraces, ancient temples, and azure waters — Bali is where magic lives.</div>
+          <div class="card-price">From ₹45,000 <span style="font-size:11px;color:rgba(240,236,227,0.4);">/ person</span></div>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <div class="card-img-placeholder">🏔</div>
+        <div class="card-body">
+          <div class="card-tag">Adventure</div>
+          <div class="card-title">Swiss Alps, Switzerland</div>
+          <div class="card-desc">Snow-capped peaks, crystal lakes, and alpine villages that feel like a painting.</div>
+          <div class="card-price">From ₹1,20,000 <span style="font-size:11px;color:rgba(240,236,227,0.4);">/ person</span></div>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <div class="card-img-placeholder">🕌</div>
+        <div class="card-body">
+          <div class="card-tag">Luxury</div>
+          <div class="card-title">Dubai, UAE</div>
+          <div class="card-desc">Where the future meets tradition — sky-high towers, desert safaris, gold souks.</div>
+          <div class="card-price">From ₹65,000 <span style="font-size:11px;color:rgba(240,236,227,0.4);">/ person</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div class="section-tag fade-in">Real Travelers</div>
+      <div class="section-title fade-in">What They Say</div>
+    </div>
+    <div class="test-grid">
+      <div class="test-card fade-in">
+        <div class="test-stars">★★★★★</div>
+        <div class="test-text">"Zentrevo made our honeymoon in Bali absolutely perfect. Every detail was taken care of — we just showed up and enjoyed!"</div>
+        <div class="test-author">Priya &amp; Rohan Sharma</div>
+        <div class="test-loc">Mumbai, India</div>
+      </div>
+      <div class="test-card fade-in">
+        <div class="test-stars">★★★★★</div>
+        <div class="test-text">"The Swiss Alps package was a dream. The accommodations were outstanding and the guides were incredibly knowledgeable."</div>
+        <div class="test-author">Ankit Mehta</div>
+        <div class="test-loc">Delhi, India</div>
+      </div>
+      <div class="test-card fade-in">
+        <div class="test-stars">★★★★★</div>
+        <div class="test-text">"I've traveled with many agencies but Zentrevo is a class apart. Dubai felt magical with their curated itinerary."</div>
+        <div class="test-author">Sunita Agarwal</div>
+        <div class="test-loc">Jaipur, India</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <div class="section-tag" style="justify-content:center;display:flex;">Start Your Journey</div>
+    <h2 class="section-title" style="margin-bottom:14px;">Your Dream Trip Awaits</h2>
+    <p>Talk to our travel experts today. No commitment, just inspiration.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-primary">Plan My Trip</a>
+      <a href="packages.html" class="btn-ghost">View Packages</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">ZENTR<span>EVO</span></div>
+        <div class="footer-desc">We craft extraordinary travel experiences for curious souls who believe the world is meant to be explored — one unforgettable journey at a time.</div>
+        <div style="display:flex;gap:12px;">
+          <span style="font-size:18px;cursor:pointer;">📘</span>
+          <span style="font-size:18px;cursor:pointer;">📸</span>
+          <span style="font-size:18px;cursor:pointer;">🐦</span>
+          <span style="font-size:18px;cursor:pointer;">▶️</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="destinations.html">All Destinations</a></li>
+          <li><a href="packages.html">Tour Packages</a></li>
+          <li><a href="blog.html">Travel Blog</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Support</div>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@zentrevo.com">hello@zentrevo.com</a></li>
+          <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+          <li><a href="#">New Delhi, India</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Zentrevo. All rights reserved.</span>
+      <span>Made with ❤ for travelers</span>
+    </div>
+  </footer>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
