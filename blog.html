@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Travel stories, destination guides, packing tips and insider secrets from experienced travelers. The Zentrevo Journal — your travel inspiration hub.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ═══ SEO META TAGS ═══ -->
+  <!-- SEO META TAGS -->
   <meta name="author" content="Zentrevo Travel">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://zentrevo.github.io/blog.html">
 
-  <!-- ═══ OPEN GRAPH ═══ -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zentrevo.github.io/blog.html">
   <meta property="og:site_name" content="Zentrevo">
   <meta property="og:locale" content="en_IN">
 
-  <!-- ═══ TWITTER CARD ═══ -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@zentrevo">
   <title>Travel Blog — Zentrevo | Stories, Tips & Inspiration</title>
@@ -29,6 +29,7 @@
   <meta name="twitter:image" content="https://zentrevo.github.io/og-image.jpg">
 
   <link rel="stylesheet" href="style.css">
+
   <style>
     .blog-hero-card {
       background: var(--navy-mid);
@@ -106,6 +107,10 @@
       justify-content: center;
       font-size: 52px;
       background: linear-gradient(135deg, var(--navy-light), #112236);
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.7);
     }
     .blog-card-body { padding: 20px 22px 24px; }
     .blog-card-tag {
@@ -172,6 +177,12 @@
       flex-wrap: wrap;
       margin-bottom: 36px;
     }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 28px;
+    }
   </style>
 </head>
 <body>
@@ -230,6 +241,24 @@
 
     <!-- BLOG GRID -->
     <div class="grid-3">
+
+      <!-- New Budget Travel Post -->
+      <div class="blog-card fade-in">
+        <div class="blog-card-img" style="background-image: url('https://picsum.photos/id/1015/800/600');">
+          <!-- Image is set via background -->
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-tag">Destinations · 12 min read</div>
+          <div class="blog-card-title">Best Budget Travel Destinations for 2026</div>
+          <div class="blog-card-desc">Amazing affordable destinations perfect for Indian travelers who want maximum experience with minimum budget in 2026.</div>
+          <div class="blog-card-footer">
+            <span>by Aditi Singh</span>
+            <a href="best-budget-travel-destinations-2026.html" style="color:var(--gold);text-decoration:none;font-size:11px;">Read →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Existing Cards -->
       <div class="blog-card fade-in">
         <div class="blog-card-img">🏔</div>
         <div class="blog-card-body">
@@ -354,11 +383,12 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Zentrevo. All rights reserved.</span>
+      <span>© 2026 Zentrevo. All rights reserved.</span>
       <span>Made with ❤ for travelers</span>
     </div>
   </footer>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
