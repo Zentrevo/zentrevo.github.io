@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Get in touch with Zentrevo travel experts to plan your perfect holiday. Call, WhatsApp, or fill our enquiry form. Offices in Delhi, Dubai and Singapore.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══ SEO META TAGS ═══ -->
+  <meta name="author" content="Zentrevo Travel">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://zentrevo.github.io/contact.html">
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zentrevo.github.io/contact.html">
+  <meta property="og:site_name" content="Zentrevo">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@zentrevo">
+  <title>Contact Us — Zentrevo | Plan Your Dream Trip</title>
+
+  <meta property="og:title" content="Contact Us — Zentrevo | Plan Your Dream Trip">
+  <meta property="og:description" content="Get in touch with Zentrevo travel experts to plan your perfect holiday. Call, WhatsApp, or fill our enquiry form. Offices in Delhi, Dubai and Singapore.">
+  <meta property="og:image" content="https://zentrevo.github.io/og-image.jpg">
+  <meta name="twitter:title" content="Contact Us — Zentrevo | Plan Your Dream Trip">
+  <meta name="twitter:description" content="Get in touch with Zentrevo travel experts to plan your perfect holiday. Call, WhatsApp, or fill our enquiry form. Offices in Delhi, Dubai and Singapore.">
+  <meta name="twitter:image" content="https://zentrevo.github.io/og-image.jpg">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .contact-info-box {
+      background: var(--navy-mid);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 16px;
+      padding: 40px 32px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 0.5px solid var(--gold-dim);
+    }
+    .contact-item:last-child { border-bottom: none; }
+    .contact-icon {
+      font-size: 22px;
+      width: 44px; height: 44px;
+      background: rgba(212,168,83,0.1);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .contact-value { font-size: 14px; color: var(--cream); }
+    .contact-value a { color: var(--cream); text-decoration: none; }
+    .contact-value a:hover { color: var(--gold); }
+
+    .form-box {
+      background: var(--navy-mid);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 16px;
+      padding: 40px 36px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px;
+    }
+    .form-success .success-icon { font-size: 48px; margin-bottom: 16px; }
+    .form-success h3 { font-family: var(--font-serif); font-size: 24px; margin-bottom: 10px; }
+    .form-success p { color: var(--cream-dim); font-size: 14px; }
+
+    .office-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+    .office-card {
+      background: var(--navy-mid);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 12px;
+      padding: 28px;
+    }
+    .office-icon { font-size: 28px; margin-bottom: 12px; }
+    .office-city { font-family: var(--font-serif); font-size: 18px; color: var(--cream); margin-bottom: 6px; }
+    .office-addr { font-size: 13px; color: var(--cream-dim); line-height: 1.65; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 12px; margin-top: 40px; }
+    .faq-item {
+      background: var(--navy-mid);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 18px 22px;
+      font-size: 14px;
+      color: var(--cream);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-q:hover { color: var(--gold); }
+    .faq-arrow { color: var(--gold); font-size: 18px; transition: transform 0.2s; }
+    .faq-a {
+      padding: 0 22px;
+      font-size: 13px;
+      color: var(--cream-dim);
+      line-height: 1.7;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s;
+    }
+    .faq-item.open .faq-a { max-height: 200px; padding-bottom: 18px; }
+    .faq-item.open .faq-arrow { transform: rotate(45deg); }
+  </style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+<div class="page-content">
+
+  <nav>
+    <a href="index.html" class="logo">ZENTR<span>EVO</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-btn">Book Now</a>
+  </nav>
+
+  <div class="page-hero">
+    <div class="section-tag fade-in">Get In Touch</div>
+    <h1 class="section-title fade-in" style="font-size:48px;">Let's Plan Your <em style="font-style:italic;color:var(--gold);">Adventure</em></h1>
+    <p class="section-sub fade-in">Have a destination in mind? A budget? A dream? Tell us — our travel experts will craft something extraordinary just for you.</p>
+  </div>
+
+  <section class="section">
+    <div class="contact-grid">
+
+      <!-- LEFT: Contact Info -->
+      <div>
+        <div class="contact-info-box fade-in">
+          <div class="section-tag" style="margin-bottom:20px;">Reach Us</div>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value"><a href="mailto:hello@zentrevo.com">hello@zentrevo.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label">Phone</div>
+              <div class="contact-value"><a href="tel:+911234567890">+91 12345 67890</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💬</div>
+            <div>
+              <div class="contact-label">WhatsApp</div>
+              <div class="contact-value"><a href="#">+91 98765 43210</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <div class="contact-label">Working Hours</div>
+              <div class="contact-value">Mon–Sat: 9 AM – 8 PM IST</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Head Office</div>
+              <div class="contact-value">Connaught Place, New Delhi – 110001</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div style="margin-top:24px;background:var(--navy-mid);border:0.5px solid var(--gold-dim);border-radius:12px;padding:24px 28px;" class="fade-in">
+          <div class="section-tag" style="margin-bottom:16px;">Follow Us</div>
+          <div style="display:flex;gap:16px;">
+            <a href="#" style="display:flex;align-items:center;gap:8px;color:var(--cream-dim);text-decoration:none;font-size:13px;padding:8px 14px;border:0.5px solid var(--gold-dim);border-radius:8px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gold-dim)'">📘 Facebook</a>
+            <a href="#" style="display:flex;align-items:center;gap:8px;color:var(--cream-dim);text-decoration:none;font-size:13px;padding:8px 14px;border:0.5px solid var(--gold-dim);border-radius:8px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gold-dim)'">📸 Instagram</a>
+            <a href="#" style="display:flex;align-items:center;gap:8px;color:var(--cream-dim);text-decoration:none;font-size:13px;padding:8px 14px;border:0.5px solid var(--gold-dim);border-radius:8px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gold-dim)'">▶️ YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="form-box fade-in">
+        <div class="section-tag" style="margin-bottom:6px;">Send a Message</div>
+        <h2 style="font-family:var(--font-serif);font-size:24px;margin-bottom:28px;color:var(--cream);">Tell Us About Your Dream Trip</h2>
+
+        <div id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input class="form-input" type="text" placeholder="Rahul">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input class="form-input" type="text" placeholder="Sharma">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input class="form-input" type="email" placeholder="rahul@email.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone</label>
+              <input class="form-input" type="tel" placeholder="+91 98765 43210">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Destination of Interest</label>
+            <select class="form-select">
+              <option value="">Select a destination...</option>
+              <option>Bali, Indonesia</option>
+              <option>Swiss Alps, Switzerland</option>
+              <option>Dubai, UAE</option>
+              <option>Paris, France</option>
+              <option>Tokyo, Japan</option>
+              <option>Maldives</option>
+              <option>Serengeti, Africa</option>
+              <option>Custom Destination</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Travel Date</label>
+              <input class="form-input" type="month">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Number of Travelers</label>
+              <select class="form-select">
+                <option>1 (Solo)</option>
+                <option>2 (Couple)</option>
+                <option>3–5 (Small Group)</option>
+                <option>6–10 (Group)</option>
+                <option>10+ (Large Group)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Budget (per person)</label>
+            <select class="form-select">
+              <option>₹30,000 – ₹60,000</option>
+              <option>₹60,000 – ₹1,00,000</option>
+              <option>₹1,00,000 – ₹2,00,000</option>
+              <option>₹2,00,000+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tell Us More</label>
+            <textarea class="form-textarea" placeholder="What kind of experience are you looking for? Any special occasions, preferences, or must-haves?"></textarea>
+          </div>
+          <button class="btn-primary" style="width:100%;font-size:14px;padding:15px;" onclick="submitForm()">Send My Enquiry ✈</button>
+        </div>
+
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">🎉</div>
+          <h3>Enquiry Sent!</h3>
+          <p>Thank you! Our travel experts will contact you within 24 hours to start planning your dream journey.</p>
+          <br>
+          <a href="packages.html" class="btn-ghost">Browse Packages While You Wait</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OFFICES -->
+    <div style="margin-top:80px;">
+      <div class="section-tag fade-in">Our Offices</div>
+      <div class="section-title fade-in" style="margin-bottom:32px;">Find Us Around the World</div>
+      <div class="office-grid">
+        <div class="office-card fade-in">
+          <div class="office-icon">🇮🇳</div>
+          <div class="office-city">New Delhi (HQ)</div>
+          <div class="office-addr">Connaught Place, Block A<br>New Delhi – 110001<br>+91 12345 67890</div>
+        </div>
+        <div class="office-card fade-in">
+          <div class="office-icon">🇦🇪</div>
+          <div class="office-city">Dubai</div>
+          <div class="office-addr">Business Bay, Tower B<br>Dubai, UAE<br>+971 4 123 4567</div>
+        </div>
+        <div class="office-card fade-in">
+          <div class="office-icon">🇸🇬</div>
+          <div class="office-city">Singapore</div>
+          <div class="office-addr">Marina Bay Financial Centre<br>Singapore 018983<br>+65 6123 4567</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div style="margin-top:80px;">
+      <div class="section-tag fade-in">FAQ</div>
+      <div class="section-title fade-in" style="margin-bottom:8px;">Common Questions</div>
+      <div class="faq-list">
+        <div class="faq-item fade-in">
+          <div class="faq-q">How far in advance should I book? <span class="faq-arrow">+</span></div>
+          <div class="faq-a">We recommend booking at least 6–8 weeks in advance for international trips, and 4 weeks for domestic. However, we can accommodate last-minute requests — just contact us!</div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-q">Is travel insurance included? <span class="faq-arrow">+</span></div>
+          <div class="faq-a">Yes! All Zentrevo packages include comprehensive travel insurance covering medical emergencies, trip cancellation, lost baggage, and more.</div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-q">Can I customise a package? <span class="faq-arrow">+</span></div>
+          <div class="faq-a">Absolutely. Every package can be tailored to your needs — different hotels, extra nights, added experiences, solo vs group travel. Just tell us what you want!</div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-q">What payment options are available? <span class="faq-arrow">+</span></div>
+          <div class="faq-a">We accept all major credit/debit cards, UPI, net banking, and offer 0% EMI options across leading banks. A 25% deposit secures your booking.</div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-q">What is your cancellation policy? <span class="faq-arrow">+</span></div>
+          <div class="faq-a">Cancellations made 30+ days before travel receive a full refund. 15–29 days: 75% refund. Under 15 days: subject to supplier terms. Travel insurance covers most scenarios.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">ZENTR<span>EVO</span></div>
+        <div class="footer-desc">Crafting extraordinary travel experiences for curious souls around the globe.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="destinations.html">All Destinations</a></li>
+          <li><a href="packages.html">Tour Packages</a></li>
+          <li><a href="blog.html">Travel Blog</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Support</div>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@zentrevo.com">hello@zentrevo.com</a></li>
+          <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Zentrevo. All rights reserved.</span>
+      <span>Made with ❤ for travelers</span>
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
+<script>
+  function submitForm() {
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      item.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>
