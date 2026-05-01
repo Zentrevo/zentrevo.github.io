@@ -4,10 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Travel Blog — Zentrevo | Stories, Tips & Inspiration</title>
-  <meta name="description" content="Tips, tales, and inspiration from the world's greatest journeys. Written by travelers, for travelers.">
+  <meta name="description" content="Tips, tales, and inspiration from the world's greatest journeys.">
   <link rel="canonical" href="https://zentrevo.github.io/blog.html">
   
-  <!-- Open Graph / Social -->
   <meta property="og:title" content="Travel Blog — Zentrevo">
   <meta property="og:description" content="Travel stories, tips & inspiration for curious souls.">
   <meta property="og:type" content="website">
@@ -27,21 +26,22 @@
       --gold-dim: rgba(212,168,83,0.2);
       --cream: #f0ece3;
       --cream-dim: rgba(240,236,227,0.55);
-      --cream-faint: rgba(240,236,227,0.15);
       --font-serif: 'Playfair Display', serif;
       --font-sans: 'DM Sans', sans-serif;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    
     body {
       font-family: var(--font-sans);
       background: var(--navy);
       color: var(--cream);
       line-height: 1.7;
+      min-height: 100vh;
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
       display: flex;
       align-items: center;
@@ -51,9 +51,10 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(10,22,40,0.92);
+      background: rgba(10,22,40,0.95);
       backdrop-filter: blur(12px);
     }
+    
     .logo {
       font-family: var(--font-serif);
       font-size: 22px;
@@ -63,11 +64,13 @@
       text-decoration: none;
     }
     .logo span { color: var(--cream); }
+    
     .nav-links {
       display: flex;
       gap: 28px;
       list-style: none;
     }
+    
     .nav-links a {
       font-size: 12px;
       letter-spacing: 1.5px;
@@ -77,6 +80,7 @@
       transition: color 0.2s;
     }
     .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    
     .nav-btn {
       background: var(--gold);
       color: var(--navy);
@@ -93,29 +97,23 @@
     }
     .nav-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
 
-    /* ── PAGE HERO ── */
+    /* PAGE HERO */
     .page-hero {
       padding: 80px 60px 64px;
       border-bottom: 0.5px solid var(--gold-dim);
       position: relative;
       overflow: hidden;
     }
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      top: -60px; right: -60px;
-      width: 300px; height: 300px;
-      border-radius: 50%;
-      border: 0.5px solid var(--gold-dim);
-      pointer-events: none;
-    }
+    
     .section-tag {
       font-size: 10px;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 8px;
+      display: block;
     }
+    
     .section-title {
       font-family: var(--font-serif);
       font-size: 38px;
@@ -124,22 +122,23 @@
       color: var(--cream);
       margin-bottom: 16px;
     }
+    
     .section-sub {
       font-size: 15px;
       color: var(--cream-dim);
       max-width: 500px;
       line-height: 1.75;
-      margin-bottom: 40px;
     }
 
-    /* ── FILTERS ── */
+    /* FILTERS */
     .filters {
       display: flex;
       gap: 12px;
-      padding: 0 60px 32px;
+      padding: 32px 60px;
       flex-wrap: wrap;
       border-bottom: 0.5px solid var(--gold-dim);
     }
+    
     .filter-btn {
       background: transparent;
       border: 0.5px solid var(--gold-dim);
@@ -158,7 +157,7 @@
       background: var(--gold-dim);
     }
 
-    /* ── AFFILIATE BANNER ── */
+    /* AFFILIATE BANNER */
     .affiliate-banner {
       margin: 32px 60px;
       padding: 20px 28px;
@@ -170,12 +169,15 @@
       justify-content: space-between;
       gap: 20px;
     }
+    
     .affiliate-banner p {
       font-size: 13px;
       color: var(--cream-dim);
       margin: 4px 0 0;
     }
+    
     .affiliate-banner strong { color: var(--gold); }
+    
     .affiliate-btn {
       background: var(--gold);
       color: var(--navy);
@@ -191,10 +193,11 @@
     }
     .affiliate-btn:hover { background: var(--gold-light); }
 
-    /* ── FEATURED POST ── */
+    /* FEATURED POST */
     .featured-post {
       padding: 0 60px 40px;
     }
+    
     .featured-card {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
@@ -206,12 +209,14 @@
       transition: border-color 0.2s;
     }
     .featured-card:hover { border-color: var(--gold); }
+    
     .featured-img {
       height: 100%;
       min-height: 320px;
       background: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800') center/cover;
       position: relative;
     }
+    
     .featured-badge {
       position: absolute;
       top: 16px;
@@ -225,12 +230,14 @@
       letter-spacing: 1px;
       text-transform: uppercase;
     }
+    
     .featured-content {
       padding: 28px 32px;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
+    
     .featured-meta {
       font-size: 11px;
       letter-spacing: 2px;
@@ -238,6 +245,7 @@
       color: var(--gold);
       margin-bottom: 12px;
     }
+    
     .featured-title {
       font-family: var(--font-serif);
       font-size: 24px;
@@ -251,12 +259,14 @@
       transition: color 0.2s;
     }
     .featured-title a:hover { color: var(--gold); }
+    
     .featured-excerpt {
       font-size: 14px;
       color: var(--cream-dim);
       line-height: 1.7;
       margin-bottom: 20px;
     }
+    
     .featured-footer {
       display: flex;
       justify-content: space-between;
@@ -273,7 +283,7 @@
       letter-spacing: 1px;
     }
 
-    /* ── BLOG GRID & CARDS ── */
+    /* BLOG GRID */
     .blog-grid {
       padding: 40px 60px;
       display: grid;
@@ -281,7 +291,7 @@
       gap: 24px;
     }
 
-    /* Blog Card with Thumbnail */
+    /* Blog Card */
     .blog-card {
       background: var(--navy-mid);
       border: 0.5px solid var(--gold-dim);
@@ -290,11 +300,14 @@
       transition: border-color 0.2s, transform 0.2s;
       display: flex;
       flex-direction: column;
+      opacity: 1;
+      visibility: visible;
     }
     .blog-card:hover {
       border-color: var(--gold);
       transform: translateY(-4px);
     }
+    
     .blog-card-img {
       width: 100%;
       height: 200px;
@@ -311,12 +324,14 @@
     .blog-card:hover .blog-card-img img {
       transform: scale(1.05);
     }
+    
     .blog-card-body {
       padding: 20px 22px 24px;
       flex: 1;
       display: flex;
       flex-direction: column;
     }
+    
     .blog-card-tag {
       font-size: 10px;
       letter-spacing: 2px;
@@ -324,6 +339,7 @@
       color: var(--gold);
       margin-bottom: 8px;
     }
+    
     .blog-card-title {
       font-family: var(--font-serif);
       font-size: 18px;
@@ -331,6 +347,7 @@
       margin-bottom: 8px;
       line-height: 1.4;
     }
+    
     .blog-card-desc {
       font-size: 13px;
       color: var(--cream-dim);
@@ -338,6 +355,7 @@
       margin-bottom: 16px;
       flex: 1;
     }
+    
     .blog-card-footer {
       display: flex;
       justify-content: space-between;
@@ -354,7 +372,7 @@
       letter-spacing: 1px;
     }
 
-    /* ── NEWSLETTER ── */
+    /* NEWSLETTER */
     .newsletter {
       padding: 60px;
       background: var(--navy-light);
@@ -411,7 +429,7 @@
       margin-top: 14px;
     }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer {
       background: #050e1c;
       border-top: 0.5px solid var(--gold-dim);
@@ -458,8 +476,7 @@
       transition: color 0.2s;
     }
     .footer-links a:hover { color: var(--gold); }
-
-    /* Social Links */
+    
     .social-links {
       display: flex;
       gap: 12px;
@@ -483,7 +500,7 @@
       color: var(--gold);
       transform: translateY(-2px);
     }
-
+    
     .footer-bottom {
       display: flex;
       align-items: center;
@@ -494,7 +511,7 @@
       color: rgba(240,236,227,0.35);
     }
 
-    /* ── POPUP FORM ── */
+    /* POPUP FORM */
     .popup-overlay {
       display: none;
       position: fixed;
@@ -578,26 +595,27 @@
     }
     .submit-btn:hover { background: var(--gold-light); }
 
-    /* ── FADE IN ANIMATION ── */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       nav { padding: 16px 24px; }
       .nav-links { display: none; }
-      .page-hero, .filters, .featured-post, .blog-grid, .newsletter, footer { padding-left: 24px; padding-right: 24px; }
-      .affiliate-banner { margin-left: 24px; margin-right: 24px; flex-direction: column; text-align: center; }
+      .page-hero, .filters, .featured-post, .blog-grid, .newsletter, footer { 
+        padding-left: 24px; 
+        padding-right: 24px; 
+      }
+      .affiliate-banner { 
+        margin-left: 24px; 
+        margin-right: 24px; 
+        flex-direction: column; 
+        text-align: center; 
+      }
       .featured-card { grid-template-columns: 1fr; }
       .featured-img { min-height: 240px; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .blog-grid { grid-template-columns: 1fr; }
       .section-title { font-size: 28px; }
     }
+    
     @media (max-width: 600px) {
       .footer-grid { grid-template-columns: 1fr; }
       .newsletter-form { flex-direction: column; }
@@ -622,7 +640,7 @@
 
   <!-- PAGE HERO -->
   <header class="page-hero">
-    <div class="section-tag">The Zentrevo Journal</div>
+    <span class="section-tag">The Zentrevo Journal</span>
     <h1 class="section-title">Travel Stories</h1>
     <p class="section-sub">Tips, tales, and inspiration from the world's greatest journeys. Written by travelers, for travelers.</p>
   </header>
@@ -648,7 +666,7 @@
 
   <!-- FEATURED POST -->
   <section class="featured-post">
-    <article class="featured-card fade-in">
+    <article class="featured-card">
       <div class="featured-img">
         <span class="featured-badge">🌅 Featured</span>
       </div>
@@ -671,79 +689,250 @@
   <!-- BLOG GRID -->
   <main class="blog-grid">
 
-    <!-- ✅ NEW BLOG: Best Budget Travel Destinations 2026 -->
-    <div class="blog-card fade-in">
+    <!-- Best Budget Travel Destinations 2026 -->
+    <article class="blog-card">
       <div class="blog-card-img">
         <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600" alt="Budget Travel Destinations 2026">
       </div>
       <div class="blog-card-body">
         <div class="blog-card-tag">Travel Tips · 7 min read</div>
-        <div class="blog-card-title">Best Budget Travel Destinations 2026</div>
-        <div class="blog-card-desc">Explore the world without breaking the bank. From Vietnam to Portugal, trips starting from just <strong>$30/day</strong>.</div>
+        <h3 class="blog-card-title">Best Budget Travel Destinations 2026</h3>
+        <p class="blog-card-desc">Explore the world without breaking the bank. From Vietnam to Portugal, trips starting from just <strong>$30/day</strong>.</p>
         <div class="blog-card-footer">
           <span>by Zentrevo Team</span>
-          <a href="blog/best-budget-travel-destinations-2026.html" style="color:var(--gold);text-decoration:none;font-size:11px;">Read →</a>
+          <a href="blog/best-budget-travel-destinations-2026.html" style="color:var(--gold);">Read →</a>
         </div>
       </div>
-    </div>
+    </article>
 
     <!-- Swiss Alps -->
-    <div class="blog-card fade-in">
+    <article class="blog-card">
       <div class="blog-card-img">
         <img src="https://images.unsplash.com/photo-1502989182530-6f4f60e358b3?w=600" alt="Swiss Alps Winter">
       </div>
       <div class="blog-card-body">
         <div class="blog-card-tag">Adventure · 6 min read</div>
-        <div class="blog-card-title">The Ultimate Swiss Alps Winter Guide</div>
-        <div class="blog-card-desc">Skiing, fondue, and alpine magic — everything you need to plan the perfect Swiss winter escape. From $48/day.</div>
+        <h3 class="blog-card-title">The Ultimate Swiss Alps Winter Guide</h3>
+        <p class="blog-card-desc">Skiing, fondue, and alpine magic — everything you need to plan the perfect Swiss winter escape. From $48/day.</p>
         <div class="blog-card-footer">
           <span>by Rahul Verma</span>
-          <a href="#" style="color:var(--gold);text-decoration:none;font-size:11px;">Read →</a>
+          <a href="#" style="color:var(--gold);">Read →</a>
         </div>
       </div>
-    </div>
+    </article>
 
     <!-- Tokyo Street Food -->
-    <div class="blog-card fade-in">
+    <article class="blog-card">
       <div class="blog-card-img">
         <img src="https://images.unsplash.com/photo-1540959733332-79c9c7206d0b?w=600" alt="Tokyo Street Food">
       </div>
       <div class="blog-card-body">
         <div class="blog-card-tag">Food & Culture · 5 min read</div>
-        <div class="blog-card-title">Tokyo's Best Street Food: A 24-Hour Eating Tour</div>
-        <div class="blog-card-desc">From sushi at dawn to ramen at midnight — navigating Tokyo's incredible street food scene. Meals from $3.</div>
+        <h3 class="blog-card-title">Tokyo's Best Street Food: A 24-Hour Eating Tour</h3>
+        <p class="blog-card-desc">From sushi at dawn to ramen at midnight — navigating Tokyo's incredible street food scene. Meals from $3.</p>
         <div class="blog-card-footer">
           <span>by Meera Kapoor</span>
-          <a href="#" style="color:var(--gold);text-decoration:none;font-size:11px;">Read →</a>
+          <a href="#" style="color:var(--gold);">Read →</a>
         </div>
       </div>
-    </div>
+    </article>
 
     <!-- Packing List -->
-    <div class="blog-card fade-in">
+    <article class="blog-card">
       <div class="blog-card-img">
         <img src="https://images.unsplash.com/photo-1553913861-81f54d9b6d6f?w=600" alt="Minimalist Packing">
       </div>
       <div class="blog-card-body">
         <div class="blog-card-tag">Travel Tips · 7 min read</div>
-        <div class="blog-card-title">Pack Smart: The 40-Country Minimalist Packing List</div>
-        <div class="blog-card-desc">I've traveled to 40 countries with a single carry-on. Here's exactly what's in it and why. Save on baggage fees!</div>
+        <h3 class="blog-card-title">Pack Smart: The 40-Country Minimalist Packing List</h3>
+        <p class="blog-card-desc">I've traveled to 40 countries with a single carry-on. Here's exactly what's in it and why. Save on baggage fees!</p>
         <div class="blog-card-footer">
           <span>by Karan Shah</span>
-          <a href="#" style="color:var(--gold);text-decoration:none;font-size:11px;">Read →</a>
+          <a href="#" style="color:var(--gold);">Read →</a>
         </div>
       </div>
-    </div>
+    </article>
 
-    <!-- ✅ UPDATED: Maldives with Image -->
-    <div class="blog-card fade-in">
+    <!-- Maldives -->
+    <article class="blog-card">
       <div class="blog-card-img">
         <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600" alt="Maldives Budget">
       </div>
       <div class="blog-card-body">
         <div class="blog-card-tag">Luxury · 4 min read</div>
-        <div class="blog-card-title">Maldives on a Budget: Yes, It's Possible</div>
-        <div class="blog-card-desc">Overwater bungalows don't have to cost a fortune. Here's how to experience Maldives for less. From $65/day.</div>
+        <h3 class="blog-card-title">Maldives on a Budget: Yes, It's Possible</h3>
+        <p class="blog-card-desc">Overwater bungalows don't have to cost a fortune. Here's how to experience Maldives for less. From $65/day.</p>
         <div class="blog-card-footer">
           <span>by Priya Nair</span>
-          <a href="#" style="color:var(--gold);
+          <a href="#" style="color:var(--gold);">Read →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Dubai Old City -->
+    <article class="blog-card">
+      <div class="blog-card-img">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea904ac22ac?w=600" alt="Dubai Old City">
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-tag">Culture · 5 min read</div>
+        <h3 class="blog-card-title">Dubai's Old City: The Side Tourists Miss</h3>
+        <p class="blog-card-desc">While everyone races to the Burj, the historic Al Fahidi district holds the soul of old Dubai. Explore for $42/day.</p>
+        <div class="blog-card-footer">
+          <span>by Arjun Bhatia</span>
+          <a href="#" style="color:var(--gold);">Read →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Serengeti Safari -->
+    <article class="blog-card">
+      <div class="blog-card-img">
+        <img src="https://images.unsplash.com/photo-1516483638261-f4db3d3d87c9?w=600" alt="Serengeti Safari">
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-tag">Adventure · 8 min read</div>
+        <h3 class="blog-card-title">On Safari: 7 Days in the Serengeti</h3>
+        <p class="blog-card-desc">Lions at sunrise, wildebeest at dusk — a first-hand account of witnessing the Great Migration. From $55/day.</p>
+        <div class="blog-card-footer">
+          <span>by Nisha Patel</span>
+          <a href="#" style="color:var(--gold);">Read →</a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h3>📬 Stay Inspired</h3>
+    <p>Get Travel Stories in Your Inbox — Join 25,000+ travelers who get weekly destination guides, tips, and exclusive deals.</p>
+    <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="newsletter-note">✓ No spam, ever. Unsubscribe anytime.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">ZENTR<span>EVO</span></div>
+        <p class="footer-desc">Crafting extraordinary travel experiences for curious souls around the globe.</p>
+        <div class="social-links">
+          <a href="https://facebook.com/zentrevo" target="_blank" class="social-link" aria-label="Facebook">f</a>
+          <a href="https://instagram.com/zentrevo" target="_blank" class="social-link" aria-label="Instagram">📷</a>
+          <a href="https://youtube.com/@zentrevo" target="_blank" class="social-link" aria-label="YouTube">▶</a>
+          <a href="https://x.com/zentrevo" target="_blank" class="social-link" aria-label="X">𝕏</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="destinations.html">All Destinations</a></li>
+          <li><a href="packages.html">Tour Packages</a></li>
+          <li><a href="blog.html">Travel Blog</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Support</div>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@zentrevo.com">hello@zentrevo.com</a></li>
+          <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Zentrevo. All rights reserved.</span>
+      <span>Made with ❤ for travelers</span>
+    </div>
+  </footer>
+
+  <!-- POPUP CONTACT FORM -->
+  <div class="popup-overlay" id="contactPopup">
+    <div class="popup-content">
+      <span class="close-popup" onclick="closePopup()">&times;</span>
+      <h3>🎯 Plan Your Next Adventure</h3>
+      <p>Get a free consultation with our travel experts!</p>
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="popupName">Your Name</label>
+          <input type="text" id="popupName" name="name" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="popupEmail">Email Address</label>
+          <input type="email" id="popupEmail" name="email" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="popupDestination">Dream Destination</label>
+          <input type="text" id="popupDestination" name="destination" class="form-input" placeholder="e.g., Bali, Swiss Alps...">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="popupMessage">Tell Us More</label>
+          <textarea id="popupMessage" name="message" class="form-textarea" placeholder="Your travel dates, budget, preferences..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Inquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Simple filter button functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      // Newsletter subscription
+      window.handleSubscribe = function(e) {
+        e.preventDefault();
+        alert('🎉 Thanks for subscribing! Check your inbox for a welcome gift.');
+        e.target.reset();
+      };
+
+      // Popup form handlers
+      window.closePopup = function() {
+        const popup = document.getElementById('contactPopup');
+        if (popup) popup.style.display = 'none';
+      };
+
+      window.handleSubmit = function(e) {
+        e.preventDefault();
+        alert('Thank you for your inquiry! Our travel expert will contact you within 24 hours.');
+        closePopup();
+      };
+
+      // Show popup after 30 seconds
+      setTimeout(function() {
+        const popup = document.getElementById('contactPopup');
+        if (popup) {
+          popup.style.display = 'flex';
+        }
+      }, 30000);
+
+      // Close popup on outside click
+      window.onclick = function(event) {
+        const popup = document.getElementById('contactPopup');
+        if (event.target == popup) {
+          closePopup();
+        }
+      };
+    });
+  </script>
+</body>
+</html>
