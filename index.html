@@ -8,535 +8,811 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WK5Z2WMC');</script>
 <!-- End Google Tag Manager -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zentrevo — Explore the World | Luxury Travel Agency</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zentrevo — Explore the World | Luxury Travel Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0a0f1e;
+  --navy-2:#0d1528;
+  --navy-3:#111c35;
+  --teal:#1a4a5c;
+  --teal-glow:#0e7c8b;
+  --gold:#c8972a;
+  --gold-light:#e8c96a;
+  --gold-pale:#f5e6b8;
+  --text:#e8eaf0;
+  --text-muted:#8a9bb5;
+  --text-dim:#4a5a75;
+  --white:#ffffff;
+  --ff-display:'Playfair Display',Georgia,serif;
+  --ff-body:'Inter',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--text);font-family:var(--ff-body);overflow-x:hidden;line-height:1.6}
 
-  <!-- ═══ SEO META TAGS ═══ -->
-  <meta name="description" content="Zentrevo is a world-class travel agency offering curated luxury tours, adventure packages, and unforgettable journeys to 120+ destinations worldwide.">
-  <meta name="keywords" content="travel agency, luxury tours, Bali packages, Europe tour, Dubai holiday, Swiss Alps, Maldives, Zentrevo travel">
-  <meta name="author" content="Zentrevo Travel">
-  <meta name="robots" content="index, follow">
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(10,15,30,0.92);border-bottom:1px solid rgba(200,151,42,0.12);backdrop-filter:blur(20px)}
+.nav-logo{font-family:var(--ff-display);font-size:1.5rem;font-weight:900;color:var(--white);text-decoration:none;letter-spacing:0.02em}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:rgba(232,234,240,0.7);text-decoration:none;font-size:0.78rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;transition:color 0.25s}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-book{background:var(--gold);color:var(--navy);padding:0.65rem 1.8rem;font-family:var(--ff-body);font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all 0.25s}
+.nav-book:hover{background:var(--gold-light)}
 
-  <!-- ═══ CANONICAL TAG ═══ -->
-  <link rel="canonical" href="https://zentrevo.github.io/">
+/* ── HERO ── */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:0 3rem}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(14,124,139,0.12) 0%,transparent 60%),radial-gradient(ellipse at 10% 80%,rgba(200,151,42,0.05) 0%,transparent 40%),var(--navy);z-index:0}
+.stars{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero-left{position:relative;z-index:10;max-width:480px;padding-top:5rem}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(200,151,42,0.4);border-radius:50px;padding:0.45rem 1.1rem;font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem}
+.hero-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.hero h1{font-family:var(--ff-display);font-size:clamp(2.8rem,5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.05;margin-bottom:1.4rem}
+.hero h1 em{font-style:italic;color:var(--gold);font-weight:700}
+.hero p{font-size:0.98rem;color:var(--text-muted);margin-bottom:2.5rem;line-height:1.75;max-width:380px;font-weight:300}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-gold{background:var(--gold);color:var(--navy);padding:0.85rem 2rem;font-family:var(--ff-body);font-size:0.82rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all 0.25s;display:inline-block}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--text);padding:0.85rem 2rem;font-family:var(--ff-body);font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(232,234,240,0.25);cursor:pointer;transition:all 0.25s;display:inline-block}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:2rem;border-top:1px solid rgba(200,151,42,0.15)}
+.stat-num{font-family:var(--ff-display);font-size:2rem;font-weight:700;color:var(--gold);display:block;line-height:1}
+.stat-label{font-size:0.7rem;color:var(--text-dim);letter-spacing:0.12em;text-transform:uppercase;margin-top:0.3rem;display:block}
 
-  <!-- ═══ OPEN GRAPH (Facebook / WhatsApp) ═══ -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://zentrevo.github.io/">
-  <meta property="og:title" content="Zentrevo — Explore the World | Luxury Travel Agency">
-  <meta property="og:description" content="Discover hidden destinations, curated journeys, and unforgettable travel experiences crafted just for you. 120+ destinations.">
-  <meta property="og:image" content="https://zentrevo.github.io/og-image.jpg">
-  <meta property="og:site_name" content="Zentrevo">
-  <meta property="og:locale" content="en_IN">
+/* ── GLOBE ── */
+.hero-right{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:55%;max-width:720px;z-index:5}
+.globe-wrap{position:relative;width:100%;padding-bottom:100%}
+canvas#globe{position:absolute;inset:0;width:100%!important;height:100%!important}
 
-  <!-- ═══ TWITTER CARD ═══ -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://zentrevo.github.io/">
-  <meta name="twitter:title" content="Zentrevo — Explore the World">
-  <meta name="twitter:description" content="Luxury travel experiences to 120+ destinations. Book your dream trip with Zentrevo.">
-  <meta name="twitter:image" content="https://zentrevo.github.io/og-image.jpg">
+/* ── DESTINATIONS BAR ── */
+.dest-bar{background:var(--navy-2);border-top:1px solid rgba(200,151,42,0.12);border-bottom:1px solid rgba(200,151,42,0.12);padding:0;overflow:hidden}
+.dest-bar-inner{display:flex}
+.dest-item{flex:1;display:flex;align-items:center;gap:1rem;padding:1.2rem 1.8rem;border-right:1px solid rgba(200,151,42,0.1);cursor:pointer;transition:background 0.25s;text-decoration:none;color:inherit}
+.dest-item:last-child{border-right:none}
+.dest-item:hover{background:rgba(200,151,42,0.06)}
+.dest-icon{width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1px solid rgba(200,151,42,0.25)}
+.dest-name{font-size:0.88rem;font-weight:600;color:var(--white);display:block}
+.dest-type{font-size:0.72rem;color:var(--text-muted)}
+.dest-price{font-size:0.82rem;font-weight:600;color:var(--gold);margin-left:auto;white-space:nowrap}
 
-  <!-- ═══ STRUCTURED DATA (JSON-LD) ═══ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    "name": "Zentrevo",
-    "url": "https://zentrevo.github.io/",
-    "logo": "https://zentrevo.github.io/logo.png",
-    "description": "World-class travel agency offering luxury tours and curated journeys to 120+ destinations worldwide.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Connaught Place, Block A",
-      "addressLocality": "New Delhi",
-      "postalCode": "110001",
-      "addressCountry": "IN"
-    },
-    "telephone": "+91-12345-67890",
-    "email": "hello@zentrevo.com",
-    "sameAs": [
-      "https://facebook.com/zentrevo",
-      "https://instagram.com/zentrevo",
-      "https://youtube.com/zentrevo"
-    ],
-    "priceRange": "₹₹₹"
-  }
-  </script>
+/* ── SECTION COMMONS ── */
+section{padding:6rem 3rem}
+.sec-tag{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.68rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem}
+.sec-tag::before{content:'';width:24px;height:1px;background:var(--gold);opacity:0.7}
+.sec-title{font-family:var(--ff-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--white);line-height:1.15;margin-bottom:1rem}
+.sec-title em{font-style:italic;color:var(--gold)}
+.sec-sub{color:var(--text-muted);font-size:0.95rem;max-width:520px;line-height:1.75;font-weight:300}
 
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .home-hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 60px;
-      height: calc(100vh - 61px);
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-left { max-width: 480px; position: relative; z-index: 5; }
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      border: 0.5px solid rgba(212,168,83,0.4);
-      padding: 6px 16px;
-      border-radius: 20px;
-      margin-bottom: 22px;
-    }
-    .tag-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--gold);
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
-    h1.hero-h1 { font-family: var(--font-serif); font-size: 52px; line-height: 1.12; margin-bottom: 18px; }
-    h1.hero-h1 em { font-style: italic; color: var(--gold); }
-    .hero-sub { font-size: 15px; color: var(--cream-dim); line-height: 1.75; margin-bottom: 32px; max-width: 380px; }
-    .hero-btns { display: flex; gap: 14px; align-items: center; margin-bottom: 36px; }
-    .hero-metrics { display: flex; gap: 32px; }
-    .met-num { font-family: var(--font-serif); font-size: 26px; color: var(--gold); font-weight: 700; }
-    .met-lbl { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(240,236,227,0.4); margin-top: 2px; }
+/* ── DESTINATIONS ── */
+.destinations{background:var(--navy)}
+.dest-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem}
+.dest-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;grid-template-rows:260px 260px;gap:1.2rem}
+.dest-card{position:relative;overflow:hidden;cursor:pointer;text-decoration:none;display:block}
+.dest-card:first-child{grid-row:span 2}
+.dest-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;display:block}
+.dest-card:hover img{transform:scale(1.07)}
+.dest-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,15,30,0.88) 0%,rgba(10,15,30,0.1) 60%,transparent 100%)}
+.dest-card-body{position:absolute;bottom:0;left:0;right:0;padding:1.4rem}
+.dest-country{font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.3rem}
+.dest-card-body h3{font-family:var(--ff-display);font-size:1.25rem;font-weight:700;color:var(--white)}
+.dest-card-body p{font-size:0.78rem;color:rgba(232,234,240,0.6);margin-top:0.2rem}
+.dest-badge{position:absolute;top:1rem;right:1rem;background:var(--gold);color:var(--navy);padding:0.3rem 0.8rem;font-size:0.7rem;font-weight:700;letter-spacing:0.08em}
 
-    /* ── GLOBE ── */
-    .globe-wrap {
-      position: absolute;
-      right: -30px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 580px;
-      height: 580px;
-      z-index: 3;
-    }
-    #globeCanvas { width: 100%; height: 100%; display: block; }
-    .glow-ring {
-      position: absolute; top: 50%; left: 50%;
-      transform: translate(-50%,-50%);
-      border-radius: 50%;
-      pointer-events: none;
-      animation: ringPulse 4s ease-in-out infinite;
-    }
-    @keyframes ringPulse {
-      0%,100% { opacity: 0.08; transform: translate(-50%,-50%) scale(1); }
-      50% { opacity: 0.18; transform: translate(-50%,-50%) scale(1.03); }
-    }
-    .ring1 { width: 500px; height: 500px; border: 0.5px solid rgba(212,168,83,0.3); animation-delay: 0s; }
-    .ring2 { width: 570px; height: 570px; border: 0.5px solid rgba(212,168,83,0.15); animation-delay: 1s; }
-    .ring3 { width: 640px; height: 640px; border: 0.5px solid rgba(212,168,83,0.07); animation-delay: 2s; }
+/* ── PACKAGES ── */
+.packages{background:var(--navy-2)}
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.pkg-card{background:var(--navy-3);border:1px solid rgba(200,151,42,0.1);overflow:hidden;transition:border-color 0.3s,transform 0.3s;cursor:pointer}
+.pkg-card:hover{border-color:rgba(200,151,42,0.4);transform:translateY(-4px)}
+.pkg-img{height:200px;overflow:hidden;position:relative}
+.pkg-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.pkg-card:hover .pkg-img img{transform:scale(1.06)}
+.pkg-tag{position:absolute;top:1rem;left:1rem;padding:0.3rem 0.8rem;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase}
+.pkg-tag.luxury{background:rgba(200,151,42,0.9);color:var(--navy)}
+.pkg-tag.adventure{background:rgba(14,124,139,0.9);color:var(--white)}
+.pkg-tag.culture{background:rgba(120,60,200,0.9);color:var(--white)}
+.pkg-tag.romance{background:rgba(200,60,100,0.9);color:var(--white)}
+.pkg-body{padding:1.4rem}
+.pkg-duration{font-size:0.68rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block}
+.pkg-body h4{font-family:var(--ff-display);font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:0.8rem;line-height:1.3}
+.pkg-includes{display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1rem}
+.pkg-inc{font-size:0.68rem;color:var(--text-muted);background:rgba(232,234,240,0.06);padding:0.2rem 0.6rem;border-radius:2px}
+.pkg-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid rgba(200,151,42,0.1)}
+.pkg-from{font-size:0.68rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em}
+.pkg-price{font-family:var(--ff-display);font-size:1.3rem;font-weight:700;color:var(--gold)}
+.pkg-price span{font-size:0.7rem;font-family:var(--ff-body);font-weight:400;color:var(--text-muted)}
 
-    /* floating particle dots around globe */
-    .globe-particle {
-      position: absolute;
-      border-radius: 50%;
-      background: var(--gold);
-      pointer-events: none;
-      animation: orbit linear infinite;
-    }
-    @keyframes orbit {
-      from { transform: rotate(var(--start)) translateX(var(--radius)) scale(1); opacity: 0.7; }
-      50% { opacity: 1; transform: rotate(calc(var(--start) + 180deg)) translateX(var(--radius)) scale(1.3); }
-      to { transform: rotate(calc(var(--start) + 360deg)) translateX(var(--radius)) scale(1); opacity: 0.7; }
-    }
+/* ── WHY US ── */
+.why{background:var(--navy);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.why-features{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+.why-feat{padding:1.5rem;border:1px solid rgba(200,151,42,0.1);background:rgba(200,151,42,0.03);transition:border-color 0.3s}
+.why-feat:hover{border-color:rgba(200,151,42,0.28)}
+.feat-icon{font-size:1.4rem;margin-bottom:0.8rem;display:block}
+.why-feat h4{font-size:0.9rem;font-weight:600;color:var(--white);margin-bottom:0.4rem}
+.why-feat p{font-size:0.8rem;color:var(--text-muted);line-height:1.65}
+.why-img-wrap{position:relative}
+.why-img-wrap img{width:100%;height:540px;object-fit:cover;display:block}
+.why-img-badge{position:absolute;bottom:2rem;left:-1.5rem;background:var(--gold);color:var(--navy);padding:1.3rem 1.6rem;text-align:center}
+.why-img-badge .big{font-family:var(--ff-display);font-size:2.2rem;font-weight:700;display:block;line-height:1}
+.why-img-badge .small{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-top:0.2rem;display:block}
 
-    .dest-strip {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      display: flex;
-      background: rgba(10,22,40,0.75);
-      backdrop-filter: blur(12px);
-      border-top: 0.5px solid rgba(212,168,83,0.15);
-      z-index: 10;
-    }
-    .strip-item {
-      flex: 1;
-      padding: 14px 22px;
-      border-right: 0.5px solid rgba(212,168,83,0.1);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-      transition: background 0.2s;
-      text-decoration: none;
-      color: inherit;
-    }
-    .strip-item:last-child { border-right: none; }
-    .strip-item:hover { background: rgba(212,168,83,0.07); }
-    .strip-icon { font-size: 18px; }
-    .strip-name { font-size: 13px; font-weight: 500; color: var(--cream); }
-    .strip-info { font-size: 11px; color: var(--cream-dim); }
+/* ── TESTIMONIALS ── */
+.testimonials{background:var(--navy-2);text-align:center}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.test-card{background:var(--navy-3);border:1px solid rgba(200,151,42,0.1);padding:2rem;text-align:left;transition:border-color 0.3s}
+.test-card:hover{border-color:rgba(200,151,42,0.25)}
+.test-stars{color:var(--gold);font-size:0.85rem;letter-spacing:0.05em;margin-bottom:1rem}
+.test-quote{font-family:var(--ff-display);font-style:italic;font-size:0.98rem;color:var(--text);line-height:1.7;margin-bottom:1.5rem}
+.test-author{display:flex;align-items:center;gap:0.8rem}
+.test-avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(200,151,42,0.3)}
+.test-name{font-size:0.85rem;font-weight:600;color:var(--white)}
+.test-meta{font-size:0.72rem;color:var(--text-muted)}
 
-    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--gold-dim); border: 0.5px solid var(--gold-dim); border-radius: 12px; overflow: hidden; }
-    .feature-box { background: var(--navy-mid); padding: 36px 32px; transition: background 0.2s; }
-    .feature-box:hover { background: #112236; }
-    .feat-icon { font-size: 28px; margin-bottom: 16px; }
-    .feat-title { font-family: var(--font-serif); font-size: 20px; margin-bottom: 10px; color: var(--cream); }
-    .feat-desc { font-size: 13px; color: var(--cream-dim); line-height: 1.7; }
+/* ── BLOG ── */
+.blog{background:var(--navy)}
+.blog-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem}
+.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.blog-card{background:var(--navy-3);border:1px solid rgba(200,151,42,0.1);overflow:hidden;text-decoration:none;color:inherit;transition:border-color 0.3s,transform 0.3s;display:block}
+.blog-card:hover{border-color:rgba(200,151,42,0.35);transform:translateY(-3px)}
+.blog-img{height:200px;overflow:hidden}
+.blog-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.blog-card:hover .blog-img img{transform:scale(1.05)}
+.blog-body{padding:1.5rem}
+.blog-date{font-size:0.68rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block}
+.blog-body h4{font-family:var(--ff-display);font-size:1.05rem;font-weight:700;color:var(--white);line-height:1.35;margin-bottom:0.6rem}
+.blog-body p{font-size:0.82rem;color:var(--text-muted);line-height:1.65}
+.read-more{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:1rem;border-bottom:1px solid rgba(200,151,42,0.35);padding-bottom:2px}
 
-    .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .test-card { background: var(--navy-mid); border: 0.5px solid var(--gold-dim); border-radius: 12px; padding: 28px; }
-    .test-stars { color: var(--gold); font-size: 13px; margin-bottom: 14px; }
-    .test-text { font-size: 14px; color: var(--cream-dim); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
-    .test-author { font-size: 13px; font-weight: 500; color: var(--cream); }
-    .test-loc { font-size: 11px; color: var(--gold); letter-spacing: 1px; }
+/* ── CTA ── */
+.cta{position:relative;padding:8rem 3rem;text-align:center;overflow:hidden}
+.cta-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1800&q=80') center/cover no-repeat;filter:brightness(0.18)}
+.cta-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(14,124,139,0.2) 0%,transparent 70%)}
+.cta-content{position:relative}
+.cta h2{font-family:var(--ff-display);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--white);margin-bottom:1rem;line-height:1.15}
+.cta h2 em{font-style:italic;color:var(--gold)}
+.cta p{color:rgba(232,234,240,0.6);font-size:0.98rem;margin-bottom:2.5rem;font-weight:300}
 
-    .cta-banner { background: linear-gradient(135deg, #0d2040, #152a50); border-top: 0.5px solid var(--gold-dim); border-bottom: 0.5px solid var(--gold-dim); padding: 70px 60px; text-align: center; }
-    .cta-banner h2 { font-family: var(--font-serif); font-size: 40px; margin-bottom: 14px; }
-    .cta-banner p { color: var(--cream-dim); margin-bottom: 32px; }
-    .cta-btns { display: flex; gap: 14px; justify-content: center; }
-  </style>
+/* ── TICKER ── */
+.ticker{background:var(--gold);overflow:hidden;padding:0.65rem 0}
+.ticker-track{display:flex;gap:3rem;animation:ticker 28s linear infinite;white-space:nowrap;width:max-content}
+.ticker-item{font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy)}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── FOOTER ── */
+footer{background:var(--navy-2);border-top:1px solid rgba(200,151,42,0.12);padding:4rem 3rem 2rem}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(200,151,42,0.08);margin-bottom:2rem}
+.footer-logo{font-family:var(--ff-display);font-size:1.6rem;font-weight:900;color:var(--white);text-decoration:none}
+.footer-logo span{color:var(--gold)}
+.footer-brand p{font-size:0.82rem;color:var(--text-muted);margin-top:0.8rem;line-height:1.7;max-width:260px}
+.footer-col h5{font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:0.55rem}
+.footer-col ul a{font-size:0.82rem;color:var(--text-muted);text-decoration:none;transition:color 0.2s}
+.footer-col ul a:hover{color:var(--text)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;color:var(--text-dim)}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){.hero-right{width:50%;right:-40px}.dest-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.dest-card:first-child{grid-row:auto;grid-column:span 2;height:300px}.pkg-grid{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr;gap:3rem}.why-img-badge{left:0}}
+@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{display:none}section{padding:4rem 1.5rem}.hero{flex-direction:column;padding:6rem 1.5rem 3rem;text-align:center}.hero-left{max-width:100%;padding-top:0}.hero-right{position:relative;width:100%;right:0;top:0;transform:none;max-width:360px;margin:2rem auto 0}.hero-btns{justify-content:center}.hero-stats{justify-content:center}.dest-grid{grid-template-columns:1fr;height:auto}.dest-card:first-child{grid-column:auto;height:260px}.dest-bar-inner{flex-direction:column}.dest-item{border-right:none;border-bottom:1px solid rgba(200,151,42,0.1)}.pkg-grid{grid-template-columns:1fr}.test-grid{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr}.footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}.why-features{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WK5Z2WMC"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<canvas id="stars"></canvas>
-<div class="page-content">
 
-  <nav>
-    <a href="index.html" class="logo">ZENTR<span>EVO</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="destinations.html">Destinations</a></li>
-      <li><a href="packages.html">Packages</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="contact.html" class="nav-btn">Book Now</a>
-  </nav>
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">ZENTR<span>EVO</span></a>
+  <ul class="nav-links">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#destinations">Destinations</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#packages" class="nav-book">Book Now</a>
+</nav>
 
-  <!-- HERO with GLOBE -->
-  <section class="home-hero">
-    <div class="hero-left">
-      <div class="hero-tag"><span class="tag-dot"></span> World Class Travel</div>
-      <h1 class="hero-h1">Explore the World<br>with <em>Zentrevo</em></h1>
-      <p class="hero-sub">Discover hidden destinations, curated journeys, and unforgettable experiences crafted just for you.</p>
-      <div class="hero-btns">
-        <a href="destinations.html" class="btn-primary">Explore Destinations</a>
-        <a href="blog.html" class="btn-ghost">Read Blog →</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <canvas id="stars-canvas" class="stars"></canvas>
+  <div class="hero-left">
+    <div class="hero-badge">World Class Travel</div>
+    <h1>Explore the World<br>with <em>Zentrevo</em></h1>
+    <p>Discover hidden destinations, curated journeys, and unforgettable experiences crafted just for you.</p>
+    <div class="hero-btns">
+      <a href="#destinations" class="btn-gold">Explore Destinations</a>
+      <a href="blog.html" class="btn-outline">Read Blog →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">120+</span>
+        <span class="stat-label">Destinations</span>
       </div>
-      <div class="hero-metrics">
-        <div><div class="met-num">120+</div><div class="met-lbl">Destinations</div></div>
-        <div><div class="met-num">50K+</div><div class="met-lbl">Travelers</div></div>
-        <div><div class="met-num">4.9★</div><div class="met-lbl">Rating</div></div>
+      <div class="stat">
+        <span class="stat-num">50K+</span>
+        <span class="stat-label">Travelers</span>
       </div>
-    </div>
-
-    <div class="globe-wrap" id="globeWrap">
-      <div class="glow-ring ring1"></div>
-      <div class="glow-ring ring2"></div>
-      <div class="glow-ring ring3"></div>
-      <canvas id="globeCanvas"></canvas>
-    </div>
-
-    <div class="dest-strip">
-      <a href="destinations.html" class="strip-item">
-        <span class="strip-icon">🏝</span>
-        <div><div class="strip-name">Bali, Indonesia</div><div class="strip-info">Beach & Culture · ₹45,000</div></div>
-      </a>
-      <a href="destinations.html" class="strip-item">
-        <span class="strip-icon">🏔</span>
-        <div><div class="strip-name">Swiss Alps</div><div class="strip-info">Adventure · ₹1,20,000</div></div>
-      </a>
-      <a href="destinations.html" class="strip-item">
-        <span class="strip-icon">🕌</span>
-        <div><div class="strip-name">Dubai, UAE</div><div class="strip-info">Luxury · ₹65,000</div></div>
-      </a>
-      <a href="destinations.html" class="strip-item">
-        <span class="strip-icon">🗼</span>
-        <div><div class="strip-name">Paris, France</div><div class="strip-info">Romance · ₹95,000</div></div>
-      </a>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section class="section">
-    <div style="text-align:center;margin-bottom:48px;">
-      <div class="section-tag fade-in">Why Zentrevo</div>
-      <div class="section-title fade-in">Travel, Reimagined</div>
-    </div>
-    <div class="features-grid">
-      <div class="feature-box fade-in"><div class="feat-icon">🧭</div><div class="feat-title">Expert Curation</div><div class="feat-desc">Every itinerary is handcrafted by travel experts who've lived the journey — not just mapped it.</div></div>
-      <div class="feature-box fade-in"><div class="feat-icon">🔒</div><div class="feat-title">Safe & Secure</div><div class="feat-desc">Your safety is our priority. 24/7 support, fully insured, and trusted partners worldwide.</div></div>
-      <div class="feature-box fade-in"><div class="feat-icon">💎</div><div class="feat-title">Luxury for Less</div><div class="feat-desc">Premium experiences at honest prices. No hidden charges, no surprises — just pure travel joy.</div></div>
-      <div class="feature-box fade-in"><div class="feat-icon">🌿</div><div class="feat-title">Sustainable Travel</div><div class="feat-desc">We partner with eco-conscious operators to ensure your journey leaves a positive footprint.</div></div>
-      <div class="feature-box fade-in"><div class="feat-icon">✈️</div><div class="feat-title">Seamless Booking</div><div class="feat-desc">Flights, hotels, transfers — all in one place. Book in minutes, travel with peace of mind.</div></div>
-      <div class="feature-box fade-in"><div class="feat-icon">🎒</div><div class="feat-title">Custom Packages</div><div class="feat-desc">Solo, couple, family, or group — we tailor every trip to match your dream perfectly.</div></div>
-    </div>
-  </section>
-
-  <!-- FEATURED DESTINATIONS -->
-  <section class="section section-alt">
-    <div class="section-tag fade-in">Top Picks</div>
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px;">
-      <div class="section-title fade-in" style="margin-bottom:0;">Featured Destinations</div>
-      <a href="destinations.html" class="btn-ghost fade-in">View All →</a>
-    </div>
-    <div class="grid-3">
-      <div class="card fade-in">
-        <div class="card-img-placeholder">🏝</div>
-        <div class="card-body">
-          <div class="card-tag">Beach &amp; Culture</div>
-          <div class="card-title">Bali, Indonesia</div>
-          <div class="card-desc">Rice terraces, ancient temples, and azure waters — Bali is where magic lives.</div>
-          <div class="card-price">From ₹45,000 <span style="font-size:11px;color:rgba(240,236,227,0.4);">/ person</span></div>
-        </div>
+      <div class="stat">
+        <span class="stat-num">4.9★</span>
+        <span class="stat-label">Rating</span>
       </div>
-      <div class="card fade-in">
-        <div class="card-img-placeholder">🏔</div>
-        <div class="card-body">
-          <div class="card-tag">Adventure</div>
-          <div class="card-title">Swiss Alps, Switzerland</div>
-          <div class="card-desc">Snow-capped peaks, crystal lakes, and alpine villages that feel like a painting.</div>
-          <div class="card-price">From ₹1,20,000 <span style="font-size:11px;color:rgba(240,236,227,0.4);">/ person</span></div>
-        </div>
-      </div>
-      <div class="card fade-in">
-        <div class="card-img-placeholder">🕌</div>
-        <div class="card-body">
-          <div class="card-tag">Luxury</div>
-          <div class="card-title">Dubai, UAE</div>
-          <div class="card-desc">Where the future meets tradition — sky-high towers, desert safaris, gold souks.</div>
-          <div class="card-price">From ₹65,000 <span style="font-size:11px;color:rgba(240,236,227,0.4);">/ person</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section">
-    <div style="text-align:center;margin-bottom:48px;">
-      <div class="section-tag fade-in">Real Travelers</div>
-      <div class="section-title fade-in">What They Say</div>
-    </div>
-    <div class="test-grid">
-      <div class="test-card fade-in"><div class="test-stars">★★★★★</div><div class="test-text">"Zentrevo made our honeymoon in Bali absolutely perfect. Every detail was taken care of — we just showed up and enjoyed!"</div><div class="test-author">Priya &amp; Rohan Sharma</div><div class="test-loc">Mumbai, India</div></div>
-      <div class="test-card fade-in"><div class="test-stars">★★★★★</div><div class="test-text">"The Swiss Alps package was a dream. The accommodations were outstanding and the guides were incredibly knowledgeable."</div><div class="test-author">Ankit Mehta</div><div class="test-loc">Delhi, India</div></div>
-      <div class="test-card fade-in"><div class="test-stars">★★★★★</div><div class="test-text">"I've traveled with many agencies but Zentrevo is a class apart. Dubai felt magical with their curated itinerary."</div><div class="test-author">Sunita Agarwal</div><div class="test-loc">Jaipur, India</div></div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <div class="cta-banner">
-    <div class="section-tag" style="justify-content:center;display:flex;">Start Your Journey</div>
-    <h2 class="section-title" style="margin-bottom:14px;">Your Dream Trip Awaits</h2>
-    <p>Talk to our travel experts today. No commitment, just inspiration.</p>
-    <div class="cta-btns">
-      <a href="contact.html" class="btn-primary">Plan My Trip</a>
-      <a href="packages.html" class="btn-ghost">View Packages</a>
     </div>
   </div>
+  <div class="hero-right">
+    <div class="globe-wrap">
+      <canvas id="globe"></canvas>
+    </div>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">ZENTR<span>EVO</span></div>
-        <div class="footer-desc">We craft extraordinary travel experiences for curious souls who believe the world is meant to be explored — one unforgettable journey at a time.</div>
-        <div style="display:flex;gap:12px;margin-top:4px;">
-          <span style="font-size:18px;cursor:pointer;">📘</span>
-          <span style="font-size:18px;cursor:pointer;">📸</span>
-          <span style="font-size:18px;cursor:pointer;">🐦</span>
-          <span style="font-size:18px;cursor:pointer;">▶️</span>
+<!-- DESTINATIONS BAR -->
+<div class="dest-bar">
+  <div class="dest-bar-inner">
+    <a href="#destinations" class="dest-item">
+      <img class="dest-icon" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=80&q=80" alt="Bali">
+      <div><span class="dest-name">Bali, Indonesia</span><span class="dest-type">Beach & Culture</span></div>
+      <span class="dest-price">$540</span>
+    </a>
+    <a href="#destinations" class="dest-item">
+      <img class="dest-icon" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=80&q=80" alt="Swiss Alps">
+      <div><span class="dest-name">Swiss Alps</span><span class="dest-type">Adventure</span></div>
+      <span class="dest-price">$1,440</span>
+    </a>
+    <a href="#destinations" class="dest-item">
+      <img class="dest-icon" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=80&q=80" alt="Dubai">
+      <div><span class="dest-name">Dubai, UAE</span><span class="dest-type">Luxury</span></div>
+      <span class="dest-price">$780</span>
+    </a>
+    <a href="#destinations" class="dest-item">
+      <img class="dest-icon" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=80&q=80" alt="Paris">
+      <div><span class="dest-name">Paris, France</span><span class="dest-type">Romance</span></div>
+      <span class="dest-price">$1,140</span>
+    </a>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">✈ Custom Tours</span>
+    <span class="ticker-item">🌍 120+ Destinations</span>
+    <span class="ticker-item">🏝 Luxury & Budget</span>
+    <span class="ticker-item">🧳 Visa Assistance</span>
+    <span class="ticker-item">🏨 Hotel Bookings</span>
+    <span class="ticker-item">🚗 Transfers & Rentals</span>
+    <span class="ticker-item">⭐ 4.9 Rated Agency</span>
+    <span class="ticker-item">✈ Custom Tours</span>
+    <span class="ticker-item">🌍 120+ Destinations</span>
+    <span class="ticker-item">🏝 Luxury & Budget</span>
+    <span class="ticker-item">🧳 Visa Assistance</span>
+    <span class="ticker-item">🏨 Hotel Bookings</span>
+    <span class="ticker-item">🚗 Transfers & Rentals</span>
+    <span class="ticker-item">⭐ 4.9 Rated Agency</span>
+  </div>
+</div>
+
+<!-- DESTINATIONS -->
+<section id="destinations" class="destinations">
+  <div class="dest-header">
+    <div>
+      <div class="sec-tag">Top Destinations</div>
+      <h2 class="sec-title">Where Will You Go <em>Next?</em></h2>
+    </div>
+    <a href="#packages" class="btn-outline">View All →</a>
+  </div>
+  <div class="dest-grid">
+    <a href="#packages" class="dest-card reveal">
+      <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900&q=80" alt="Bali">
+      <div class="dest-card-overlay"></div>
+      <div class="dest-card-body">
+        <span class="dest-country">Indonesia</span>
+        <h3>Bali</h3>
+        <p>Temples, terraces & turquoise shores</p>
+      </div>
+      <span class="dest-badge">From $540</span>
+    </a>
+    <a href="#packages" class="dest-card reveal reveal-delay-1">
+      <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=700&q=80" alt="Switzerland">
+      <div class="dest-card-overlay"></div>
+      <div class="dest-card-body">
+        <span class="dest-country">Switzerland</span>
+        <h3>Swiss Alps</h3>
+        <p>Alpine peaks & glacier lakes</p>
+      </div>
+      <span class="dest-badge">From $1,440</span>
+    </a>
+    <a href="#packages" class="dest-card reveal reveal-delay-2">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=700&q=80" alt="Paris">
+      <div class="dest-card-overlay"></div>
+      <div class="dest-card-body">
+        <span class="dest-country">France</span>
+        <h3>Paris</h3>
+        <p>Romance, art & the Eiffel's glow</p>
+      </div>
+      <span class="dest-badge">From $1,140</span>
+    </a>
+    <a href="#packages" class="dest-card reveal reveal-delay-1">
+      <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700&q=80" alt="Maldives">
+      <div class="dest-card-overlay"></div>
+      <div class="dest-card-body">
+        <span class="dest-country">Maldives</span>
+        <h3>Overwater Bliss</h3>
+        <p>Crystal lagoons & coral reefs</p>
+      </div>
+      <span class="dest-badge">From $2,400</span>
+    </a>
+    <a href="#packages" class="dest-card reveal reveal-delay-2">
+      <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80" alt="Japan">
+      <div class="dest-card-overlay"></div>
+      <div class="dest-card-body">
+        <span class="dest-country">Japan</span>
+        <h3>Tokyo & Kyoto</h3>
+        <p>Cherry blossoms & ancient shrines</p>
+      </div>
+      <span class="dest-badge">From $1,200</span>
+    </a>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages" class="packages">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:0">
+    <div>
+      <div class="sec-tag">Travel Packages</div>
+      <h2 class="sec-title">Handcrafted Journeys for <em>Every Style</em></h2>
+    </div>
+    <a href="#packages" class="btn-outline">All Packages →</a>
+  </div>
+  <div class="pkg-grid">
+    <div class="pkg-card reveal">
+      <div class="pkg-img">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=700&q=80" alt="Dubai Luxury">
+        <span class="pkg-tag luxury">Luxury</span>
+      </div>
+      <div class="pkg-body">
+        <span class="pkg-duration">5 Days / 4 Nights</span>
+        <h4>Dubai Luxury Escape</h4>
+        <div class="pkg-includes">
+          <span class="pkg-inc">✈ Flights</span>
+          <span class="pkg-inc">🏨 5★ Hotel</span>
+          <span class="pkg-inc">🚗 Transfers</span>
+        </div>
+        <div class="pkg-footer">
+          <div><div class="pkg-from">From</div><div class="pkg-price">$1,200 <span>/ person</span></div></div>
+          <a href="#" class="btn-gold" style="padding:0.5rem 1.2rem;font-size:0.75rem">Book</a>
         </div>
       </div>
-      <div>
-        <div class="footer-heading">Explore</div>
-        <ul class="footer-links">
-          <li><a href="destinations.html">All Destinations</a></li>
-          <li><a href="packages.html">Tour Packages</a></li>
-          <li><a href="blog.html">Travel Blog</a></li>
-          <li><a href="about.html">About Us</a></li>
-        </ul>
+    </div>
+    <div class="pkg-card reveal reveal-delay-1">
+      <div class="pkg-img">
+        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700&q=80" alt="Maldives">
+        <span class="pkg-tag romance">Romance</span>
       </div>
-      <div>
-        <div class="footer-heading">Support</div>
-        <ul class="footer-links">
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-heading">Contact</div>
-        <ul class="footer-links">
-          <li><a href="mailto:hello@zentrevo.com">hello@zentrevo.com</a></li>
-          <li><a href="tel:+911234567890">+91 12345 67890</a></li>
-          <li><a href="#">New Delhi, India</a></li>
-        </ul>
+      <div class="pkg-body">
+        <span class="pkg-duration">7 Days / 6 Nights</span>
+        <h4>Maldives Overwater Honeymoon</h4>
+        <div class="pkg-includes">
+          <span class="pkg-inc">✈ Flights</span>
+          <span class="pkg-inc">🏝 Overwater Villa</span>
+          <span class="pkg-inc">🍽 Meals</span>
+        </div>
+        <div class="pkg-footer">
+          <div><div class="pkg-from">From</div><div class="pkg-price">$2,400 <span>/ person</span></div></div>
+          <a href="#" class="btn-gold" style="padding:0.5rem 1.2rem;font-size:0.75rem">Book</a>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2025 Zentrevo. All rights reserved.</span>
-      <span>Made with ❤ for travelers</span>
+    <div class="pkg-card reveal reveal-delay-2">
+      <div class="pkg-img">
+        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=700&q=80" alt="Morocco">
+        <span class="pkg-tag adventure">Adventure</span>
+      </div>
+      <div class="pkg-body">
+        <span class="pkg-duration">8 Days / 7 Nights</span>
+        <h4>Morocco Desert Journey</h4>
+        <div class="pkg-includes">
+          <span class="pkg-inc">🏕 Desert Camp</span>
+          <span class="pkg-inc">🐪 Camel Ride</span>
+          <span class="pkg-inc">🧭 Guide</span>
+        </div>
+        <div class="pkg-footer">
+          <div><div class="pkg-from">From</div><div class="pkg-price">$1,600 <span>/ person</span></div></div>
+          <a href="#" class="btn-gold" style="padding:0.5rem 1.2rem;font-size:0.75rem">Book</a>
+        </div>
+      </div>
     </div>
-  </footer>
+    <div class="pkg-card reveal">
+      <div class="pkg-img">
+        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80" alt="Japan">
+        <span class="pkg-tag culture">Culture</span>
+      </div>
+      <div class="pkg-body">
+        <span class="pkg-duration">7 Days / 6 Nights</span>
+        <h4>Japan Spring Highlights</h4>
+        <div class="pkg-includes">
+          <span class="pkg-inc">🚄 Rail Pass</span>
+          <span class="pkg-inc">🏨 Ryokan</span>
+          <span class="pkg-inc">🍣 Food Tour</span>
+        </div>
+        <div class="pkg-footer">
+          <div><div class="pkg-from">From</div><div class="pkg-price">$1,200 <span>/ person</span></div></div>
+          <a href="#" class="btn-gold" style="padding:0.5rem 1.2rem;font-size:0.75rem">Book</a>
+        </div>
+      </div>
+    </div>
+    <div class="pkg-card reveal reveal-delay-1">
+      <div class="pkg-img">
+        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=700&q=80" alt="Italy">
+        <span class="pkg-tag romance">Romance</span>
+      </div>
+      <div class="pkg-body">
+        <span class="pkg-duration">7 Days / 6 Nights</span>
+        <h4>Italy Classic Discovery</h4>
+        <div class="pkg-includes">
+          <span class="pkg-inc">✈ Flights</span>
+          <span class="pkg-inc">🍕 Food Tours</span>
+          <span class="pkg-inc">🏛 Museums</span>
+        </div>
+        <div class="pkg-footer">
+          <div><div class="pkg-from">From</div><div class="pkg-price">$1,400 <span>/ person</span></div></div>
+          <a href="#" class="btn-gold" style="padding:0.5rem 1.2rem;font-size:0.75rem">Book</a>
+        </div>
+      </div>
+    </div>
+    <div class="pkg-card reveal reveal-delay-2">
+      <div class="pkg-img">
+        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700&q=80" alt="Africa Safari">
+        <span class="pkg-tag adventure">Adventure</span>
+      </div>
+      <div class="pkg-body">
+        <span class="pkg-duration">8 Days / 7 Nights</span>
+        <h4>Africa Safari Experience</h4>
+        <div class="pkg-includes">
+          <span class="pkg-inc">🦁 Game Drives</span>
+          <span class="pkg-inc">⛺ Safari Lodge</span>
+          <span class="pkg-inc">🌅 Sundowners</span>
+        </div>
+        <div class="pkg-footer">
+          <div><div class="pkg-from">From</div><div class="pkg-price">$2,200 <span>/ person</span></div></div>
+          <a href="#" class="btn-gold" style="padding:0.5rem 1.2rem;font-size:0.75rem">Book</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-</div>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
-<script src="script.js"></script>
+<!-- WHY US -->
+<section id="about" class="why">
+  <div>
+    <div class="sec-tag">Why Choose Us</div>
+    <h2 class="sec-title">Travel with Confidence,<br><em>Return with Stories</em></h2>
+    <p class="sec-sub">We are passionate travel experts creating unforgettable journeys beyond sightseeing. Every itinerary combines comfort, discovery, and meaningful experiences.</p>
+    <div class="why-features">
+      <div class="why-feat reveal">
+        <span class="feat-icon">🌿</span>
+        <h4>Authentic Experiences</h4>
+        <p>Trips tailored to your personality, interests and budget.</p>
+      </div>
+      <div class="why-feat reveal reveal-delay-1">
+        <span class="feat-icon">🍜</span>
+        <h4>Culinary Adventures</h4>
+        <p>Savor local cuisines with guided food tours worldwide.</p>
+      </div>
+      <div class="why-feat reveal reveal-delay-2">
+        <span class="feat-icon">🤝</span>
+        <h4>Trusted Partners</h4>
+        <p>Handpicked hotels, guides, and vetted local experiences.</p>
+      </div>
+      <div class="why-feat reveal reveal-delay-3">
+        <span class="feat-icon">🛡</span>
+        <h4>24/7 Support</h4>
+        <p>Our team is with you every step of your journey.</p>
+      </div>
+    </div>
+  </div>
+  <div class="why-img-wrap reveal">
+    <img src="https://images.unsplash.com/photo-1682687981674-0509eb5efca5?w=900&q=80" alt="Travel experience">
+    <div class="why-img-badge">
+      <span class="big">10+</span>
+      <span class="small">Years of Excellence</span>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="sec-tag" style="justify-content:center">Testimonials</div>
+  <h2 class="sec-title" style="margin-bottom:0.5rem">Words From Our <em>Happy Travellers</em></h2>
+  <div class="test-grid">
+    <div class="test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">"Zentrevo completely transformed how I see travel. Every detail was perfectly planned — I came back a different person."</p>
+      <div class="test-author">
+        <img class="test-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" alt="Emily">
+        <div><div class="test-name">Emily Carter</div><div class="test-meta">Solo Traveler • Japan Tour</div></div>
+      </div>
+    </div>
+    <div class="test-card reveal reveal-delay-1">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">"The Morocco trip was absolutely magical. Our guide knew every hidden gem — we felt like locals, not tourists."</p>
+      <div class="test-author">
+        <img class="test-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" alt="James">
+        <div><div class="test-name">James Thornton</div><div class="test-meta">Couple Travel • Morocco</div></div>
+      </div>
+    </div>
+    <div class="test-card reveal reveal-delay-2">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">"From visa to hotel to sightseeing — Zentrevo handled everything flawlessly. Will absolutely book again!"</p>
+      <div class="test-author">
+        <img class="test-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80" alt="Priya">
+        <div><div class="test-name">Priya Sharma</div><div class="test-meta">Family Travel • Switzerland</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog">
+  <div class="blog-header">
+    <div>
+      <div class="sec-tag">Blog</div>
+      <h2 class="sec-title">Stories, Tips & <em>Inspiration</em></h2>
+    </div>
+    <a href="blog.html" class="btn-outline">View All →</a>
+  </div>
+  <div class="blog-grid">
+    <a href="blog-island-life.html" class="blog-card reveal">
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Island"></div>
+      <div class="blog-body">
+        <span class="blog-date">25 Feb 2026</span>
+        <h4>Discovering Island Life Beyond Luxury</h4>
+        <p>What happens when you trade five-star resorts for barefoot villages and sunsets nobody photographs?</p>
+        <span class="read-more">Read More →</span>
+      </div>
+    </a>
+    <a href="blog-europe-routes.html" class="blog-card reveal reveal-delay-1">
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80" alt="Europe"></div>
+      <div class="blog-body">
+        <span class="blog-date">10 Mar 2026</span>
+        <h4>Experiencing Europe Beyond Tourist Routes</h4>
+        <p>The real Europe — the one that still belongs to its people — is hiding just one street off the main road.</p>
+        <span class="read-more">Read More →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="cta-bg"></div>
+  <div class="cta-overlay"></div>
+  <div class="cta-content">
+    <div class="sec-tag" style="justify-content:center">Start Your Journey</div>
+    <h2>Turn Your Travel Dreams<br>Into <em>Reality</em></h2>
+    <p>From the first idea to the final detail, we design journeys you'll remember forever.</p>
+    <a href="#packages" class="btn-gold" style="font-size:0.9rem;padding:1rem 2.8rem">Book a Trip Today</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="footer-logo">ZENTR<span>EVO</span></a>
+      <p>We create meaningful travel experiences that go beyond sightseeing — journeys crafted around you, your pace, and your story.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="blog-island-life.html">Island Life</a></li>
+        <li><a href="blog-europe-routes.html">Europe Guide</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="#">hello@zentrevo.com</a></li>
+        <li><a href="#">+1 (800) 123-4567</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter / X</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Zentrevo. All rights reserved.</span>
+    <span>Crafted with care for curious travellers worldwide.</span>
+  </div>
+</footer>
+
 <script>
-// ── Enhanced auto-moving globe ──
-(function waitThree() {
-  if (typeof THREE === 'undefined') { setTimeout(waitThree, 50); return; }
-
-  const canvas = document.getElementById('globeCanvas');
-  const wrap   = document.getElementById('globeWrap');
-  const W = wrap.clientWidth, H = wrap.clientHeight;
-
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.setSize(W, H);
-
-  const scene  = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(42, W / H, 0.1, 1000);
-  camera.position.z = 2.7;
-
-  // Lights
-  scene.add(new THREE.AmbientLight(0xffffff, 0.12));
-  const sun = new THREE.DirectionalLight(0xd4a853, 1.2);
-  sun.position.set(-3, 2, 4); scene.add(sun);
-  const rim = new THREE.DirectionalLight(0x3a6bb5, 0.5);
-  rim.position.set(3, -1, -3); scene.add(rim);
-  const fill = new THREE.DirectionalLight(0xd4a853, 0.15);
-  fill.position.set(0, -3, 2); scene.add(fill);
-
-  // Globe mesh
-  const globe = new THREE.Mesh(
-    new THREE.SphereGeometry(1, 72, 72),
-    new THREE.MeshPhongMaterial({ color: 0x0d2244, emissive: 0x091525, emissiveIntensity: 0.4, shininess: 40, specular: 0x1e4a8a })
-  );
-  scene.add(globe);
-
-  // Grid lines
-  const lm = new THREE.LineBasicMaterial({ color: 0xd4a853, opacity: 0.15, transparent: true });
-  for (let lat = -80; lat <= 80; lat += 20) {
-    const pts = [];
-    for (let lon = 0; lon <= 360; lon += 2) {
-      const phi = (90-lat)*Math.PI/180, th = lon*Math.PI/180;
-      pts.push(new THREE.Vector3(1.001*Math.sin(phi)*Math.cos(th), 1.001*Math.cos(phi), 1.001*Math.sin(phi)*Math.sin(th)));
-    }
-    scene.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), lm));
-  }
-  for (let lon = 0; lon < 360; lon += 20) {
-    const pts = [];
-    for (let lat = -90; lat <= 90; lat += 2) {
-      const phi = (90-lat)*Math.PI/180, th = lon*Math.PI/180;
-      pts.push(new THREE.Vector3(1.001*Math.sin(phi)*Math.cos(th), 1.001*Math.cos(phi), 1.001*Math.sin(phi)*Math.sin(th)));
-    }
-    scene.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), lm));
-  }
-
-  // Atmosphere
-  scene.add(new THREE.Mesh(new THREE.SphereGeometry(1.08,32,32), new THREE.MeshPhongMaterial({color:0x1a4080,transparent:true,opacity:0.13,side:THREE.BackSide})));
-  scene.add(new THREE.Mesh(new THREE.SphereGeometry(1.16,32,32), new THREE.MeshPhongMaterial({color:0x0a2040,transparent:true,opacity:0.06,side:THREE.BackSide})));
-
-  // Destination markers
-  const dests = [
-    {lat:51.5,lon:-0.1},{lat:48.8,lon:2.3},{lat:25.2,lon:55.3},
-    {lat:-8.4,lon:115.2},{lat:46.8,lon:8.2},{lat:35.7,lon:139.7},
-    {lat:40.7,lon:-74},{lat:-33.9,lon:151.2},{lat:28.6,lon:77.2},
-    {lat:-22.9,lon:-43.2},{lat:59.9,lon:30.3},{lat:1.3,lon:103.8},
-    {lat:19.1,lon:72.9},{lat:-4.0,lon:39.7},{lat:13.7,lon:100.5}
-  ];
-  const dotGeo  = new THREE.SphereGeometry(0.02, 8, 8);
-  const glowGeo = new THREE.SphereGeometry(0.038, 8, 8);
-  const dots = [];
-  dests.forEach(d => {
-    const phi = (90-d.lat)*Math.PI/180, th = d.lon*Math.PI/180;
-    const x=Math.sin(phi)*Math.cos(th), y=Math.cos(phi), z=Math.sin(phi)*Math.sin(th);
-    const dot  = new THREE.Mesh(dotGeo,  new THREE.MeshBasicMaterial({color:0xd4a853}));
-    const glow = new THREE.Mesh(glowGeo, new THREE.MeshBasicMaterial({color:0xd4a853,transparent:true,opacity:0.28}));
-    dot.position.set(x,y,z); glow.position.set(x,y,z);
-    scene.add(dot); scene.add(glow);
-    dots.push({dot, glow});
-  });
-
-  // Arc helper
-  function addArc(la1,lo1,la2,lo2,col,h=0.2){
-    const pts=[];
-    for(let t=0;t<=1;t+=0.018){
-      const la=la1+(la2-la1)*t, lo=lo1+(lo2-lo1)*t;
-      const phi=(90-la)*Math.PI/180, th=lo*Math.PI/180;
-      const r=1+h*Math.sin(Math.PI*t);
-      pts.push(new THREE.Vector3(r*Math.sin(phi)*Math.cos(th),r*Math.cos(phi),r*Math.sin(phi)*Math.sin(th)));
-    }
-    scene.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),
-      new THREE.LineBasicMaterial({color:col||0xd4a853,opacity:0.5,transparent:true})));
-  }
-  addArc(51.5,-0.1, 25.2,55.3, 0xd4a853);
-  addArc(25.2,55.3, -8.4,115.2, 0xd4a853);
-  addArc(40.7,-74,  51.5,-0.1, 0x5599dd);
-  addArc(28.6,77.2, -8.4,115.2, 0xd4a853);
-  addArc(48.8,2.3,  35.7,139.7, 0x5599dd);
-  addArc(19.1,72.9, -8.4,115.2, 0xd4a853);
-  addArc(-33.9,151.2, 1.3,103.8, 0x5599dd);
-
-  // ── SMOOTH AUTO MOVEMENT (figure-8 / lemniscate path) ──
-  let t = 0;
-  let isDragging = false, px = 0, py = 0;
-  let manualX = 0, manualY = 0, velX = 0, velY = 0;
-
-  canvas.addEventListener('mousedown', e => { isDragging=true; px=e.clientX; py=e.clientY; velX=velY=0; });
-  window.addEventListener('mouseup',   () => { isDragging=false; });
-  window.addEventListener('mousemove', e => {
-    if (!isDragging) return;
-    velX = (e.clientX-px)*0.005; velY = (e.clientY-py)*0.005;
-    manualY += velX; manualX += velY;
-    px=e.clientX; py=e.clientY;
-  });
-
-  // Touch support
-  canvas.addEventListener('touchstart', e=>{isDragging=true;px=e.touches[0].clientX;py=e.touches[0].clientY;},{passive:true});
-  canvas.addEventListener('touchend',   ()=>{isDragging=false;});
-  canvas.addEventListener('touchmove',  e=>{
-    const dx=e.touches[0].clientX-px, dy=e.touches[0].clientY-py;
-    manualY+=dx*0.005; manualX+=dy*0.005;
-    px=e.touches[0].clientX; py=e.touches[0].clientY;
-    e.preventDefault();
-  },{passive:false});
-
-  function animate() {
-    requestAnimationFrame(animate);
-    t += 0.004;
-
-    if (isDragging) {
-      velX *= 0.92; velY *= 0.92;
-    } else {
-      // Smooth deceleration from manual drag
-      velX *= 0.96; velY *= 0.96;
-      manualX += velY;
-      manualY += velX;
-      // Auto figure-8 movement
-      manualY += 0.003;
-      manualX = Math.sin(t * 0.4) * 0.25; // gentle tilt oscillation
-    }
-
-    // Clamp vertical tilt
-    manualX = Math.max(-0.55, Math.min(0.55, manualX));
-
-    scene.children.forEach(c => {
-      c.rotation.y = manualY;
-      c.rotation.x = manualX;
+/* ── STARS BACKGROUND ── */
+(function(){
+  const c = document.getElementById('stars-canvas');
+  const hero = document.querySelector('.hero');
+  function resize(){c.width=hero.offsetWidth;c.height=hero.offsetHeight}
+  resize();
+  window.addEventListener('resize',resize);
+  const ctx = c.getContext('2d');
+  const stars = Array.from({length:180},()=>({
+    x:Math.random()*c.width, y:Math.random()*c.height,
+    r:Math.random()*1.2+0.2, o:Math.random()*0.6+0.2,
+    s:Math.random()*0.003+0.001
+  }));
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    stars.forEach(s=>{
+      s.o+=s.s; if(s.o>0.8||s.o<0.1)s.s=-s.s;
+      ctx.beginPath();
+      ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(200,151,42,${s.o})`;
+      ctx.fill();
     });
-
-    // Pulsing dot glow
-    dots.forEach(({glow}, i) => {
-      glow.material.opacity = 0.18 + 0.15 * Math.sin(t * 2 + i * 0.7);
-    });
-
-    renderer.render(scene, camera);
+    requestAnimationFrame(draw);
   }
-  animate();
+  draw();
 })();
+
+/* ── GLOBE ── */
+(function(){
+  const canvas = document.getElementById('globe');
+  const wrap = canvas.parentElement;
+  function resize(){
+    const w = wrap.offsetWidth;
+    canvas.width = w; canvas.height = w;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+  const ctx = canvas.getContext('2d');
+  let rot = 0;
+
+  const dots = [];
+  for(let i=0;i<200;i++){
+    const lat=(Math.random()-0.5)*Math.PI;
+    const lng=Math.random()*Math.PI*2;
+    dots.push({lat,lng});
+  }
+
+  const lines = [
+    {lat1:0.6,lng1:0,lat2:-0.3,lng2:1.2},
+    {lat1:0.8,lng1:2,lat2:0.1,lng2:3.5},
+    {lat1:-0.4,lng1:1,lat2:0.5,lng2:2.8},
+    {lat1:0.2,lng1:0.5,lat2:-0.6,lng2:2.2},
+  ];
+
+  const hotspots = [
+    {lat:0.6,lng:0.3,label:'Tokyo'},
+    {lat:0.8,lng:2.1,label:'Paris'},
+    {lat:-0.3,lng:1.2,label:'Dubai'},
+    {lat:0.1,lng:2.9,label:'NYC'},
+    {lat:-0.5,lng:2.0,label:'Bali'},
+  ];
+
+  function project(lat,lng,R,cx,cy){
+    const x3 = R*Math.cos(lat)*Math.sin(lng+rot);
+    const y3 = R*Math.sin(lat);
+    const z3 = R*Math.cos(lat)*Math.cos(lng+rot);
+    return {x:cx+x3, y:cy-y3, visible:z3>0};
+  }
+
+  function draw(){
+    const w = canvas.width, h = canvas.height;
+    const cx=w/2, cy=h/2, R=w*0.44;
+    ctx.clearRect(0,0,w,h);
+
+    // Glow bg
+    const grd = ctx.createRadialGradient(cx,cy,R*0.1,cx,cy,R);
+    grd.addColorStop(0,'rgba(14,124,139,0.18)');
+    grd.addColorStop(0.5,'rgba(14,124,139,0.06)');
+    grd.addColorStop(1,'rgba(14,124,139,0)');
+    ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);
+    ctx.fillStyle=grd;ctx.fill();
+
+    // Globe circle
+    ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);
+    ctx.strokeStyle='rgba(200,151,42,0.15)';ctx.lineWidth=1;ctx.stroke();
+
+    // Grid lines
+    ctx.lineWidth=0.4;
+    for(let lat=-75;lat<=75;lat+=15){
+      const la=lat*Math.PI/180;
+      ctx.beginPath();
+      let first=true;
+      for(let lng=0;lng<=360;lng+=3){
+        const p=project(la,lng*Math.PI/180,R,cx,cy);
+        if(p.visible){first?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y);first=false;}
+        else first=true;
+      }
+      ctx.strokeStyle='rgba(200,151,42,0.12)';ctx.stroke();
+    }
+    for(let lng=0;lng<360;lng+=20){
+      const ln=lng*Math.PI/180;
+      ctx.beginPath();
+      let first=true;
+      for(let lat=-90;lat<=90;lat+=3){
+        const p=project(lat*Math.PI/180,ln,R,cx,cy);
+        if(p.visible){first?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y);first=false;}
+        else first=true;
+      }
+      ctx.strokeStyle='rgba(200,151,42,0.12)';ctx.stroke();
+    }
+
+    // Flight lines
+    lines.forEach(l=>{
+      const p1=project(l.lat1,l.lng1,R,cx,cy);
+      const p2=project(l.lat2,l.lng2,R,cx,cy);
+      if(p1.visible&&p2.visible){
+        const mx=(p1.x+p2.x)/2, my=(p1.y+p2.y)/2 - R*0.18;
+        ctx.beginPath();ctx.moveTo(p1.x,p1.y);ctx.quadraticCurveTo(mx,my,p2.x,p2.y);
+        ctx.strokeStyle='rgba(200,151,42,0.35)';ctx.lineWidth=0.8;ctx.stroke();
+      }
+    });
+
+    // Dots
+    dots.forEach(d=>{
+      const p=project(d.lat,d.lng,R,cx,cy);
+      if(p.visible){
+        ctx.beginPath();ctx.arc(p.x,p.y,0.8,0,Math.PI*2);
+        ctx.fillStyle='rgba(200,151,42,0.4)';ctx.fill();
+      }
+    });
+
+    // Hotspots
+    hotspots.forEach(h=>{
+      const p=project(h.lat,h.lng,R,cx,cy);
+      if(p.visible){
+        ctx.beginPath();ctx.arc(p.x,p.y,4,0,Math.PI*2);
+        ctx.fillStyle='rgba(200,151,42,0.9)';ctx.fill();
+        ctx.beginPath();ctx.arc(p.x,p.y,7,0,Math.PI*2);
+        ctx.strokeStyle='rgba(200,151,42,0.35)';ctx.lineWidth=1;ctx.stroke();
+      }
+    });
+
+    rot += 0.003;
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── NAV SCROLL ── */
+window.addEventListener('scroll',()=>{
+  document.querySelector('nav').style.background=
+    window.scrollY>50?'rgba(10,15,30,0.98)':'rgba(10,15,30,0.92)';
+});
+
+/* ── SCROLL REVEAL ── */
+const reveals=document.querySelectorAll('.reveal');
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
+},{threshold:0.12});
+reveals.forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
