@@ -101,8 +101,6 @@ section{padding:6rem 3rem}
 .dest-card-body p{font-size:0.78rem;color:rgba(232,234,240,0.6);margin-top:0.2rem}
 .dest-badge{position:absolute;top:1rem;right:1rem;background:var(--gold);color:var(--navy);padding:0.3rem 0.8rem;font-size:0.7rem;font-weight:700;letter-spacing:0.08em}
 
-/* ── PACKAGES ── */
-.packages{background:var(--navy-2)}
 .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
 .pkg-card{background:var(--navy-3);border:1px solid rgba(200,151,42,0.1);overflow:hidden;transition:border-color 0.3s,transform 0.3s;cursor:pointer}
 .pkg-card:hover{border-color:rgba(200,151,42,0.4);transform:translateY(-4px)}
@@ -217,12 +215,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <ul class="nav-links">
     <li><a href="#" class="active">Home</a></li>
     <li><a href="#destinations">Destinations</a></li>
-    <li><a href="#packages">Packages</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#packages" class="nav-book">Book Now</a>
+  <a href="#contact" class="nav-book">Book Now</a>
 </nav>
 
 <!-- HERO -->
@@ -312,10 +309,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="sec-tag">Top Destinations</div>
       <h2 class="sec-title">Where Will You Go <em>Next?</em></h2>
     </div>
-    <a href="#packages" class="btn-outline">View All →</a>
+    <a href="#contact" class="btn-outline">View All →</a>
   </div>
   <div class="dest-grid">
-    <a href="#packages" class="dest-card reveal">
+    <a href="#contact" class="dest-card reveal">
       <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900&q=80" alt="Bali">
       <div class="dest-card-overlay"></div>
       <div class="dest-card-body">
@@ -325,7 +322,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <span class="dest-badge">From $540</span>
     </a>
-    <a href="#packages" class="dest-card reveal reveal-delay-1">
+    <a href="#contact" class="dest-card reveal reveal-delay-1">
       <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=700&q=80" alt="Switzerland">
       <div class="dest-card-overlay"></div>
       <div class="dest-card-body">
@@ -335,7 +332,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <span class="dest-badge">From $1,440</span>
     </a>
-    <a href="#packages" class="dest-card reveal reveal-delay-2">
+    <a href="#contact" class="dest-card reveal reveal-delay-2">
       <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=700&q=80" alt="Paris">
       <div class="dest-card-overlay"></div>
       <div class="dest-card-body">
@@ -345,7 +342,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <span class="dest-badge">From $1,140</span>
     </a>
-    <a href="#packages" class="dest-card reveal reveal-delay-1">
+    <a href="#contact" class="dest-card reveal reveal-delay-1">
       <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700&q=80" alt="Maldives">
       <div class="dest-card-overlay"></div>
       <div class="dest-card-body">
@@ -355,7 +352,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <span class="dest-badge">From $2,400</span>
     </a>
-    <a href="#packages" class="dest-card reveal reveal-delay-2">
+    <a href="#contact" class="dest-card reveal reveal-delay-2">
       <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80" alt="Japan">
       <div class="dest-card-overlay"></div>
       <div class="dest-card-body">
@@ -365,133 +362,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <span class="dest-badge">From $1,200</span>
     </a>
-  </div>
-</section>
-
-<!-- PACKAGES -->
-<section id="packages" class="packages">
-  <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:0">
-    <div>
-      <div class="sec-tag">Travel Packages</div>
-      <h2 class="sec-title">Handcrafted Journeys for <em>Every Style</em></h2>
-    </div>
-    <a href="#packages" class="btn-outline">All Packages →</a>
-  </div>
-  <div class="pkg-grid">
-    <div class="pkg-card reveal">
-      <div class="pkg-img">
-        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=700&q=80" alt="Dubai Luxury">
-        <span class="pkg-tag luxury">Luxury</span>
-      </div>
-      <div class="pkg-body">
-        <span class="pkg-duration">5 Days / 4 Nights</span>
-        <h4>Dubai Luxury Escape</h4>
-        <div class="pkg-includes">
-          <span class="pkg-inc">✈ Flights</span>
-          <span class="pkg-inc">🏨 5★ Hotel</span>
-          <span class="pkg-inc">🚗 Transfers</span>
-        </div>
-        <div class="pkg-footer">
-          <div><div class="pkg-from">From</div><div class="pkg-price">$1,200 <span>/ person</span></div></div>
-          <a href="#" class="btn-gold" style="padding:0.5rem 1.2rem;font-size:0.75rem">Book</a>
-        </div>
-      </div>
-    </div>
-    <div class="pkg-card reveal reveal-delay-1">
-      <div class="pkg-img">
-        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700&q=80" alt="Maldives">
-        <span class="pkg-tag romance">Romance</span>
-      </div>
-      <div class="pkg-body">
-        <span class="pkg-duration">7 Days / 6 Nights</span>
-        <h4>Maldives Overwater Honeymoon</h4>
-        <div class="pkg-includes">
-          <span class="pkg-inc">✈ Flights</span>
-          <span class="pkg-inc">🏝 Overwater Villa</span>
-          <span class="pkg-inc">🍽 Meals</span>
-        </div>
-        <div class="pkg-footer">
-          <div><div class="pkg-from">From</div><div class="pkg-price">$2,400 <span>/ person</span></div></div>
-          <a href="#" class="btn-gold" style="padding:0.5rem 1.2rem;font-size:0.75rem">Book</a>
-        </div>
-      </div>
-    </div>
-    <div class="pkg-card reveal reveal-delay-2">
-      <div class="pkg-img">
-        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=700&q=80" alt="Morocco">
-        <span class="pkg-tag adventure">Adventure</span>
-      </div>
-      <div class="pkg-body">
-        <span class="pkg-duration">8 Days / 7 Nights</span>
-        <h4>Morocco Desert Journey</h4>
-        <div class="pkg-includes">
-          <span class="pkg-inc">🏕 Desert Camp</span>
-          <span class="pkg-inc">🐪 Camel Ride</span>
-          <span class="pkg-inc">🧭 Guide</span>
-        </div>
-        <div class="pkg-footer">
-          <div><div class="pkg-from">From</div><div class="pkg-price">$1,600 <span>/ person</span></div></div>
-          <a href="#" class="btn-gold" style="padding:0.5rem 1.2rem;font-size:0.75rem">Book</a>
-        </div>
-      </div>
-    </div>
-    <div class="pkg-card reveal">
-      <div class="pkg-img">
-        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80" alt="Japan">
-        <span class="pkg-tag culture">Culture</span>
-      </div>
-      <div class="pkg-body">
-        <span class="pkg-duration">7 Days / 6 Nights</span>
-        <h4>Japan Spring Highlights</h4>
-        <div class="pkg-includes">
-          <span class="pkg-inc">🚄 Rail Pass</span>
-          <span class="pkg-inc">🏨 Ryokan</span>
-          <span class="pkg-inc">🍣 Food Tour</span>
-        </div>
-        <div class="pkg-footer">
-          <div><div class="pkg-from">From</div><div class="pkg-price">$1,200 <span>/ person</span></div></div>
-          <a href="#" class="btn-gold" style="padding:0.5rem 1.2rem;font-size:0.75rem">Book</a>
-        </div>
-      </div>
-    </div>
-    <div class="pkg-card reveal reveal-delay-1">
-      <div class="pkg-img">
-        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=700&q=80" alt="Italy">
-        <span class="pkg-tag romance">Romance</span>
-      </div>
-      <div class="pkg-body">
-        <span class="pkg-duration">7 Days / 6 Nights</span>
-        <h4>Italy Classic Discovery</h4>
-        <div class="pkg-includes">
-          <span class="pkg-inc">✈ Flights</span>
-          <span class="pkg-inc">🍕 Food Tours</span>
-          <span class="pkg-inc">🏛 Museums</span>
-        </div>
-        <div class="pkg-footer">
-          <div><div class="pkg-from">From</div><div class="pkg-price">$1,400 <span>/ person</span></div></div>
-          <a href="#" class="btn-gold" style="padding:0.5rem 1.2rem;font-size:0.75rem">Book</a>
-        </div>
-      </div>
-    </div>
-    <div class="pkg-card reveal reveal-delay-2">
-      <div class="pkg-img">
-        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700&q=80" alt="Africa Safari">
-        <span class="pkg-tag adventure">Adventure</span>
-      </div>
-      <div class="pkg-body">
-        <span class="pkg-duration">8 Days / 7 Nights</span>
-        <h4>Africa Safari Experience</h4>
-        <div class="pkg-includes">
-          <span class="pkg-inc">🦁 Game Drives</span>
-          <span class="pkg-inc">⛺ Safari Lodge</span>
-          <span class="pkg-inc">🌅 Sundowners</span>
-        </div>
-        <div class="pkg-footer">
-          <div><div class="pkg-from">From</div><div class="pkg-price">$2,200 <span>/ person</span></div></div>
-          <a href="#" class="btn-gold" style="padding:0.5rem 1.2rem;font-size:0.75rem">Book</a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -604,7 +474,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="sec-tag" style="justify-content:center">Start Your Journey</div>
     <h2>Turn Your Travel Dreams<br>Into <em>Reality</em></h2>
     <p>From the first idea to the final detail, we design journeys you'll remember forever.</p>
-    <a href="#packages" class="btn-gold" style="font-size:0.9rem;padding:1rem 2.8rem">Book a Trip Today</a>
+    <a href="#contact" class="btn-gold" style="font-size:0.9rem;padding:1rem 2.8rem">Book a Trip Today</a>
   </div>
 </section>
 
@@ -620,7 +490,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#destinations">Destinations</a></li>
-        <li><a href="#packages">Packages</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
