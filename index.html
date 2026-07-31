@@ -68,15 +68,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 canvas#globe{position:absolute;inset:0;width:100%!important;height:100%!important}
 
 /* ── DESTINATIONS BAR ── */
-.dest-bar{background:var(--navy-2);border-top:1px solid rgba(200,151,42,0.12);border-bottom:1px solid rgba(200,151,42,0.12);padding:0;overflow:hidden}
-.dest-bar-inner{display:flex}
-.dest-item{flex:1;display:flex;align-items:center;gap:1rem;padding:1.2rem 1.8rem;border-right:1px solid rgba(200,151,42,0.1);cursor:pointer;transition:background 0.25s;text-decoration:none;color:inherit}
-.dest-item:last-child{border-right:none}
-.dest-item:hover{background:rgba(200,151,42,0.06)}
-.dest-icon{width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1px solid rgba(200,151,42,0.25)}
-.dest-name{font-size:0.88rem;font-weight:600;color:var(--white);display:block}
-.dest-type{font-size:0.72rem;color:var(--text-muted)}
-.dest-price{font-size:0.82rem;font-weight:600;color:var(--gold);margin-left:auto;white-space:nowrap}
 
 /* ── SECTION COMMONS ── */
 section{padding:6rem 3rem}
@@ -87,19 +78,6 @@ section{padding:6rem 3rem}
 .sec-sub{color:var(--text-muted);font-size:0.95rem;max-width:520px;line-height:1.75;font-weight:300}
 
 /* ── DESTINATIONS ── */
-.destinations{background:var(--navy)}
-.dest-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem}
-.dest-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;grid-template-rows:260px 260px;gap:1.2rem}
-.dest-card{position:relative;overflow:hidden;cursor:pointer;text-decoration:none;display:block}
-.dest-card:first-child{grid-row:span 2}
-.dest-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;display:block}
-.dest-card:hover img{transform:scale(1.07)}
-.dest-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,15,30,0.88) 0%,rgba(10,15,30,0.1) 60%,transparent 100%)}
-.dest-card-body{position:absolute;bottom:0;left:0;right:0;padding:1.4rem}
-.dest-country{font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.3rem}
-.dest-card-body h3{font-family:var(--ff-display);font-size:1.25rem;font-weight:700;color:var(--white)}
-.dest-card-body p{font-size:0.78rem;color:rgba(232,234,240,0.6);margin-top:0.2rem}
-.dest-badge{position:absolute;top:1rem;right:1rem;background:var(--gold);color:var(--navy);padding:0.3rem 0.8rem;font-size:0.7rem;font-weight:700;letter-spacing:0.08em}
 
 .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
 .pkg-card{background:var(--navy-3);border:1px solid rgba(200,151,42,0.1);overflow:hidden;transition:border-color 0.3s,transform 0.3s;cursor:pointer}
@@ -199,8 +177,8 @@ footer{background:var(--navy-2);border-top:1px solid rgba(200,151,42,0.12);paddi
 .reveal-delay-3{transition-delay:0.3s}
 
 /* ── RESPONSIVE ── */
-@media(max-width:1024px){.hero-right{width:50%;right:-40px}.dest-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.dest-card:first-child{grid-row:auto;grid-column:span 2;height:300px}.pkg-grid{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr;gap:3rem}.why-img-badge{left:0}}
-@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{display:none}section{padding:4rem 1.5rem}.hero{flex-direction:column;padding:6rem 1.5rem 3rem;text-align:center}.hero-left{max-width:100%;padding-top:0}.hero-right{position:relative;width:100%;right:0;top:0;transform:none;max-width:360px;margin:2rem auto 0}.hero-btns{justify-content:center}.hero-stats{justify-content:center}.dest-grid{grid-template-columns:1fr;height:auto}.dest-card:first-child{grid-column:auto;height:260px}.dest-bar-inner{flex-direction:column}.dest-item{border-right:none;border-bottom:1px solid rgba(200,151,42,0.1)}.pkg-grid{grid-template-columns:1fr}.test-grid{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr}.footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}.why-features{grid-template-columns:1fr}}
+@media(max-width:1024px){.hero-right{width:50%;right:-40px}.pkg-grid{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr;gap:3rem}.why-img-badge{left:0}}
+@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{display:none}section{padding:4rem 1.5rem}.hero{flex-direction:column;padding:6rem 1.5rem 3rem;text-align:center}.hero-left{max-width:100%;padding-top:0}.hero-right{position:relative;width:100%;right:0;top:0;transform:none;max-width:360px;margin:2rem auto 0}.hero-btns{justify-content:center}.hero-stats{justify-content:center}.pkg-grid{grid-template-columns:1fr}.test-grid{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr}.footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}.why-features{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -214,7 +192,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#" class="nav-logo">ZENTR<span>EVO</span></a>
   <ul class="nav-links">
     <li><a href="#" class="active">Home</a></li>
-    <li><a href="#destinations">Destinations</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -231,7 +208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1>Explore the World<br>with <em>Zentrevo</em></h1>
     <p>Discover hidden destinations, curated journeys, and unforgettable experiences crafted just for you.</p>
     <div class="hero-btns">
-      <a href="#destinations" class="btn-gold">Explore Destinations</a>
+      <a href="#contact" class="btn-gold">Plan Your Trip</a>
       <a href="blog.html" class="btn-outline">Read Blog →</a>
     </div>
     <div class="hero-stats">
@@ -256,31 +233,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- DESTINATIONS BAR -->
-<div class="dest-bar">
-  <div class="dest-bar-inner">
-    <a href="#destinations" class="dest-item">
-      <img class="dest-icon" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=80&q=80" alt="Bali">
-      <div><span class="dest-name">Bali, Indonesia</span><span class="dest-type">Beach & Culture</span></div>
-      <span class="dest-price">$540</span>
-    </a>
-    <a href="#destinations" class="dest-item">
-      <img class="dest-icon" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=80&q=80" alt="Swiss Alps">
-      <div><span class="dest-name">Swiss Alps</span><span class="dest-type">Adventure</span></div>
-      <span class="dest-price">$1,440</span>
-    </a>
-    <a href="#destinations" class="dest-item">
-      <img class="dest-icon" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=80&q=80" alt="Dubai">
-      <div><span class="dest-name">Dubai, UAE</span><span class="dest-type">Luxury</span></div>
-      <span class="dest-price">$780</span>
-    </a>
-    <a href="#destinations" class="dest-item">
-      <img class="dest-icon" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=80&q=80" alt="Paris">
-      <div><span class="dest-name">Paris, France</span><span class="dest-type">Romance</span></div>
-      <span class="dest-price">$1,140</span>
-    </a>
-  </div>
-</div>
 
 <!-- TICKER -->
 <div class="ticker">
@@ -302,68 +254,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<!-- DESTINATIONS -->
-<section id="destinations" class="destinations">
-  <div class="dest-header">
-    <div>
-      <div class="sec-tag">Top Destinations</div>
-      <h2 class="sec-title">Where Will You Go <em>Next?</em></h2>
-    </div>
-    <a href="#contact" class="btn-outline">View All →</a>
-  </div>
-  <div class="dest-grid">
-    <a href="#contact" class="dest-card reveal">
-      <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900&q=80" alt="Bali">
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-body">
-        <span class="dest-country">Indonesia</span>
-        <h3>Bali</h3>
-        <p>Temples, terraces & turquoise shores</p>
-      </div>
-      <span class="dest-badge">From $540</span>
-    </a>
-    <a href="#contact" class="dest-card reveal reveal-delay-1">
-      <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=700&q=80" alt="Switzerland">
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-body">
-        <span class="dest-country">Switzerland</span>
-        <h3>Swiss Alps</h3>
-        <p>Alpine peaks & glacier lakes</p>
-      </div>
-      <span class="dest-badge">From $1,440</span>
-    </a>
-    <a href="#contact" class="dest-card reveal reveal-delay-2">
-      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=700&q=80" alt="Paris">
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-body">
-        <span class="dest-country">France</span>
-        <h3>Paris</h3>
-        <p>Romance, art & the Eiffel's glow</p>
-      </div>
-      <span class="dest-badge">From $1,140</span>
-    </a>
-    <a href="#contact" class="dest-card reveal reveal-delay-1">
-      <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700&q=80" alt="Maldives">
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-body">
-        <span class="dest-country">Maldives</span>
-        <h3>Overwater Bliss</h3>
-        <p>Crystal lagoons & coral reefs</p>
-      </div>
-      <span class="dest-badge">From $2,400</span>
-    </a>
-    <a href="#contact" class="dest-card reveal reveal-delay-2">
-      <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80" alt="Japan">
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-body">
-        <span class="dest-country">Japan</span>
-        <h3>Tokyo & Kyoto</h3>
-        <p>Cherry blossoms & ancient shrines</p>
-      </div>
-      <span class="dest-badge">From $1,200</span>
-    </a>
-  </div>
-</section>
 
 <!-- WHY US -->
 <section id="about" class="why">
@@ -489,7 +379,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h5>Pages</h5>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#destinations">Destinations</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
