@@ -125,4 +125,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/best-road-trip-routes-2026.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/best-food-travel-destinations-2026.html</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/best-national-parks-to-visit-2026.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/best-photography-travel-destinations-2026.html</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/best-honeymoon-alternatives-2026.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
