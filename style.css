@@ -46,7 +46,11 @@ nav {
   color: var(--gold);
   letter-spacing: 3px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+.logo img { height: 30px; width: 30px; }
 .logo span { color: var(--cream); }
 
 .nav-links {

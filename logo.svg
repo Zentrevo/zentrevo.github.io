@@ -1,0 +1,26 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8c96a"/>
+      <stop offset="100%" stop-color="#c8972a"/>
+    </linearGradient>
+  </defs>
+  <!-- Navy background circle -->
+  <circle cx="256" cy="256" r="256" fill="#0a0f1e"/>
+  <circle cx="256" cy="256" r="246" fill="none" stroke="#c8972a" stroke-width="1.5" opacity="0.35"/>
+
+  <!-- Compass rose mark: four-point star representing wayfinding/exploration -->
+  <g transform="translate(256,256)">
+    <!-- Long vertical/horizontal points -->
+    <path d="M0,-158 L28,-28 L0,0 L-28,-28 Z" fill="url(#goldGrad)"/>
+    <path d="M0,158 L28,28 L0,0 L-28,28 Z" fill="#e8eaf0" opacity="0.9"/>
+    <path d="M158,0 L28,28 L0,0 L28,-28 Z" fill="#e8eaf0" opacity="0.55"/>
+    <path d="M-158,0 L-28,28 L0,0 L-28,-28 Z" fill="#e8eaf0" opacity="0.55"/>
+
+    <!-- Diagonal shorter points -->
+    <path d="M96,-96 L18,-18 L0,0 L-18,-18 Z" fill="#c8972a" opacity="0.75" transform="rotate(45)"/>
+
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="14" fill="#0a0f1e" stroke="url(#goldGrad)" stroke-width="4"/>
+  </g>
+</svg>
