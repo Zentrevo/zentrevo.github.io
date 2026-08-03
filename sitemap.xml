@@ -155,4 +155,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/how-many-days-do-you-need-in-japan.html</loc>
+    <lastmod>2026-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/is-travel-insurance-worth-it-short-trips.html</loc>
+    <lastmod>2026-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
