@@ -167,4 +167,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/what-to-pack-for-a-two-week-europe-trip.html</loc>
+    <lastmod>2027-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/best-time-to-book-flights-for-cheapest-prices.html</loc>
+    <lastmod>2027-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
