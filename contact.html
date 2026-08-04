@@ -10,7 +10,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
   <meta charset="UTF-8">
-  <meta name="description" content="Get in touch with Zentrevo travel experts to plan your perfect holiday. Call, WhatsApp, or fill our enquiry form. We respond within 24 hours.">
+  <meta name="description" content="Get in touch with Zentrevo travel experts to plan your perfect holiday. Email us or fill out our enquiry form — we respond within 24 hours.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ═══ SEO META TAGS ═══ -->
@@ -30,10 +30,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <title>Contact Us — Zentrevo | Plan Your Dream Trip</title>
 
   <meta property="og:title" content="Contact Us — Zentrevo | Plan Your Dream Trip">
-  <meta property="og:description" content="Get in touch with Zentrevo travel experts to plan your perfect holiday. Call, WhatsApp, or fill our enquiry form. We respond within 24 hours.">
+  <meta property="og:description" content="Get in touch with Zentrevo travel experts to plan your perfect holiday. Email us or fill out our enquiry form — we respond within 24 hours.">
   <meta property="og:image" content="https://zentrevo.github.io/og-image.jpg">
   <meta name="twitter:title" content="Contact Us — Zentrevo | Plan Your Dream Trip">
-  <meta name="twitter:description" content="Get in touch with Zentrevo travel experts to plan your perfect holiday. Call, WhatsApp, or fill our enquiry form. We respond within 24 hours.">
+  <meta name="twitter:description" content="Get in touch with Zentrevo travel experts to plan your perfect holiday. Email us or fill out our enquiry form — we respond within 24 hours.">
   <meta name="twitter:image" content="https://zentrevo.github.io/og-image.jpg">
 
   <link rel="stylesheet" href="style.css">
@@ -176,20 +176,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">📞</div>
-            <div>
-              <div class="contact-label">Phone</div>
-              <div class="contact-value"><a href="tel:+911234567890">+91 12345 67890</a></div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">💬</div>
-            <div>
-              <div class="contact-label">WhatsApp</div>
-              <div class="contact-value"><a href="https://wa.me/919876543210">+91 98765 43210</a></div>
-            </div>
-          </div>
-          <div class="contact-item">
             <div class="contact-icon">🕐</div>
             <div>
               <div class="contact-label">Working Hours</div>
@@ -211,30 +197,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="section-tag" style="margin-bottom:6px;">Send a Message</div>
         <h2 style="font-family:var(--font-serif);font-size:24px;margin-bottom:28px;color:var(--cream);">Tell Us About Your Dream Trip</h2>
 
-        <div id="contactForm">
+        <form id="contactForm" onsubmit="return submitForm(event)">
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">First Name</label>
-              <input class="form-input" type="text" placeholder="Rahul">
+              <input class="form-input" type="text" name="first_name" placeholder="Rahul" required>
             </div>
             <div class="form-group">
               <label class="form-label">Last Name</label>
-              <input class="form-input" type="text" placeholder="Sharma">
+              <input class="form-input" type="text" name="last_name" placeholder="Sharma" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">Email</label>
-              <input class="form-input" type="email" placeholder="rahul@email.com">
+              <input class="form-input" type="email" name="email" placeholder="rahul@email.com" required>
             </div>
             <div class="form-group">
               <label class="form-label">Phone</label>
-              <input class="form-input" type="tel" placeholder="+91 98765 43210">
+              <input class="form-input" type="tel" name="phone" placeholder="Your phone number (optional)">
             </div>
           </div>
           <div class="form-group">
             <label class="form-label">Destination of Interest</label>
-            <select class="form-select">
+            <select class="form-select" name="destination">
               <option value="">Select a destination...</option>
               <option>Bali, Indonesia</option>
               <option>Swiss Alps, Switzerland</option>
@@ -249,11 +235,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">Travel Date</label>
-              <input class="form-input" type="month">
+              <input class="form-input" type="month" name="travel_date">
             </div>
             <div class="form-group">
               <label class="form-label">Number of Travelers</label>
-              <select class="form-select">
+              <select class="form-select" name="travelers">
                 <option>1 (Solo)</option>
                 <option>2 (Couple)</option>
                 <option>3–5 (Small Group)</option>
@@ -264,7 +250,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="form-group">
             <label class="form-label">Budget (per person)</label>
-            <select class="form-select">
+            <select class="form-select" name="budget">
               <option>₹30,000 – ₹60,000</option>
               <option>₹60,000 – ₹1,00,000</option>
               <option>₹1,00,000 – ₹2,00,000</option>
@@ -273,10 +259,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="form-group">
             <label class="form-label">Tell Us More</label>
-            <textarea class="form-textarea" placeholder="What kind of experience are you looking for? Any special occasions, preferences, or must-haves?"></textarea>
+            <textarea class="form-textarea" name="message" placeholder="What kind of experience are you looking for? Any special occasions, preferences, or must-haves?"></textarea>
           </div>
-          <button class="btn-primary" style="width:100%;font-size:14px;padding:15px;" onclick="submitForm()">Send My Enquiry ✈</button>
-        </div>
+          <div id="formError" style="display:none;color:#e07a7a;font-size:13px;margin-bottom:12px;">Something went wrong sending your message. Please try again or email us directly.</div>
+          <button class="btn-primary" type="submit" id="submitBtn" style="width:100%;font-size:14px;padding:15px;">Send My Enquiry ✈</button>
+        </form>
 
         <div class="form-success" id="formSuccess">
           <div class="success-icon">🎉</div>
@@ -299,9 +286,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="office-addr">Our fastest way to reach us for detailed enquiries.<br><a href="mailto:zentrevo.official@outlook.com" style="color:var(--gold)">zentrevo.official@outlook.com</a></div>
         </div>
         <div class="office-card fade-in">
-          <div class="office-icon">💬</div>
-          <div class="office-city">WhatsApp</div>
-          <div class="office-addr">Quick questions or last-minute planning help.<br><a href="https://wa.me/919876543210" style="color:var(--gold)">+91 98765 43210</a></div>
+          <div class="office-icon">🌐</div>
+          <div class="office-city">Social Media</div>
+          <div class="office-addr">Follow along and message us on Instagram, Pinterest, Tumblr, or Mastodon.</div>
         </div>
         <div class="office-card fade-in">
           <div class="office-icon">📝</div>
@@ -372,7 +359,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="footer-heading">Contact</div>
         <ul class="footer-links">
           <li><a href="mailto:zentrevo.official@outlook.com">zentrevo.official@outlook.com</a></li>
-          <li><a href="tel:+911234567890">+91 12345 67890</a></li>
         </ul>
       </div>
     </div>
@@ -384,9 +370,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <script src="script.js"></script>
 <script>
-  function submitForm() {
-    document.getElementById('contactForm').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
+  function submitForm(event) {
+    event.preventDefault();
+    const form = document.getElementById('contactForm');
+    const btn = document.getElementById('submitBtn');
+    const errorBox = document.getElementById('formError');
+    errorBox.style.display = 'none';
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    fetch('https://formspree.io/f/mjybbybr', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        throw new Error('Submission failed');
+      }
+    }).catch(() => {
+      errorBox.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Send My Enquiry ✈';
+    });
+    return false;
   }
   document.querySelectorAll('.faq-q').forEach(q => {
     q.addEventListener('click', () => {

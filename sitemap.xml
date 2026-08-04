@@ -179,4 +179,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/is-it-safe-to-travel-to-thailand-alone.html</loc>
+    <lastmod>2027-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/how-to-see-the-northern-lights-in-iceland.html</loc>
+    <lastmod>2027-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/do-you-need-a-visa-to-visit-vietnam.html</loc>
+    <lastmod>2027-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/best-way-to-get-from-cdg-to-paris-city-center.html</loc>
+    <lastmod>2027-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
