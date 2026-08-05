@@ -203,4 +203,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/how-to-spend-3-days-in-rome.html</loc>
+    <lastmod>2027-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/is-bali-safe-for-solo-female-travelers.html</loc>
+    <lastmod>2027-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/what-currency-to-use-in-switzerland.html</loc>
+    <lastmod>2027-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/how-to-avoid-jet-lag-on-long-flights.html</loc>
+    <lastmod>2027-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zentrevo.github.io/blog/best-neighborhoods-to-stay-in-new-york-city.html</loc>
+    <lastmod>2027-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
