@@ -31,6 +31,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {"@context":"https://schema.org","@type":"Article","headline":"Southeast Asia Island Hopping Guide 2026","description":"The ultimate Southeast Asia island hopping guide for 2026, covering the Philippines, Thailand, and Indonesia with routes, ferry tips, and costs.","author":{"@type":"Person","name":"Maya Santos"},"publisher":{"@type":"Organization","name":"Zentrevo","logo":{"@type":"ImageObject","url":"https://zentrevo.github.io/logo.svg"}},"datePublished":"2026-04-14","image":"https://images.unsplash.com/photo-1537956965359-7573183d1f57?w=1200&q=80"}
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 .nav-logo img{height:28px;width:28px;margin-right:8px;vertical-align:middle}
@@ -141,6 +143,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .faq-item{background:var(--navy-2);border:1px solid rgba(200,151,42,0.15);border-radius:10px;padding:1.3rem 1.6rem;margin-bottom:0.9rem}
 .faq-item h3{font-family:var(--ff-display);font-size:1.05rem;color:var(--gold-light);margin-bottom:0.5rem}
 .faq-item p{font-size:0.92rem;color:var(--text-muted);line-height:1.7}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.4rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:transform 0.25s,opacity 0.25s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){.blog-layout{grid-template-columns:1fr;padding:2.5rem 1.5rem}.related-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){
+nav{padding:1rem 1.5rem}
+.nav-toggle{display:block}
+.nav-links{display:none;position:fixed;top:60px;left:0;right:0;flex-direction:column;background:rgba(10,15,30,0.98);backdrop-filter:blur(20px);padding:1.5rem;gap:1.2rem;border-bottom:1px solid rgba(200,151,42,0.15);text-align:center;z-index:199}
+.nav-links.nav-open{display:flex}
+.nav-cta{padding:0.5rem 1rem;font-size:0.75rem}
+.blog-hero{height:auto;min-height:340px;padding:5.5rem 1.5rem 2.5rem}
+.blog-layout{grid-template-columns:1fr;padding:2.5rem 1.5rem}
+.related{padding:3rem 1.5rem}
+.related-grid{grid-template-columns:1fr}
+.author-box{flex-direction:column;text-align:center}
+.dest-item{grid-template-columns:60px 1fr}
+.site-footer{padding:3rem 1.5rem 1.5rem}
+.site-footer .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
+}
+@media(max-width:480px){.site-footer .footer-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -157,6 +181,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="../contact.html">Contact</a></li>
   </ul>
   <a href="../contact.html" class="nav-cta">Book Now</a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="blog-hero">
@@ -194,7 +221,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="dest-item">
-    <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=200&q=80" alt="Koh islands Thailand">
+    <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=200&q=80" alt="Koh islands Thailand" loading="lazy" decoding="async">
     <div class="dest-info">
       <div class="dest-num">02</div>
       <h4>Koh Phi Phi, Koh Lanta & Koh Lipe, Thailand</h4>
@@ -203,7 +230,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="dest-item">
-    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=200&q=80" alt="Gili islands Indonesia">
+    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=200&q=80" alt="Gili islands Indonesia" loading="lazy" decoding="async">
     <div class="dest-info">
       <div class="dest-num">03</div>
       <h4>Gili Islands, Indonesia</h4>
@@ -212,7 +239,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="dest-item">
-    <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=200&q=80" alt="Siargao Philippines">
+    <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=200&q=80" alt="Siargao Philippines" loading="lazy" decoding="async">
     <div class="dest-info">
       <div class="dest-num">04</div>
       <h4>Siargao, Philippines</h4>
@@ -222,7 +249,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<img class="blog-img-full" src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=1200&q=80" alt="Island hopping boat Southeast Asia">
+<img class="blog-img-full" src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=1200&q=80" alt="Island hopping boat Southeast Asia" loading="lazy" decoding="async">
 
 <h2>Ferry <em>Logistics</em> Nobody Explains Well</h2>
 
@@ -253,7 +280,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="author-box">
-  <img class="author-avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&q=80" alt="Maya Santos">
+  <img class="author-avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&q=80" alt="Maya Santos" loading="lazy" decoding="async">
   <div>
     <div class="author-name">Maya Santos</div>
     <div class="author-role">Southeast Asia Correspondent, Zentrevo</div>
@@ -267,15 +294,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="sidebar-card">
     <h4>Related Articles</h4>
     <a href="best-digital-nomad-destinations-2026.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Best Digital Nomad Destinations 2026">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Best Digital Nomad Destinations 2026" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">Best Digital Nomad Destinations 2026</div><span class="sidebar-post-date">26 Feb 2026</span></div>
     </a>
     <a href="best-budget-travel-destinations-2026.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=80" alt="Best Budget Travel Destinations 2026">
+      <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=80" alt="Best Budget Travel Destinations 2026" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">Best Budget Travel Destinations 2026</div><span class="sidebar-post-date">5 Mar 2026</span></div>
     </a>
     <a href="best-honeymoon-destinations-2026.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&q=80" alt="Best Honeymoon Destinations 2026">
+      <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&q=80" alt="Best Honeymoon Destinations 2026" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">Best Honeymoon Destinations 2026</div><span class="sidebar-post-date">21 Jan 2026</span></div>
     </a>
   </div>
@@ -298,15 +325,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>More Travel Inspiration</h2>
   <div class="related-grid">
     <a href="best-digital-nomad-destinations-2026.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Best Digital Nomad Destinations 2026"></div>
+      <div class="related-img"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Best Digital Nomad Destinations 2026" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">26 Feb 2026</span><h4>Best Digital Nomad Destinations 2026</h4></div>
     </a>
     <a href="best-budget-travel-destinations-2026.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=80" alt="Best Budget Travel Destinations 2026"></div>
+      <div class="related-img"><img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=80" alt="Best Budget Travel Destinations 2026" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">5 Mar 2026</span><h4>Best Budget Travel Destinations 2026</h4></div>
     </a>
     <a href="best-honeymoon-destinations-2026.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&q=80" alt="Best Honeymoon Destinations 2026"></div>
+      <div class="related-img"><img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&q=80" alt="Best Honeymoon Destinations 2026" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">21 Jan 2026</span><h4>Best Honeymoon Destinations 2026</h4></div>
     </a>
   </div>
@@ -353,5 +380,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span>Made with ❤ for travelers</span>
   </div>
 </footer>
+<script>
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    document.querySelector('.nav-links').classList.remove('nav-open');
+    document.querySelector('.nav-toggle').classList.remove('open');
+  });
+});
+</script>
 </body>
 </html>

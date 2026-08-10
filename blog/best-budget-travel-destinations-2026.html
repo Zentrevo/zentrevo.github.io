@@ -101,6 +101,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: white !important;
         }
         
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.4rem;
+        }
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: white;
+            margin: 5px 0;
+            transition: transform 0.25s, opacity 0.25s;
+        }
+        .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-toggle.open span:nth-child(2) { opacity: 0; }
+        .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        
         /* Blog Header */
         .blog-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -528,8 +547,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 font-size: 2rem;
             }
             
+            .nav-toggle {
+                display: block;
+            }
+            
             .nav-links {
                 display: none;
+                position: fixed;
+                top: 64px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: rgba(20,20,35,0.98);
+                backdrop-filter: blur(20px);
+                padding: 1.5rem;
+                gap: 1.2rem;
+                text-align: center;
+                z-index: 199;
+                list-style: none;
+            }
+            
+            .nav-links.nav-open {
+                display: flex;
             }
             
             .featured-image {
@@ -562,6 +601,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="../contact.html">Contact</a></li>
                 <li><a href="../contact.html" class="book-now">Book Now</a></li>
             </ul>
+            <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('nav-open')">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
@@ -597,7 +639,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="highlights">
                 <strong>Highlights:</strong> Ha Long Bay cruises, Hoi An lantern nights, street food tours in Hanoi
             </div>
-            <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=800" alt="Vietnam Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;">
+            <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=800" alt="Vietnam Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;" loading="lazy" decoding="async">
             <div class="pro-tip">
                 <strong>💡 Pro Tip:</strong> Travel by overnight train to save on accommodation + see the countryside!
             </div>
@@ -611,7 +653,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="highlights">
                 <strong>Highlights:</strong> Tbilisi old town, Kazbegi hiking, authentic khachapuri under $2
             </div>
-            <img src="https://images.unsplash.com/photo-1565017990969-30e49544763d?w=800" alt="Georgia Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;">
+            <img src="https://images.unsplash.com/photo-1565017990969-30e49544763d?w=800" alt="Georgia Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;" loading="lazy" decoding="async">
             <div class="pro-tip">
                 <strong>💡 Pro Tip:</strong> Visit in shoulder season (May or September) for lower prices and fewer crowds.
             </div>
@@ -625,7 +667,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="highlights">
                 <strong>Highlights:</strong> Yogyakarta temples, Lombok beaches, Java volcanoes
             </div>
-            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800" alt="Indonesia Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800" alt="Indonesia Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;" loading="lazy" decoding="async">
             <div class="pro-tip">
                 <strong>💡 Pro Tip:</strong> Use local warungs (family eateries) for delicious meals under $1.20.
             </div>
@@ -639,7 +681,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="highlights">
                 <strong>Highlights:</strong> Lisbon trams, Algarve cliffs, Porto wine tastings
             </div>
-            <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd81?w=800" alt="Portugal Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;">
+            <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd81?w=800" alt="Portugal Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;" loading="lazy" decoding="async">
             <div class="pro-tip">
                 <strong>💡 Pro Tip:</strong> Book regional trains in advance — fares start at just $3.60!
             </div>
@@ -653,7 +695,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="highlights">
                 <strong>Highlights:</strong> Oaxaca culture, Tulum beaches, Mexico City street art
             </div>
-            <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=800" alt="Mexico Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;">
+            <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=800" alt="Mexico Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;" loading="lazy" decoding="async">
             <div class="pro-tip">
                 <strong>💡 Pro Tip:</strong> Stay in casas de huéspedes (guesthouses) for authentic stays at 50% less.
             </div>
@@ -667,7 +709,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="highlights">
                 <strong>Highlights:</strong> Ella rock hike, Galle Fort sunset, spice garden tours
             </div>
-            <img src="https://images.unsplash.com/photo-1588258524675-55d656402477?w=800" alt="Sri Lanka Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;">
+            <img src="https://images.unsplash.com/photo-1588258524675-55d656402477?w=800" alt="Sri Lanka Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;" loading="lazy" decoding="async">
             <div class="pro-tip">
                 <strong>💡 Pro Tip:</strong> The iconic blue train from Kandy to Ella costs under $2.40 — book window seats!
             </div>
@@ -681,7 +723,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="highlights">
                 <strong>Highlights:</strong> Marrakech medina, Sahara desert camp, Chefchaouen blue streets
             </div>
-            <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=800" alt="Morocco Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;">
+            <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=800" alt="Morocco Budget Travel" style="width:100%;border-radius:8px;margin:1rem 0;" loading="lazy" decoding="async">
             <div class="pro-tip">
                 <strong>💡 Pro Tip:</strong> Bargain respectfully in markets — start at 40% of the asking price.
             </div>
@@ -870,5 +912,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             }
         }
     </script>
+<script>
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    document.querySelector('.nav-links').classList.remove('nav-open');
+    document.querySelector('.nav-toggle').classList.remove('open');
+  });
+});
+</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap');
+/* Fonts loaded via <link rel="preload"> in HTML head for performance — see individual page <head> */
 
 :root {
   --navy: #0a1628;
@@ -84,6 +84,12 @@ nav {
   transition: background 0.2s, transform 0.1s;
 }
 .nav-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;z-index:110}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--cream);margin:5px 0;transition:transform 0.25s,opacity 0.25s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 /* ── SECTION LABELS ── */
 .section-tag {
@@ -368,7 +374,10 @@ footer {
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 16px 24px; }
-  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: fixed; top: 60px; left: 0; right: 0; flex-direction: column; background: rgba(10,22,40,0.98); backdrop-filter: blur(12px); padding: 24px; gap: 20px; border-bottom: 0.5px solid var(--gold-dim); text-align: center; z-index: 99; }
+  .nav-links.nav-open { display: flex; }
+  .nav-btn { padding: 8px 16px; font-size: 10px; }
   .section { padding: 60px 24px; }
   .page-hero { padding: 60px 24px 48px; }
   footer { padding: 48px 24px; }

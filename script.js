@@ -39,6 +39,12 @@ function initNav() {
   const path = window.location.pathname.split('/').pop() || 'index.html';
   links.forEach(l => {
     if (l.getAttribute('href') === path) l.classList.add('active');
+    l.addEventListener('click', () => {
+      const navLinks = document.querySelector('.nav-links');
+      const toggle = document.querySelector('.nav-toggle');
+      if (navLinks) navLinks.classList.remove('nav-open');
+      if (toggle) toggle.classList.remove('open');
+    });
   });
 }
 

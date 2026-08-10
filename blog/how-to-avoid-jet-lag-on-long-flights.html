@@ -33,6 +33,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many days does jet lag actually last?", "acceptedAnswer": {"@type": "Answer", "text": "A common rule of thumb is about one day of recovery per time zone crossed, though this varies by person and by direction of travel."}}, {"@type": "Question", "name": "Is eastbound or westbound travel worse for jet lag?", "acceptedAnswer": {"@type": "Answer", "text": "Eastbound travel is generally harder, since it requires shortening your day, while westbound travel lets you extend it \u2014 which most people's bodies handle more easily."}}, {"@type": "Question", "name": "Do melatonin supplements help with jet lag?", "acceptedAnswer": {"@type": "Answer", "text": "Many travelers find them helpful for adjusting sleep timing, though it's worth discussing timing and dosage with a doctor before your trip rather than experimenting for the first time mid-journey."}}, {"@type": "Question", "name": "Should I sleep on a long flight or stay awake?", "acceptedAnswer": {"@type": "Answer", "text": "Base it on your destination's local time, not your departure time zone \u2014 sleep if it will be nighttime when you land, stay awake if it will be daytime."}}]}
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 .nav-logo img{height:28px;width:28px;margin-right:8px;vertical-align:middle}
@@ -143,6 +145,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .faq-item{background:var(--navy-2);border:1px solid rgba(200,151,42,0.15);border-radius:10px;padding:1.3rem 1.6rem;margin-bottom:0.9rem}
 .faq-item h3{font-family:var(--ff-display);font-size:1.05rem;color:var(--gold-light);margin-bottom:0.5rem}
 .faq-item p{font-size:0.92rem;color:var(--text-muted);line-height:1.7}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.4rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:transform 0.25s,opacity 0.25s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){.blog-layout{grid-template-columns:1fr;padding:2.5rem 1.5rem}.related-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){
+nav{padding:1rem 1.5rem}
+.nav-toggle{display:block}
+.nav-links{display:none;position:fixed;top:60px;left:0;right:0;flex-direction:column;background:rgba(10,15,30,0.98);backdrop-filter:blur(20px);padding:1.5rem;gap:1.2rem;border-bottom:1px solid rgba(200,151,42,0.15);text-align:center;z-index:199}
+.nav-links.nav-open{display:flex}
+.nav-cta{padding:0.5rem 1rem;font-size:0.75rem}
+.blog-hero{height:auto;min-height:340px;padding:5.5rem 1.5rem 2.5rem}
+.blog-layout{grid-template-columns:1fr;padding:2.5rem 1.5rem}
+.related{padding:3rem 1.5rem}
+.related-grid{grid-template-columns:1fr}
+.author-box{flex-direction:column;text-align:center}
+.dest-item{grid-template-columns:60px 1fr}
+.site-footer{padding:3rem 1.5rem 1.5rem}
+.site-footer .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
+}
+@media(max-width:480px){.site-footer .footer-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -159,6 +183,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="../contact.html">Contact</a></li>
   </ul>
   <a href="../contact.html" class="nav-cta">Book Now</a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="blog-hero">
@@ -233,7 +260,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <div class="author-box">
-  <img class="author-avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&q=80" alt="Nadia Kessler">
+  <img class="author-avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&q=80" alt="Nadia Kessler" loading="lazy" decoding="async">
   <div>
     <div class="author-name">Nadia Kessler</div>
     <div class="author-role">Remote Work Correspondent, Zentrevo</div>
@@ -247,15 +274,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="sidebar-card">
     <h4>Related Articles</h4>
     <a href="is-travel-insurance-worth-it-short-trips.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=80" alt="Is Travel Insurance Worth It for Short Trips?">
+      <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=80" alt="Is Travel Insurance Worth It for Short Trips?" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">Is Travel Insurance Worth It for Short Trips?</div><span class="sidebar-post-date">1 Jun 2026</span></div>
     </a>
     <a href="best-digital-nomad-destinations-2026.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Best Digital Nomad Destinations 2026">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Best Digital Nomad Destinations 2026" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">Best Digital Nomad Destinations 2026</div><span class="sidebar-post-date">26 Feb 2026</span></div>
     </a>
     <a href="how-many-days-do-you-need-in-japan.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="How Many Days Do You Need in Japan? A First-Timer's Guide">
+      <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="How Many Days Do You Need in Japan? A First-Timer's Guide" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">How Many Days Do You Need in Japan? A First-Timer's Guide</div><span class="sidebar-post-date">26 May 2026</span></div>
     </a>
   </div>
@@ -278,15 +305,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>More Travel Inspiration</h2>
   <div class="related-grid">
     <a href="is-travel-insurance-worth-it-short-trips.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=80" alt="Is Travel Insurance Worth It for Short Trips?"></div>
+      <div class="related-img"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=80" alt="Is Travel Insurance Worth It for Short Trips?" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">1 Jun 2026</span><h4>Is Travel Insurance Worth It for Short Trips?</h4></div>
     </a>
     <a href="best-digital-nomad-destinations-2026.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Best Digital Nomad Destinations 2026"></div>
+      <div class="related-img"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Best Digital Nomad Destinations 2026" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">26 Feb 2026</span><h4>Best Digital Nomad Destinations 2026</h4></div>
     </a>
     <a href="how-many-days-do-you-need-in-japan.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="How Many Days Do You Need in Japan? A First-Timer's Guide"></div>
+      <div class="related-img"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="How Many Days Do You Need in Japan? A First-Timer's Guide" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">26 May 2026</span><h4>How Many Days Do You Need in Japan? A First-Timer's Guide</h4></div>
     </a>
   </div>
@@ -333,5 +360,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span>Made with ❤ for travelers</span>
   </div>
 </footer>
+<script>
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    document.querySelector('.nav-links').classList.remove('nav-open');
+    document.querySelector('.nav-toggle').classList.remove('open');
+  });
+});
+</script>
 </body>
 </html>

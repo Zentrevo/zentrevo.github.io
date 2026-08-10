@@ -25,6 +25,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <link rel="shortcut icon" href="../favicon.ico">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Best Honeymoon Destinations 2026","description":"Discover the most romantic honeymoon destinations for 2026.","author":{"@type":"Person","name":"Sofia Mendes"},"publisher":{"@type":"Organization","name":"Zentrevo"},"datePublished":"2026-01-21","image":"https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1200&q=80"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -120,6 +122,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 @media(max-width:768px){.site-footer .footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){nav{padding:1rem 1.5rem}.nav-links{display:none}.blog-layout{grid-template-columns:1fr;padding:2.5rem 1.5rem}.blog-img-grid,.dest-cards{grid-template-columns:1fr}.related{padding:3rem 1.5rem}.related-grid{grid-template-columns:1fr 1fr}footer{flex-direction:column;gap:.5rem;text-align:center;padding:1.5rem}.blog-hero{padding:2rem 1.5rem}}
 @media(max-width:600px){.related-grid{grid-template-columns:1fr}}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.4rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:transform 0.25s,opacity 0.25s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){.blog-layout{grid-template-columns:1fr;padding:2.5rem 1.5rem}.related-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){
+nav{padding:1rem 1.5rem}
+.nav-toggle{display:block}
+.nav-links{display:none;position:fixed;top:60px;left:0;right:0;flex-direction:column;background:rgba(10,15,30,0.98);backdrop-filter:blur(20px);padding:1.5rem;gap:1.2rem;border-bottom:1px solid rgba(200,151,42,0.15);text-align:center;z-index:199}
+.nav-links.nav-open{display:flex}
+.nav-cta{padding:0.5rem 1rem;font-size:0.75rem}
+.blog-hero{height:auto;min-height:340px;padding:5.5rem 1.5rem 2.5rem}
+.blog-layout{grid-template-columns:1fr;padding:2.5rem 1.5rem}
+.related{padding:3rem 1.5rem}
+.related-grid{grid-template-columns:1fr}
+.author-box{flex-direction:column;text-align:center}
+.dest-item{grid-template-columns:60px 1fr}
+.site-footer{padding:3rem 1.5rem 1.5rem}
+.site-footer .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
+}
+@media(max-width:480px){.site-footer .footer-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -134,6 +158,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="../blog.html">Blog</a></li>
   </ul>
   <a href="../contact.html" class="nav-cta">Book Now</a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="blog-hero">
@@ -171,7 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="dest-card">
-    <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80" alt="Santorini">
+    <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80" alt="Santorini" loading="lazy" decoding="async">
     <div class="dest-card-body">
       <h4>🌅 Santorini, Greece</h4>
       <p>Cliffside infinity pools, white-washed villages, and sunsets that stop time. Santorini is Europe's most romantic island, and it earns that title every evening.</p>
@@ -179,7 +206,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="dest-card">
-    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80" alt="Paris">
+    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80" alt="Paris" loading="lazy" decoding="async">
     <div class="dest-card-body">
       <h4>🗼 Paris, France</h4>
       <p>The original city of love. Seine riverside walks, champagne in secret wine bars, the Eiffel Tower at golden hour. Paris never fails a honeymoon.</p>
@@ -187,7 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="dest-card">
-    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80" alt="Bali">
+    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80" alt="Bali" loading="lazy" decoding="async">
     <div class="dest-card-body">
       <h4>🌺 Bali, Indonesia</h4>
       <p>Private jungle villas, couples' spa rituals, temple ceremonies, and rice terrace sunsets. Bali is romance made tangible — and remarkably affordable.</p>
@@ -196,7 +223,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<img class="blog-img-full" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=1200&q=80" alt="Romantic honeymoon destinations 2026">
+<img class="blog-img-full" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=1200&q=80" alt="Romantic honeymoon destinations 2026" loading="lazy" decoding="async">
 
 <h2>Hidden Romantic Gems <em>Worth Considering</em></h2>
 
@@ -214,8 +241,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <blockquote><p>"The best honeymoon is not about where you go — it is about going somewhere that lets you forget about everywhere else."</p></blockquote>
 
 <div class="blog-img-grid">
-  <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80" alt="Romantic mountain honeymoon">
-  <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=700&q=80" alt="Honeymoon travel">
+  <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80" alt="Romantic mountain honeymoon" loading="lazy" decoding="async">
+  <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=700&q=80" alt="Honeymoon travel" loading="lazy" decoding="async">
 </div>
 
 <h2>Honeymoon Planning <em>Checklist</em></h2>
@@ -240,7 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>If your honeymoon involves a name change on travel documents or an international destination wedding, check requirements early via the <a href="https://travel.state.gov/en/international-travel/travel-advisories.html" target="_blank" rel="noopener">U.S. State Department travel advisories</a> and confirm passport validity rules for your destination well ahead of the trip.</p>
 
 <div class="author-box">
-  <img class="author-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80" alt="Sofia Mendes">
+  <img class="author-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&q=80" alt="Sofia Mendes" loading="lazy" decoding="async">
   <div>
     <div class="author-name">Sofia Mendes</div>
     <div class="author-role">Romance Travel Specialist, Zentrevo</div>
@@ -253,15 +280,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="sidebar-card">
     <h4>Related Articles</h4>
     <a href="best-places-to-visit-2026.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=120&q=80" alt="Best places">
+      <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=120&q=80" alt="Best places" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">25 Best Places to Visit in 2026</div><span class="sidebar-post-date">15 Jan 2026</span></div>
     </a>
     <a href="discovering-island-life-beyond-luxury.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=120&q=80" alt="Island">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=120&q=80" alt="Island" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">Discovering Island Life Beyond Luxury</div><span class="sidebar-post-date">27 Jan 2026</span></div>
     </a>
     <a href="luxury-travel-guide-2026.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=120&q=80" alt="Luxury">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=120&q=80" alt="Luxury" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">Luxury Travel Guide 2026</div><span class="sidebar-post-date">14 Feb 2026</span></div>
     </a>
   </div>
@@ -284,15 +311,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>More Travel Inspiration</h2>
   <div class="related-grid">
     <a href="best-places-to-visit-2026.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Best places"></div>
+      <div class="related-img"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Best places" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">15 Jan 2026</span><h4>25 Best Places to Visit in 2026</h4></div>
     </a>
     <a href="best-budget-travel-destinations-2026.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=80" alt="Budget Travel"></div>
+      <div class="related-img"><img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=80" alt="Budget Travel" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">5 Mar 2026</span><h4>How to Travel the World on a Budget</h4></div>
     </a>
     <a href="luxury-travel-guide-2026.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Luxury Travel"></div>
+      <div class="related-img"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Luxury Travel" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">14 Feb 2026</span><h4>Luxury Travel Guide: Worth Every Penny</h4></div>
     </a>
   </div>
@@ -338,5 +365,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span>Made with ❤ for travelers</span>
   </div>
 </footer>
+<script>
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    document.querySelector('.nav-links').classList.remove('nav-open');
+    document.querySelector('.nav-toggle').classList.remove('open');
+  });
+});
+</script>
 </body>
 </html>

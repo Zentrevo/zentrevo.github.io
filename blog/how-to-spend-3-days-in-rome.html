@@ -33,6 +33,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I need to book Colosseum tickets in advance?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, especially between April and October. Walk-up availability is limited and lines without a pre-booked ticket can run over an hour."}}, {"@type": "Question", "name": "Is 3 days in Rome too rushed?", "acceptedAnswer": {"@type": "Answer", "text": "It's enough for the essential sights if you limit yourself to one major area per day. It won't cover everything Rome offers, but it avoids the burnout of trying to do too much."}}, {"@type": "Question", "name": "What should I skip on a first visit?", "acceptedAnswer": {"@type": "Answer", "text": "Skip trying to fit in day trips like Pompeii or Florence on a 3-day Rome-only visit \u2014 it turns every day into a rushed transit day instead of actually experiencing Rome."}}, {"@type": "Question", "name": "Is Rome walkable?", "acceptedAnswer": {"@type": "Answer", "text": "Very. Most major sights sit within a compact historic center, and walking between them is often faster and more enjoyable than taxis or the metro for short hops."}}]}
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 .nav-logo img{height:28px;width:28px;margin-right:8px;vertical-align:middle}
@@ -143,6 +145,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .faq-item{background:var(--navy-2);border:1px solid rgba(200,151,42,0.15);border-radius:10px;padding:1.3rem 1.6rem;margin-bottom:0.9rem}
 .faq-item h3{font-family:var(--ff-display);font-size:1.05rem;color:var(--gold-light);margin-bottom:0.5rem}
 .faq-item p{font-size:0.92rem;color:var(--text-muted);line-height:1.7}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.4rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:transform 0.25s,opacity 0.25s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){.blog-layout{grid-template-columns:1fr;padding:2.5rem 1.5rem}.related-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){
+nav{padding:1rem 1.5rem}
+.nav-toggle{display:block}
+.nav-links{display:none;position:fixed;top:60px;left:0;right:0;flex-direction:column;background:rgba(10,15,30,0.98);backdrop-filter:blur(20px);padding:1.5rem;gap:1.2rem;border-bottom:1px solid rgba(200,151,42,0.15);text-align:center;z-index:199}
+.nav-links.nav-open{display:flex}
+.nav-cta{padding:0.5rem 1rem;font-size:0.75rem}
+.blog-hero{height:auto;min-height:340px;padding:5.5rem 1.5rem 2.5rem}
+.blog-layout{grid-template-columns:1fr;padding:2.5rem 1.5rem}
+.related{padding:3rem 1.5rem}
+.related-grid{grid-template-columns:1fr}
+.author-box{flex-direction:column;text-align:center}
+.dest-item{grid-template-columns:60px 1fr}
+.site-footer{padding:3rem 1.5rem 1.5rem}
+.site-footer .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
+}
+@media(max-width:480px){.site-footer .footer-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -159,6 +183,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="../contact.html">Contact</a></li>
   </ul>
   <a href="../contact.html" class="nav-cta">Book Now</a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="blog-hero">
@@ -237,7 +264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <div class="author-box">
-  <img class="author-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80" alt="Marco Ferretti">
+  <img class="author-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80" alt="Marco Ferretti" loading="lazy" decoding="async">
   <div>
     <div class="author-name">Marco Ferretti</div>
     <div class="author-role">European Travel Specialist, Zentrevo</div>
@@ -251,15 +278,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="sidebar-card">
     <h4>Related Articles</h4>
     <a href="best-european-city-breaks-2026.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Best European City Breaks 2026">
+      <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Best European City Breaks 2026" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">Best European City Breaks 2026</div><span class="sidebar-post-date">8 Apr 2026</span></div>
     </a>
     <a href="experiencing-europe-beyond-tourist-routes.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80" alt="Experiencing Europe Beyond Tourist Routes">
+      <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80" alt="Experiencing Europe Beyond Tourist Routes" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">Experiencing Europe Beyond Tourist Routes</div><span class="sidebar-post-date">2 Feb 2026</span></div>
     </a>
     <a href="what-to-pack-for-a-two-week-europe-trip.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80" alt="What to Pack for a Two-Week Europe Trip">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80" alt="What to Pack for a Two-Week Europe Trip" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">What to Pack for a Two-Week Europe Trip</div><span class="sidebar-post-date">7 Jun 2026</span></div>
     </a>
   </div>
@@ -282,15 +309,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>More Travel Inspiration</h2>
   <div class="related-grid">
     <a href="best-european-city-breaks-2026.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Best European City Breaks 2026"></div>
+      <div class="related-img"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Best European City Breaks 2026" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">8 Apr 2026</span><h4>Best European City Breaks 2026</h4></div>
     </a>
     <a href="experiencing-europe-beyond-tourist-routes.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80" alt="Experiencing Europe Beyond Tourist Routes"></div>
+      <div class="related-img"><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80" alt="Experiencing Europe Beyond Tourist Routes" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">2 Feb 2026</span><h4>Experiencing Europe Beyond Tourist Routes</h4></div>
     </a>
     <a href="what-to-pack-for-a-two-week-europe-trip.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80" alt="What to Pack for a Two-Week Europe Trip"></div>
+      <div class="related-img"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80" alt="What to Pack for a Two-Week Europe Trip" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">7 Jun 2026</span><h4>What to Pack for a Two-Week Europe Trip</h4></div>
     </a>
   </div>
@@ -337,5 +364,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span>Made with ❤ for travelers</span>
   </div>
 </footer>
+<script>
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    document.querySelector('.nav-links').classList.remove('nav-open');
+    document.querySelector('.nav-toggle').classList.remove('open');
+  });
+});
+</script>
 </body>
 </html>

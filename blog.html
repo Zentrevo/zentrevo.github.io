@@ -28,6 +28,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="shortcut icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -35,6 +37,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 html{scroll-behavior:smooth}
 body{background:var(--navy);color:var(--text);font-family:var(--ff-body);overflow-x:hidden;line-height:1.7}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(10,15,30,0.97);border-bottom:1px solid rgba(200,151,42,0.15);backdrop-filter:blur(20px)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.4rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:transform 0.25s,opacity 0.25s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .nav-logo{font-family:var(--ff-display);font-size:1.5rem;font-weight:900;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:10px}.nav-logo img{height:32px;width:32px}.nav-logo span{color:var(--gold)}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{color:rgba(232,234,240,0.7);text-decoration:none;font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;transition:color .25s}
@@ -106,7 +113,7 @@ footer{background:var(--navy-2);border-top:1px solid rgba(200,151,42,.15);paddin
 .reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}.reveal-delay-4{transition-delay:.4s}.reveal-delay-5{transition-delay:.5s}
 @media(max-width:1024px){.blog-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr 1fr}}
-@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{display:none}.blog-section{padding:3rem 1.5rem}.featured-post{grid-template-columns:1fr}.featured-img{height:260px}.blog-grid{grid-template-columns:1fr}.newsletter{padding:3rem 1.5rem}.newsletter-form{flex-direction:column}.footer-top{grid-template-columns:1fr 1fr}.footer-bottom{flex-direction:column;gap:.5rem}footer{padding:3rem 1.5rem 1.5rem}.page-hero{padding:7rem 1.5rem 3rem}}
+@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-toggle{display:block}.nav-links{display:none;position:fixed;top:60px;left:0;right:0;flex-direction:column;background:rgba(10,15,30,0.98);backdrop-filter:blur(20px);padding:1.5rem;gap:1.2rem;border-bottom:1px solid rgba(200,151,42,0.15);text-align:center;z-index:199}.nav-links.nav-open{display:flex}.nav-cta{padding:0.5rem 1rem;font-size:0.75rem}.blog-section{padding:3rem 1.5rem}.featured-post{grid-template-columns:1fr}.featured-img{height:260px}.blog-grid{grid-template-columns:1fr}.newsletter{padding:3rem 1.5rem}.newsletter-form{flex-direction:column}.footer-top{grid-template-columns:1fr 1fr}.footer-bottom{flex-direction:column;gap:.5rem}footer{padding:3rem 1.5rem 1.5rem}.page-hero{padding:7rem 1.5rem 3rem}}
 @media(max-width:480px){.footer-top{grid-template-columns:1fr}}
 </style>
 </head>
@@ -123,6 +130,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="about.html">About</a></li>
   </ul>
   <a href="contact.html" class="nav-cta">Book Now</a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('nav-open')">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="page-hero">
@@ -156,148 +166,156 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="blog-grid-title">All Articles</div>
   <div class="blog-grid">
     <a href="blog/best-honeymoon-destinations-2026.html" class="blog-card reveal">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700&q=80" alt="Honeymoon 2026"><span class="blog-cat-badge">Honeymoon</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700&q=80" alt="Honeymoon 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Honeymoon</span></div>
       <div class="blog-body"><span class="blog-date">21 Jan 2026</span><h3>Best Honeymoon Destinations 2026</h3><p>From Maldives overwater villas to Santorini sunsets — the world's most romantic places for your perfect honeymoon.</p><div class="blog-footer"><span>9 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/discovering-island-life-beyond-luxury.html" class="blog-card reveal reveal-delay-1">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80" alt="Island life"><span class="blog-cat-badge">Island Life</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80" alt="Island life" loading="lazy" decoding="async"><span class="blog-cat-badge">Island Life</span></div>
       <div class="blog-body"><span class="blog-date">27 Jan 2026</span><h3>Discovering Island Life Beyond Luxury</h3><p>What happens when you trade five-star resorts for barefoot villages and sunsets nobody photographs?</p><div class="blog-footer"><span>7 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-budget-travel-destinations-2026.html" class="blog-card reveal reveal-delay-2">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=700&q=80" alt="Budget travel"><span class="blog-cat-badge">Budget Travel</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=700&q=80" alt="Budget travel" loading="lazy" decoding="async"><span class="blog-cat-badge">Budget Travel</span></div>
       <div class="blog-body"><span class="blog-date">5 Mar 2026</span><h3>How to Travel the World on a Budget in 2026</h3><p>Proven flight, hotel and food strategies that genuinely save hundreds of dollars on every trip.</p><div class="blog-footer"><span>11 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/experiencing-europe-beyond-tourist-routes.html" class="blog-card reveal reveal-delay-3">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=700&q=80" alt="Europe routes"><span class="blog-cat-badge">Europe</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=700&q=80" alt="Europe routes" loading="lazy" decoding="async"><span class="blog-cat-badge">Europe</span></div>
       <div class="blog-body"><span class="blog-date">2 Feb 2026</span><h3>Experiencing Europe Beyond Tourist Routes</h3><p>The real Europe — the one that still belongs to its people — is just one street off the main road.</p><div class="blog-footer"><span>8 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/ultimate-solo-travel-guide-2026.html" class="blog-card reveal reveal-delay-4">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=700&q=80" alt="Solo travel"><span class="blog-cat-badge">Solo Travel</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=700&q=80" alt="Solo travel" loading="lazy" decoding="async"><span class="blog-cat-badge">Solo Travel</span></div>
       <div class="blog-body"><span class="blog-date">8 Feb 2026</span><h3>The Ultimate Solo Travel Guide for 2026</h3><p>Safe destinations, smart packing, and why travelling alone is one of the most transformative things you can do.</p><div class="blog-footer"><span>12 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/luxury-travel-guide-2026.html" class="blog-card reveal reveal-delay-5">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=700&q=80" alt="Luxury travel"><span class="blog-cat-badge">Luxury</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=700&q=80" alt="Luxury travel" loading="lazy" decoding="async"><span class="blog-cat-badge">Luxury</span></div>
       <div class="blog-body"><span class="blog-date">14 Feb 2026</span><h3>Luxury Travel Guide 2026 — Worth Every Penny</h3><p>The world's finest travel experiences — private island retreats, five-star safari lodges, and exclusive access beyond.</p><div class="blog-footer"><span>10 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-family-travel-destinations-2026.html" class="blog-card reveal">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80" alt="Family travel"><span class="blog-cat-badge">Family</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80" alt="Family travel" loading="lazy" decoding="async"><span class="blog-cat-badge">Family</span></div>
       <div class="blog-body"><span class="blog-date">21 Jan 2026</span><h3>Best Family Travel Destinations 2026</h3><p>From Bali to Africa safari — the world's most kid-friendly, memory-making destinations for families of all ages.</p><div class="blog-footer"><span>10 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-places-to-visit-2026.html" class="blog-card reveal reveal-delay-1">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=700&q=80" alt="Best places 2026"><span class="blog-cat-badge">Destinations</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=700&q=80" alt="Best places 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Destinations</span></div>
       <div class="blog-body"><span class="blog-date">15 Jan 2026</span><h3>25 Best Places to Visit in 2026</h3><p>The definitive travel bucket list for 2026 — ranked by experience quality, value, and transformation.</p><div class="blog-footer"><span>10 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-digital-nomad-destinations-2026.html" class="blog-card reveal">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80" alt="Digital nomad destinations 2026"><span class="blog-cat-badge">Remote Work</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80" alt="Digital nomad destinations 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Remote Work</span></div>
       <div class="blog-body"><span class="blog-date">26 Feb 2026</span><h3>Best Digital Nomad Destinations 2026</h3><p>Fast wifi, fair visas, and a real sense of community — the eight places actually worth relocating your laptop to this year.</p><div class="blog-footer"><span>9 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/solo-female-travel-safety-guide-2026.html" class="blog-card reveal reveal-delay-1">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=700&q=80" alt="Solo female travel safety"><span class="blog-cat-badge">Solo Travel</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=700&q=80" alt="Solo female travel safety" loading="lazy" decoding="async"><span class="blog-cat-badge">Solo Travel</span></div>
       <div class="blog-body"><span class="blog-date">4 Mar 2026</span><h3>Solo Female Travel Safety Guide 2026</h3><p>Practical advice from women who travel alone for a living — what actually keeps you safe, and what's mostly internet noise.</p><div class="blog-footer"><span>11 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-african-safari-experiences-2026.html" class="blog-card reveal reveal-delay-2">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=700&q=80" alt="African safari 2026"><span class="blog-cat-badge">Adventure</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=700&q=80" alt="African safari 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Adventure</span></div>
       <div class="blog-body"><span class="blog-date">9 Mar 2026</span><h3>Best African Safari Experiences 2026</h3><p>From the Great Migration to the Okavango Delta — where to see Africa's wildlife at its most spectacular this year.</p><div class="blog-footer"><span>10 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-ski-winter-destinations-2026.html" class="blog-card reveal reveal-delay-3">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=700&q=80" alt="Best ski destinations 2026"><span class="blog-cat-badge">Adventure</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=700&q=80" alt="Best ski destinations 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Adventure</span></div>
       <div class="blog-body"><span class="blog-date">15 Mar 2026</span><h3>Best Ski & Winter Travel Destinations 2026</h3><p>From Japan's legendary powder to the classic Alpine resorts — where the snow, and the value, is best this season.</p><div class="blog-footer"><span>9 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/ultimate-cruise-vacation-guide-2026.html" class="blog-card reveal reveal-delay-4">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=700&q=80" alt="Cruise vacation guide 2026"><span class="blog-cat-badge">Luxury</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?w=700&q=80" alt="Cruise vacation guide 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Luxury</span></div>
       <div class="blog-body"><span class="blog-date">21 Mar 2026</span><h3>Ultimate Cruise Vacation Guide 2026</h3><p>How to actually choose the right cruise for your travel style — itineraries, cabin tiers, and hidden costs.</p><div class="blog-footer"><span>10 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-wellness-spa-retreats-2026.html" class="blog-card reveal reveal-delay-5">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=700&q=80" alt="Wellness spa retreats 2026"><span class="blog-cat-badge">Wellness</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=700&q=80" alt="Wellness spa retreats 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Wellness</span></div>
       <div class="blog-body"><span class="blog-date">27 Mar 2026</span><h3>Best Wellness & Spa Retreats 2026</h3><p>From Thai detox programs to Icelandic geothermal springs — where to genuinely reset in 2026.</p><div class="blog-footer"><span>8 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/top-adventure-travel-destinations-2026.html" class="blog-card reveal">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=80" alt="Adventure travel destinations 2026"><span class="blog-cat-badge">Adventure</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=80" alt="Adventure travel destinations 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Adventure</span></div>
       <div class="blog-body"><span class="blog-date">2 Apr 2026</span><h3>Top Adventure Travel Destinations 2026</h3><p>From Patagonia's granite spires to Nepal's Himalayan trails — the biggest adrenaline-to-effort ratio this year.</p><div class="blog-footer"><span>10 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-european-city-breaks-2026.html" class="blog-card reveal reveal-delay-1">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=700&q=80" alt="European city breaks 2026"><span class="blog-cat-badge">Europe</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=700&q=80" alt="European city breaks 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Europe</span></div>
       <div class="blog-body"><span class="blog-date">8 Apr 2026</span><h3>Best European City Breaks 2026</h3><p>The perfect 2-3 day escapes — destinations that reward even a short weekend without leaving you wishing for more time.</p><div class="blog-footer"><span>8 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/southeast-asia-island-hopping-guide-2026.html" class="blog-card reveal reveal-delay-2">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1537956965359-7573183d1f57?w=700&q=80" alt="Southeast Asia island hopping 2026"><span class="blog-cat-badge">Island Life</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1537956965359-7573183d1f57?w=700&q=80" alt="Southeast Asia island hopping 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Island Life</span></div>
       <div class="blog-body"><span class="blog-date">14 Apr 2026</span><h3>Southeast Asia Island Hopping Guide 2026</h3><p>Routes, ferry logistics, and real costs for stringing together the best islands across three countries.</p><div class="blog-footer"><span>11 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-all-inclusive-resorts-2026.html" class="blog-card reveal reveal-delay-3">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=700&q=80" alt="Best all-inclusive resorts 2026"><span class="blog-cat-badge">Luxury</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=700&q=80" alt="Best all-inclusive resorts 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Luxury</span></div>
       <div class="blog-body"><span class="blog-date">20 Apr 2026</span><h3>Best All-Inclusive Resort Destinations 2026</h3><p>Where all-inclusive actually means all-inclusive in 2026 — plus the fine print worth checking before you book.</p><div class="blog-footer"><span>9 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-road-trip-routes-2026.html" class="blog-card reveal reveal-delay-4">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=700&q=80" alt="Best road trip routes 2026"><span class="blog-cat-badge">Adventure</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=700&q=80" alt="Best road trip routes 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Adventure</span></div>
       <div class="blog-body"><span class="blog-date">26 Apr 2026</span><h3>Best Road Trip Routes 2026</h3><p>From California's Pacific coastline to Scotland's rugged Highlands — the routes worth putting real miles on this year.</p><div class="blog-footer"><span>9 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-food-travel-destinations-2026.html" class="blog-card reveal reveal-delay-5">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&q=80" alt="Best food travel destinations 2026"><span class="blog-cat-badge">Culture</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&q=80" alt="Best food travel destinations 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Culture</span></div>
       <div class="blog-body"><span class="blog-date">2 May 2026</span><h3>Best Food Travel Destinations 2026</h3><p>From Osaka's street food alleys to Oaxaca's mole culture — where to actually eat your way through 2026.</p><div class="blog-footer"><span>9 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-national-parks-to-visit-2026.html" class="blog-card reveal">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?w=700&q=80" alt="Best national parks 2026"><span class="blog-cat-badge">Adventure</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?w=700&q=80" alt="Best national parks 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Adventure</span></div>
       <div class="blog-body"><span class="blog-date">8 May 2026</span><h3>Best National Parks to Visit in 2026</h3><p>From Yellowstone's geysers to Torres del Paine's granite towers — the parks worth the permit hassle this year.</p><div class="blog-footer"><span>9 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-photography-travel-destinations-2026.html" class="blog-card reveal reveal-delay-1">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=700&q=80" alt="Best photography travel destinations 2026"><span class="blog-cat-badge">Culture</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=700&q=80" alt="Best photography travel destinations 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Culture</span></div>
       <div class="blog-body"><span class="blog-date">14 May 2026</span><h3>Best Photography Travel Destinations 2026</h3><p>From Iceland's ice caves to the Sahara's shifting dunes — where the light does most of the work for you.</p><div class="blog-footer"><span>8 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-honeymoon-alternatives-2026.html" class="blog-card reveal reveal-delay-2">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=700&q=80" alt="Best honeymoon alternatives 2026"><span class="blog-cat-badge">Honeymoon</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=700&q=80" alt="Best honeymoon alternatives 2026" loading="lazy" decoding="async"><span class="blog-cat-badge">Honeymoon</span></div>
       <div class="blog-body"><span class="blog-date">20 May 2026</span><h3>Best Honeymoon Alternatives 2026</h3><p>Not every honeymoon needs an overwater villa. Here's where couples are actually going instead in 2026.</p><div class="blog-footer"><span>8 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/how-many-days-do-you-need-in-japan.html" class="blog-card reveal reveal-delay-3">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80" alt="How many days do you need in Japan"><span class="blog-cat-badge">Culture</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80" alt="How many days do you need in Japan" loading="lazy" decoding="async"><span class="blog-cat-badge">Culture</span></div>
       <div class="blog-body"><span class="blog-date">26 May 2026</span><h3>How Many Days Do You Need in Japan?</h3><p>A first-timer's honest breakdown — from a rushed 5-day taste to a proper 14-day loop through Tokyo, Kyoto, and beyond.</p><div class="blog-footer"><span>7 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/is-travel-insurance-worth-it-short-trips.html" class="blog-card reveal reveal-delay-4">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=700&q=80" alt="Is travel insurance worth it for short trips"><span class="blog-cat-badge">Culture</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=700&q=80" alt="Is travel insurance worth it for short trips" loading="lazy" decoding="async"><span class="blog-cat-badge">Culture</span></div>
       <div class="blog-body"><span class="blog-date">1 Jun 2026</span><h3>Is Travel Insurance Worth It for Short Trips?</h3><p>A clear, honest breakdown of when travel insurance actually pays off on a 3-5 day trip — and when you can skip it.</p><div class="blog-footer"><span>6 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/what-to-pack-for-a-two-week-europe-trip.html" class="blog-card reveal">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=700&q=80" alt="What to pack for a two week Europe trip"><span class="blog-cat-badge">Europe</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=700&q=80" alt="What to pack for a two week Europe trip" loading="lazy" decoding="async"><span class="blog-cat-badge">Europe</span></div>
       <div class="blog-body"><span class="blog-date">7 Jun 2026</span><h3>What to Pack for a Two-Week Europe Trip</h3><p>What actually fits in a carry-on, how to handle unpredictable weather, and the items first-timers always forget.</p><div class="blog-footer"><span>8 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-time-to-book-flights-for-cheapest-prices.html" class="blog-card reveal reveal-delay-1">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=700&q=80" alt="Best time to book flights for cheapest prices"><span class="blog-cat-badge">Budget Travel</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=700&q=80" alt="Best time to book flights for cheapest prices" loading="lazy" decoding="async"><span class="blog-cat-badge">Budget Travel</span></div>
       <div class="blog-body"><span class="blog-date">13 Jun 2026</span><h3>Best Time to Book Flights for the Cheapest Prices</h3><p>Real booking windows by trip type, and what actually moves the price more than "the best day to buy."</p><div class="blog-footer"><span>7 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/is-it-safe-to-travel-to-thailand-alone.html" class="blog-card reveal reveal-delay-2">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=700&q=80" alt="Is it safe to travel to Thailand alone"><span class="blog-cat-badge">Solo Travel</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=700&q=80" alt="Is it safe to travel to Thailand alone" loading="lazy" decoding="async"><span class="blog-cat-badge">Solo Travel</span></div>
       <div class="blog-body"><span class="blog-date">30 Jun 2026</span><h3>Is It Safe to Travel to Thailand Alone?</h3><p>A realistic answer, not a scare piece — common scams, the regions that deserve caution, and what genuinely matters.</p><div class="blog-footer"><span>9 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/how-to-see-the-northern-lights-in-iceland.html" class="blog-card reveal reveal-delay-3">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=700&q=80" alt="How to see the Northern Lights in Iceland"><span class="blog-cat-badge">Adventure</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=700&q=80" alt="How to see the Northern Lights in Iceland" loading="lazy" decoding="async"><span class="blog-cat-badge">Adventure</span></div>
       <div class="blog-body"><span class="blog-date">12 Jul 2026</span><h3>How to See the Northern Lights in Iceland</h3><p>Best months, where to escape Reykjavik's light pollution, and how to read an aurora forecast.</p><div class="blog-footer"><span>8 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/do-you-need-a-visa-to-visit-vietnam.html" class="blog-card reveal reveal-delay-4">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=700&q=80" alt="Do you need a visa to visit Vietnam"><span class="blog-cat-badge">Destinations</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=700&q=80" alt="Do you need a visa to visit Vietnam" loading="lazy" decoding="async"><span class="blog-cat-badge">Destinations</span></div>
       <div class="blog-body"><span class="blog-date">24 Jul 2026</span><h3>Do You Need a Visa to Visit Vietnam?</h3><p>A clear breakdown of Vietnam's e-visa system, exemptions, and how long you can actually stay.</p><div class="blog-footer"><span>7 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-way-to-get-from-cdg-to-paris-city-center.html" class="blog-card reveal">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=700&q=80" alt="Best way to get from CDG to Paris city center"><span class="blog-cat-badge">Europe</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=700&q=80" alt="Best way to get from CDG to Paris city center" loading="lazy" decoding="async"><span class="blog-cat-badge">Europe</span></div>
       <div class="blog-body"><span class="blog-date">5 Aug 2026</span><h3>Best Way to Get from CDG to Paris City Center</h3><p>RER B train, taxi, shuttle, or rideshare — compared honestly by cost, time, and hassle.</p><div class="blog-footer"><span>6 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/how-to-spend-3-days-in-rome.html" class="blog-card reveal reveal-delay-1">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=700&q=80" alt="How to spend 3 days in Rome"><span class="blog-cat-badge">Europe</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=700&q=80" alt="How to spend 3 days in Rome" loading="lazy" decoding="async"><span class="blog-cat-badge">Europe</span></div>
       <div class="blog-body"><span class="blog-date">18 Jun 2026</span><h3>How to Spend 3 Days in Rome</h3><p>A day-by-day plan that covers the essentials without museum-legs burnout — plus what's worth skipping.</p><div class="blog-footer"><span>9 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/is-bali-safe-for-solo-female-travelers.html" class="blog-card reveal reveal-delay-2">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=700&q=80" alt="Is Bali safe for solo female travelers"><span class="blog-cat-badge">Solo Travel</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=700&q=80" alt="Is Bali safe for solo female travelers" loading="lazy" decoding="async"><span class="blog-cat-badge">Solo Travel</span></div>
       <div class="blog-body"><span class="blog-date">24 Jun 2026</span><h3>Is Bali Safe for Solo Female Travelers?</h3><p>An honest answer — the real risks, where they concentrate, and how to plan around them.</p><div class="blog-footer"><span>8 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/what-currency-to-use-in-switzerland.html" class="blog-card reveal reveal-delay-3">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1527866959252-deab85ef7d1b?w=700&q=80" alt="What currency to use in Switzerland"><span class="blog-cat-badge">Europe</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1527866959252-deab85ef7d1b?w=700&q=80" alt="What currency to use in Switzerland" loading="lazy" decoding="async"><span class="blog-cat-badge">Europe</span></div>
       <div class="blog-body"><span class="blog-date">6 Jul 2026</span><h3>What Currency to Use in Switzerland</h3><p>Why Switzerland still uses its own currency, and how to handle money without overpaying.</p><div class="blog-footer"><span>6 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/how-to-avoid-jet-lag-on-long-flights.html" class="blog-card reveal reveal-delay-4">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=700&q=80" alt="How to avoid jet lag on long flights"><span class="blog-cat-badge">Culture</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=700&q=80" alt="How to avoid jet lag on long flights" loading="lazy" decoding="async"><span class="blog-cat-badge">Culture</span></div>
       <div class="blog-body"><span class="blog-date">18 Jul 2026</span><h3>How to Avoid Jet Lag on Long Flights</h3><p>What actually works to reset your body clock faster, before, during, and after a long-haul flight.</p><div class="blog-footer"><span>8 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
     <a href="blog/best-neighborhoods-to-stay-in-new-york-city.html" class="blog-card reveal">
-      <div class="blog-img"><img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=700&q=80" alt="Best neighborhoods to stay in New York City"><span class="blog-cat-badge">Culture</span></div>
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=700&q=80" alt="Best neighborhoods to stay in New York City" loading="lazy" decoding="async"><span class="blog-cat-badge">Culture</span></div>
       <div class="blog-body"><span class="blog-date">30 Jul 2026</span><h3>Best Neighborhoods to Stay in New York City</h3><p>Where to base yourself depending on walkability, nightlife, budget, or a quieter pace.</p><div class="blog-footer"><span>8 min read</span><span class="blog-arrow">→</span></div></div>
+    </a>
+    <a href="blog/does-schengen-visa-require-travel-insurance.html" class="blog-card reveal reveal-delay-1">
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=700&q=80" alt="Does a Schengen visa require travel insurance" loading="lazy" decoding="async"><span class="blog-cat-badge">Europe</span></div>
+      <div class="blog-body"><span class="blog-date">3 Mar 2026</span><h3>Does a Schengen Visa Require Travel Insurance?</h3><p>Yes — and it's one of the few visa requirements that's actually strict. Here's exactly what counts.</p><div class="blog-footer"><span>7 min read</span><span class="blog-arrow">→</span></div></div>
+    </a>
+    <a href="blog/how-much-money-do-you-need-for-a-week-in-thailand.html" class="blog-card reveal reveal-delay-2">
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=700&q=80" alt="How much money do you need for a week in Thailand" loading="lazy" decoding="async"><span class="blog-cat-badge">Budget Travel</span></div>
+      <div class="blog-body"><span class="blog-date">17 Mar 2026</span><h3>How Much Money Do You Need for a Week in Thailand?</h3><p>Real daily costs across budget, mid-range, and comfortable trip styles — broken down by category.</p><div class="blog-footer"><span>8 min read</span><span class="blog-arrow">→</span></div></div>
     </a>
   </div>
 </div>
@@ -342,6 +360,13 @@ const io=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
 },{threshold:0.1});
 reveals.forEach(el=>io.observe(el));
+
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    document.querySelector('.nav-links').classList.remove('nav-open');
+    document.querySelector('.nav-toggle').classList.remove('open');
+  });
+});
 </script>
 </body>
 </html>

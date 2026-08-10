@@ -36,6 +36,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="twitter:description" content="Zentrevo is a travel agency crafting personalized, extraordinary journeys. Learn our story, meet our team, and see what we stand for.">
   <meta name="twitter:image" content="https://zentrevo.github.io/og-image.jpg">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg+xml" href="logo.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -176,6 +179,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="contact.html" class="nav-btn">Book Now</a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('nav-open')">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <div class="page-hero">
