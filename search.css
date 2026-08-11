@@ -1,0 +1,19 @@
+.search-toggle{background:none;border:none;cursor:pointer;color:var(--white,#e8eaf0);padding:0.4rem;display:flex;align-items:center;justify-content:center;transition:color 0.2s}
+.search-toggle:hover{color:var(--gold,#c8972a)}
+.search-toggle svg{width:19px;height:19px}
+.search-overlay{position:fixed;inset:0;background:rgba(6,9,18,0.92);backdrop-filter:blur(6px);z-index:500;display:none;align-items:flex-start;justify-content:center;padding:10vh 1.5rem 2rem}
+.search-overlay.search-open{display:flex}
+.search-box{width:100%;max-width:560px;background:#0d1528;border:1px solid rgba(200,151,42,0.3);border-radius:14px;padding:1.4rem;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.search-box-top{display:flex;align-items:center;gap:0.8rem}
+.search-input{flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(200,151,42,0.2);border-radius:8px;padding:0.75rem 1rem;color:#e8eaf0;font-size:0.95rem;font-family:inherit;outline:none}
+.search-input:focus{border-color:#c8972a}
+.search-input::placeholder{color:#8a9bb5}
+.search-close{background:none;border:none;color:#8a9bb5;font-size:1.4rem;cursor:pointer;line-height:1;padding:0.3rem}
+.search-close:hover{color:#e8eaf0}
+.search-results{margin-top:1rem;max-height:55vh;overflow-y:auto}
+.search-result{display:flex;gap:0.8rem;align-items:flex-start;padding:0.7rem 0.5rem;border-radius:8px;text-decoration:none;color:inherit;transition:background 0.15s}
+.search-result:hover{background:rgba(200,151,42,0.08)}
+.search-result-type{font-size:0.95rem;margin-top:0.15rem}
+.search-result-title{font-size:0.9rem;font-weight:600;color:#e8eaf0;font-family:'Playfair Display',Georgia,serif}
+.search-result-desc{font-size:0.78rem;color:#8a9bb5;margin-top:0.2rem;line-height:1.4}
+.search-no-results{padding:1rem 0.5rem;color:#8a9bb5;font-size:0.88rem;text-align:center}

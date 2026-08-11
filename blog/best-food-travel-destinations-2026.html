@@ -42,7 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .site-footer .footer-brand-logo img{height:32px;width:32px}
 .site-footer .footer-brand-logo span{color:var(--gold)}
 .site-footer .footer-desc{font-size:0.82rem;color:var(--text-muted);line-height:1.7;max-width:280px}
-.site-footer .footer-social{display:flex;gap:0.7rem;margin-top:1rem}
+.site-footer .footer-social{display:flex;flex-wrap:wrap;max-width:220px;gap:0.7rem;margin-top:1rem}
 .site-footer .footer-social a{width:34px;height:34px;border-radius:50%;border:1px solid rgba(200,151,42,0.3);display:flex;align-items:center;justify-content:center;color:var(--text-muted);transition:all 0.2s}
 .site-footer .footer-social svg{width:16px;height:16px}
 .site-footer .footer-social a:hover{color:var(--gold);border-color:var(--gold)}
@@ -166,12 +166,23 @@ nav{padding:1rem 1.5rem}
 }
 @media(max-width:480px){.site-footer .footer-grid{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="../search.css">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PF5TGZJ5"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<div class="search-overlay">
+  <div class="search-box">
+    <div class="search-box-top">
+      <input type="text" class="search-input" placeholder="Search destinations, guides, tips...">
+      <button class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <div class="search-results"></div>
+  </div>
+</div>
 <nav>
   <a href="../index.html" class="nav-logo"><img src="../logo.svg" alt="Zentrevo logo">ZENTR<span>EVO</span></a>
   <ul class="nav-links">
@@ -181,6 +192,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><a href="../contact.html">Contact</a></li>
   </ul>
   <a href="../contact.html" class="nav-cta">Book Now</a>
+  <button class="search-toggle" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21L16.5 16.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
   <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('nav-open')">
     <span></span><span></span><span></span>
   </button>
@@ -343,7 +355,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="../index.html" class="footer-brand-logo"><img src="../logo.svg" alt="Zentrevo logo">ZENTR<span>EVO</span></a>
       <p class="footer-desc">Crafting extraordinary travel experiences for curious souls around the globe.</p>
       <div class="footer-social">
-        <a href="https://www.instagram.com/zentrevo.official/" target="_blank" rel="noopener me" aria-label="Zentrevo on Instagram"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1.15" fill="currentColor"/></svg></a>
+        <a href="https://www.instagram.com/zentrevo_travel/" target="_blank" rel="noopener me" aria-label="Zentrevo on Instagram"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1.15" fill="currentColor"/></svg></a>
+        <a href="https://x.com/zentrevo_travel" target="_blank" rel="noopener me" aria-label="Zentrevo on X"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61592436556939" target="_blank" rel="noopener me" aria-label="Zentrevo on Facebook"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M13.6 21.8V13.6H16L16.4 10.6H13.6V8.7C13.6 7.86 13.83 7.3 15.03 7.3H16.5V4.6C16.24 4.57 15.36 4.5 14.33 4.5C12.18 4.5 10.7 5.8 10.7 8.22V10.6H8.3V13.6H10.7V21.8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></a>
+        <a href="https://www.linkedin.com/company/zentrevo" target="_blank" rel="noopener me" aria-label="Zentrevo on LinkedIn"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.6"/><circle cx="7.2" cy="7.5" r="1.3" fill="currentColor"/><rect x="6.2" y="10.5" width="2" height="7.5" fill="currentColor"/><path d="M11 10.5H12.9V11.6C13.3 10.9 14.1 10.3 15.4 10.3C17.5 10.3 18.1 11.6 18.1 13.7V18H16.1V14.1C16.1 12.9 15.8 12.2 14.9 12.2C13.7 12.2 13 13 13 14.1V18H11V10.5Z" fill="currentColor"/></svg></a>
+        <a href="https://bsky.app/profile/zentrevo.bsky.social" target="_blank" rel="noopener me" aria-label="Zentrevo on Bluesky"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8.5C11 6.2 8.5 4.2 6.2 4C5 3.9 4 4.3 4 5.6C4 8.2 5.3 12.3 8.7 14C9.5 14.4 10.4 14.6 11.2 14.4C10 14.7 8.7 15.4 8.7 16.8C8.7 18.2 10.2 19 12 19C13.8 19 15.3 18.2 15.3 16.8C15.3 15.4 14 14.7 12.8 14.4C13.6 14.6 14.5 14.4 15.3 14C18.7 12.3 20 8.2 20 5.6C20 4.3 19 3.9 17.8 4C15.5 4.2 13 6.2 12 8.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
         <a href="https://www.pinterest.com/zentrevoofficial/" target="_blank" rel="noopener me" aria-label="Zentrevo on Pinterest"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M9.5 18C10 16.2 11 12.4 11 12.4M12.1 14.5C13.7 14.5 15.3 13.2 15.3 10.8C15.3 8.7 13.6 7 11.7 7C9.2 7 7.9 8.8 7.9 10.4C7.9 11.3 8.3 12.1 9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="https://www.tumblr.com/blog/zentervo" target="_blank" rel="noopener me" aria-label="Zentrevo on Tumblr"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M13.2 5.5V8.3H15.6V10.6H13.2V14.7C13.2 15.7 13.6 16.2 14.5 16.2C14.9 16.2 15.3 16.15 15.6 16.05V18.3C15.1 18.5 14.4 18.6 13.6 18.6C11.6 18.6 10.5 17.4 10.5 15.1V10.6H9V8.3H10.5C10.7 7.1 11.4 6 13.2 5.5Z" fill="currentColor"/></svg></a>
         <a href="https://mastodon.social/@zentervo" target="_blank" rel="noopener me" aria-label="Zentrevo on Mastodon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C7.5 3 5.5 4.5 5.5 8V12.5C5.5 15.5 7.3 17 9.8 17.3C10.6 17.4 11.3 17.4 12 17.3V15C11.4 15.1 10.8 15.1 10.2 15C8.7 14.8 7.7 13.9 7.7 12.4V8C7.7 6 9 5 12 5C15 5 16.3 6 16.3 8V12.4C16.3 13.9 15.3 14.8 13.8 15C13.5 15.05 13.2 15.07 12.9 15.07V17.35C13.9 17.4 14.9 17.3 15.7 17C17.9 16.4 18.5 15 18.5 12.5V8C18.5 4.5 16.5 3 12 3Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M9.8 9V12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M14.2 9V12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M12.9 17.35V21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a>
@@ -386,5 +402,6 @@ document.querySelectorAll('.nav-links a').forEach(a=>{
   });
 });
 </script>
+<script src="../search.js"></script>
 </body>
 </html>

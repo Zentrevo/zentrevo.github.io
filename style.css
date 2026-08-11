@@ -246,7 +246,7 @@ footer {
   margin-bottom: 20px;
 }
 
-.footer-social{display:flex;gap:0.7rem;margin-top:0.5rem;margin-bottom:20px}
+.footer-social{display:flex;flex-wrap:wrap;max-width:220px;gap:0.7rem;margin-top:0.5rem;margin-bottom:20px}
 .footer-social a{width:34px;height:34px;border-radius:50%;border:1px solid rgba(200,151,42,0.3);display:flex;align-items:center;justify-content:center;color:var(--cream-dim);transition:all 0.2s;text-decoration:none}
 .footer-social a:hover{color:var(--gold);border-color:var(--gold)}
 .footer-social svg{width:16px;height:16px}
