@@ -30,243 +30,301 @@
   "type": "page"
  },
  {
+  "title": "Sitemap",
+  "url": "sitemap.html",
+  "desc": "Every page and travel guide on Zentrevo, organized in one place.",
+  "type": "page"
+ },
+ {
+  "title": "Privacy Policy",
+  "url": "privacy-policy.html",
+  "desc": "How Zentrevo collects, uses, and protects your information.",
+  "type": "page"
+ },
+ {
+  "title": "Terms & Conditions",
+  "url": "terms.html",
+  "desc": "The rules and guidelines for using Zentrevo's website and services.",
+  "type": "page"
+ },
+ {
   "title": "Best African Safari Experiences 2026 Travel Guide",
   "url": "blog/best-african-safari-experiences-2026.html",
   "desc": "The best African safari experiences for 2026, from Serengeti migrations to Okavango Delta water safaris, with best-time-to-visit and lodge r",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-03-09"
  },
  {
   "title": "Best All-Inclusive Resort Destinations 2026",
   "url": "blog/best-all-inclusive-resorts-2026.html",
   "desc": "The best all-inclusive resort destinations for 2026, covering the Caribbean, Mexico, and the Maldives, with what's actually included and wha",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-04-20"
  },
  {
   "title": "Best Budget Travel Destinations 2026 | Explore More, Spend Less",
   "url": "blog/best-budget-travel-destinations-2026.html",
   "desc": "Discover the 7 best budget travel destinations for 2026. From Vietnam to Portugal, explore amazing places where your money goes further. Tip",
-  "type": "blog"
+  "type": "blog",
+  "date": ""
  },
  {
   "title": "Best Digital Nomad Destinations 2026 — Where to Work & Travel",
   "url": "blog/best-digital-nomad-destinations-2026.html",
   "desc": "The 8 best digital nomad destinations for 2026, ranked by wifi speed, visa access, cost of living, and community. Includes visa requirements",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-02-26"
  },
  {
   "title": "Best European City Breaks 2026 — Weekend Trip Guide",
   "url": "blog/best-european-city-breaks-2026.html",
   "desc": "The best European city breaks for 2026 — perfect 2-3 day weekend trip destinations with flight time, budget, and itinerary tips.",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-04-08"
  },
  {
   "title": "Best Family Travel Destinations 2026",
   "url": "blog/best-family-travel-destinations-2026.html",
   "desc": "From Bali to Africa safari, the world's most kid-friendly, memory-making destinations for families of all ages. Best family travel destinati",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-02-20"
  },
  {
   "title": "Best Food Travel Destinations 2026",
   "url": "blog/best-food-travel-destinations-2026.html",
   "desc": "The best food travel destinations for 2026, from Osaka's street food to Oaxaca's mole culture, with market tips and what to actually order.",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-05-02"
  },
  {
   "title": "Best Honeymoon Alternatives 2026 — Beyond the Beach",
   "url": "blog/best-honeymoon-alternatives-2026.html",
   "desc": "Looking beyond the traditional beach honeymoon? The best honeymoon alternatives for 2026, from safari lodges to European train journeys.",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-05-20"
  },
  {
   "title": "Best Honeymoon Destinations 2026",
   "url": "blog/best-honeymoon-destinations-2026.html",
   "desc": "Planning your honeymoon in 2026? Discover the most romantic destinations worldwide — from Maldives overwater villas to Santorini sunsets. Ex",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-01-21"
  },
  {
   "title": "Best National Parks to Visit in 2026",
   "url": "blog/best-national-parks-to-visit-2026.html",
   "desc": "The best national parks to visit in 2026, from Yellowstone to Torres del Paine, with permit tips, best seasons, and crowd-avoidance strategi",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-05-08"
  },
  {
   "title": "Best Neighborhoods to Stay in New York City (2026)",
   "url": "blog/best-neighborhoods-to-stay-in-new-york-city.html",
   "desc": "The best neighborhoods to stay in New York City for first-time visitors — where to base yourself depending on your trip style and budget.",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-07-30"
  },
  {
   "title": "Best Photography Travel Destinations 2026",
   "url": "blog/best-photography-travel-destinations-2026.html",
   "desc": "The best photography travel destinations for 2026, from Iceland's ice caves to Morocco's desert dunes, with golden hour timing and gear tips",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-05-14"
  },
  {
   "title": "25 Best Places to Visit in 2026 Travel Guide",
   "url": "blog/best-places-to-visit-2026.html",
   "desc": "Discover the 25 best places to visit in 2026. From hidden gems to iconic destinations, our expert travel guide covers top-rated destinations",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-01-15"
  },
  {
   "title": "Best Road Trip Routes 2026 Travel Guide",
   "url": "blog/best-road-trip-routes-2026.html",
   "desc": "The best road trip routes for 2026, from California's Highway 1 to Scotland's North Coast 500, with drive times, seasonal tips, and rental a",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-04-26"
  },
  {
   "title": "Best Ski & Winter Travel Destinations 2026",
   "url": "blog/best-ski-winter-destinations-2026.html",
   "desc": "The best ski and winter travel destinations for the 2026 season, from the Swiss Alps to Japan's powder snow, with resort tips and best-value",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-03-15"
  },
  {
   "title": "Best Time to Book Flights for the Cheapest Prices (2026)",
   "url": "blog/best-time-to-book-flights-for-cheapest-prices.html",
   "desc": "When is the best time to book flights for the cheapest prices? Real booking windows by trip type, best days to buy, and myths worth ignoring",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-06-13"
  },
  {
   "title": "Best Way to Get from CDG to Paris City Center (2026)",
   "url": "blog/best-way-to-get-from-cdg-to-paris-city-center.html",
   "desc": "The best way to get from Charles de Gaulle Airport to Paris city center in 2026 — RER B train, taxi, shuttle, and Uber compared by cost and ",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-08-05"
  },
  {
   "title": "Best Wellness & Spa Retreats 2026 Travel Guide",
   "url": "blog/best-wellness-spa-retreats-2026.html",
   "desc": "The best wellness and spa retreats around the world for 2026, from Thai detox programs to Icelandic geothermal spas, with cost and program d",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-03-27"
  },
  {
   "title": "Discovering Island Life Beyond Luxury",
   "url": "blog/discovering-island-life-beyond-luxury.html",
   "desc": "What happens when you trade five-star resorts for barefoot villages and unphotographed sunsets? A look at authentic island life beyond the r",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-01-27"
  },
  {
   "title": "Do You Need a Visa to Visit Vietnam? (2026 Guide)",
   "url": "blog/do-you-need-a-visa-to-visit-vietnam.html",
   "desc": "Do you need a visa to visit Vietnam? A clear breakdown of Vietnam's e-visa system, visa-exempt countries, and how long you can actually stay",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-07-24"
  },
  {
   "title": "Does a Schengen Visa Require Travel Insurance?",
   "url": "blog/does-schengen-visa-require-travel-insurance.html",
   "desc": "Does a Schengen visa require travel insurance? Yes — here's the exact coverage minimum, what counts as valid proof, and how to get it right ",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-03-03"
  },
  {
   "title": "Experiencing Europe Beyond Tourist Routes",
   "url": "blog/experiencing-europe-beyond-tourist-routes.html",
   "desc": "The real Europe is one street off the main road. A guide to experiencing Europe beyond the tourist routes, from local markets to overlooked ",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-02-02"
  },
  {
   "title": "How Early Should You Arrive at the Airport for International Flights?",
   "url": "blog/how-early-should-you-arrive-at-the-airport-for-international-flights.html",
   "desc": "How early should you arrive at the airport for international flights? A realistic breakdown by airport size, season, and travel document sta",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-04-07"
  },
  {
   "title": "How Many Days Do You Need in Japan? A First-Timer's Guide",
   "url": "blog/how-many-days-do-you-need-in-japan.html",
   "desc": "Planning your first Japan trip? Here's exactly how many days you need for Tokyo, Kyoto, and beyond, based on your travel style and budget.",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-05-26"
  },
  {
   "title": "How Much Money Do You Need for a Week in Thailand?",
   "url": "blog/how-much-money-do-you-need-for-a-week-in-thailand.html",
   "desc": "How much money do you need for a week in Thailand? Real daily costs for budget, mid-range, and comfortable trips, broken down by category.",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-03-17"
  },
  {
   "title": "How to Avoid Jet Lag on Long Flights (2026 Guide)",
   "url": "blog/how-to-avoid-jet-lag-on-long-flights.html",
   "desc": "How to avoid jet lag on long flights — pre-flight prep, in-flight habits, and what actually works to reset your body clock faster, backed by",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-07-18"
  },
  {
   "title": "How to See the Northern Lights in Iceland (2026 Guide)",
   "url": "blog/how-to-see-the-northern-lights-in-iceland.html",
   "desc": "How to see the Northern Lights in Iceland — best months, where to go outside Reykjavik light pollution, and what the aurora forecast actuall",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-07-12"
  },
  {
   "title": "How to Spend 3 Days in Rome: A First-Timer's Itinerary",
   "url": "blog/how-to-spend-3-days-in-rome.html",
   "desc": "How to spend 3 days in Rome, day by day — the Colosseum, Vatican, and Trastevere without rushing, plus what to skip and where to eat.",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-06-18"
  },
  {
   "title": "Is Bali Safe for Solo Female Travelers? (2026 Honest Guide)",
   "url": "blog/is-bali-safe-for-solo-female-travelers.html",
   "desc": "Is Bali safe for solo female travelers? An honest look at real safety considerations, best areas to stay, and practical tips from experience",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-06-24"
  },
  {
   "title": "Is It Cheaper to Book Flight and Hotel Together?",
   "url": "blog/is-it-cheaper-to-book-flight-and-hotel-together.html",
   "desc": "Is it cheaper to book flight and hotel together? Sometimes — here's when bundling actually saves money and when booking separately wins.",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-03-24"
  },
  {
   "title": "Is It Safe to Travel to Thailand Alone? (2026 Guide)",
   "url": "blog/is-it-safe-to-travel-to-thailand-alone.html",
   "desc": "Is it safe to travel to Thailand alone? A realistic look at solo travel safety in Thailand — common scams, safest regions, and what to actua",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-06-30"
  },
  {
   "title": "Is Travel Insurance Worth It for Short Trips?",
   "url": "blog/is-travel-insurance-worth-it-short-trips.html",
   "desc": "Is travel insurance worth it for a 3-5 day trip? Here's a clear breakdown of when it actually pays off and when you can reasonably skip it.",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-06-01"
  },
  {
   "title": "Luxury Travel Guide 2026 — Worth Every Penny",
   "url": "blog/luxury-travel-guide-2026.html",
   "desc": "The world's finest travel experiences for 2026 — private island retreats, five-star safari lodges, and exclusive access most travelers never",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-02-14"
  },
  {
   "title": "Solo Female Travel Safety Guide 2026",
   "url": "blog/solo-female-travel-safety-guide-2026.html",
   "desc": "A practical solo female travel safety guide for 2026 covering destination research, accommodation choices, packing, and real safety tips fro",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-03-04"
  },
  {
   "title": "Southeast Asia Island Hopping Guide 2026",
   "url": "blog/southeast-asia-island-hopping-guide-2026.html",
   "desc": "The ultimate Southeast Asia island hopping guide for 2026, covering the Philippines, Thailand, and Indonesia with routes, ferry tips, and co",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-04-14"
  },
  {
   "title": "Top Adventure Travel Destinations 2026",
   "url": "blog/top-adventure-travel-destinations-2026.html",
   "desc": "The top adventure travel destinations for 2026, from Patagonia trekking to Nepal's Himalayan trails, with difficulty levels and best-season ",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-04-02"
  },
  {
   "title": "Ultimate Cruise Vacation Guide 2026",
   "url": "blog/ultimate-cruise-vacation-guide-2026.html",
   "desc": "Everything to know before booking a cruise in 2026 — how to choose an itinerary, cabin selection tips, hidden costs, and the best cruise lin",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-03-21"
  },
  {
   "title": "The Ultimate Solo Travel Guide for 2026",
   "url": "blog/ultimate-solo-travel-guide-2026.html",
   "desc": "Safe destinations, smart packing, and why traveling alone is one of the most transformative things you can do. The ultimate solo travel guid",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-02-08"
  },
  {
   "title": "What Currency to Use in Switzerland (2026 Guide)",
   "url": "blog/what-currency-to-use-in-switzerland.html",
   "desc": "What currency to use in Switzerland — why it's Swiss francs and not euros, current exchange tips, and where cards are accepted vs. cash-only",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-07-06"
  },
  {
   "title": "What to Pack for a Two-Week Europe Trip (2026 Checklist)",
   "url": "blog/what-to-pack-for-a-two-week-europe-trip.html",
   "desc": "A complete packing checklist for a two-week Europe trip in 2026 — what actually fits in a carry-on, seasonal layers, and the items first-tim",
-  "type": "blog"
+  "type": "blog",
+  "date": "2026-06-07"
  }
 ]

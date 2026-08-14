@@ -112,7 +112,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .sidebar{}
 .sidebar-card{background:var(--navy-3);border:1px solid rgba(200,151,42,.12);padding:1.5rem;margin-bottom:1.5rem}
 .sidebar-card h4{font-family:var(--ff-display);font-size:1rem;font-weight:700;color:var(--white);margin-bottom:1rem;padding-bottom:.7rem;border-bottom:1px solid rgba(200,151,42,.15)}
-.sidebar-post{display:flex;gap:.8rem;margin-bottom:.9rem;text-decoration:none;color:inherit}
+.sidebar-post{display:flex;gap:.8rem;margin-bottom:.9rem;text-decoration:none;color:inherit;padding:.4rem;margin-left:-.4rem;margin-right:-.4rem;border-radius:8px;transition:background .25s ease,transform .25s cubic-bezier(0.2,0.8,0.2,1)}
+.sidebar-post:hover{background:rgba(200,151,42,0.08);transform:translateX(4px)}
+.sidebar-post:active{transform:translateX(2px) scale(0.98);transition-duration:.12s}
+.sidebar-post img{transition:transform .35s ease}
+.sidebar-post:hover img{transform:scale(1.06)}
 .sidebar-post:last-child{margin-bottom:0}
 .sidebar-post img{width:60px;height:50px;object-fit:cover;flex-shrink:0}
 .sidebar-post-title{font-size:.8rem;font-weight:500;color:var(--text);line-height:1.4}
@@ -130,11 +134,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .sec-tag::before{content:'';width:22px;height:1px;background:var(--gold)}
 .related h2{font-family:var(--ff-display);font-size:1.8rem;font-weight:700;color:var(--white);margin-bottom:2rem}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.related-card{background:var(--navy-3);border:1px solid rgba(200,151,42,.1);overflow:hidden;text-decoration:none;color:inherit;transition:border-color .3s,transform .3s;display:block}
-.related-card:hover{border-color:rgba(200,151,42,.35);transform:translateY(-3px)}
+.related-card{background:var(--navy-3);border:1px solid rgba(200,151,42,.1);overflow:hidden;text-decoration:none;color:inherit;transition:border-color .35s ease,transform .35s cubic-bezier(0.2,0.8,0.2,1),box-shadow .35s ease;display:block}
+.related-card:hover{border-color:rgba(200,151,42,.45);transform:translateY(-6px) scale(1.015);box-shadow:0 18px 40px rgba(0,0,0,0.35),0 0 0 1px rgba(200,151,42,0.15)}
+.related-card:active{transform:translateY(-2px) scale(0.99);transition-duration:.12s}
 .related-img{height:160px;overflow:hidden}
-.related-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.related-card:hover .related-img img{transform:scale(1.06)}
+.related-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(0.2,0.8,0.2,1)}
+.related-card:hover .related-img img{transform:scale(1.08)}
 .related-body{padding:1rem}
 .related-date{font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;display:block}
 .related-body h4{font-family:var(--ff-display);font-size:.9rem;font-weight:700;color:var(--white);line-height:1.35}
@@ -224,7 +229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="dest-list">
   <div class="dest-item">
-    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=200&q=80" alt="Highway 1 California">
+    <img width="200" height="133" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=200&q=80" alt="Highway 1 California">
     <div class="dest-info">
       <div class="dest-num">01</div>
       <h4>Pacific Coast Highway, California</h4>
@@ -233,7 +238,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="dest-item">
-    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&q=80" alt="North Coast 500 Scotland" loading="lazy" decoding="async">
+    <img width="200" height="133" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&q=80" alt="North Coast 500 Scotland" loading="lazy" decoding="async">
     <div class="dest-info">
       <div class="dest-num">02</div>
       <h4>North Coast 500, Scotland</h4>
@@ -242,7 +247,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="dest-item">
-    <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=200&q=80" alt="Ring Road Iceland" loading="lazy" decoding="async">
+    <img width="200" height="133" src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=200&q=80" alt="Ring Road Iceland" loading="lazy" decoding="async">
     <div class="dest-info">
       <div class="dest-num">03</div>
       <h4>Ring Road, Iceland</h4>
@@ -251,7 +256,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="dest-item">
-    <img src="https://images.unsplash.com/photo-1527824404775-dce343118ebc?w=200&q=80" alt="Great Ocean Road Australia" loading="lazy" decoding="async">
+    <img width="200" height="133" src="https://images.unsplash.com/photo-1527824404775-dce343118ebc?w=200&q=80" alt="Great Ocean Road Australia" loading="lazy" decoding="async">
     <div class="dest-info">
       <div class="dest-num">04</div>
       <h4>Great Ocean Road, Australia</h4>
@@ -261,7 +266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<img class="blog-img-full" src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=1200&q=80" alt="Scenic road trip driving" loading="lazy" decoding="async">
+<img width="1200" height="800" class="blog-img-full" src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=1200&q=80" alt="Scenic road trip driving" loading="lazy" decoding="async">
 
 <h2>Rental Car <em>Logistics</em> Worth Knowing</h2>
 
@@ -290,7 +295,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="author-box">
-  <img class="author-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80" alt="Diego Ramirez" loading="lazy" decoding="async">
+  <img width="120" height="80" class="author-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80" alt="Diego Ramirez" loading="lazy" decoding="async">
   <div>
     <div class="author-name">Diego Ramirez</div>
     <div class="author-role">Adventure Travel Editor, Zentrevo</div>
@@ -304,15 +309,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="sidebar-card">
     <h4>Related Articles</h4>
     <a href="best-ski-winter-destinations-2026.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=600&q=80" alt="Best Ski & Winter Travel Destinations 2026" loading="lazy" decoding="async">
+      <img width="600" height="400" src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=600&q=80" alt="Best Ski & Winter Travel Destinations 2026" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">Best Ski & Winter Travel Destinations 2026</div><span class="sidebar-post-date">15 Mar 2026</span></div>
     </a>
     <a href="best-european-city-breaks-2026.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Best European City Breaks 2026" loading="lazy" decoding="async">
+      <img width="600" height="400" src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Best European City Breaks 2026" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">Best European City Breaks 2026</div><span class="sidebar-post-date">8 Apr 2026</span></div>
     </a>
     <a href="top-adventure-travel-destinations-2026.html" class="sidebar-post">
-      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Top Adventure Travel Destinations 2026" loading="lazy" decoding="async">
+      <img width="600" height="400" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Top Adventure Travel Destinations 2026" loading="lazy" decoding="async">
       <div><div class="sidebar-post-title">Top Adventure Travel Destinations 2026</div><span class="sidebar-post-date">2 Apr 2026</span></div>
     </a>
   </div>
@@ -335,15 +340,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>More Travel Inspiration</h2>
   <div class="related-grid">
     <a href="best-ski-winter-destinations-2026.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=600&q=80" alt="Best Ski & Winter Travel Destinations 2026" loading="lazy" decoding="async"></div>
+      <div class="related-img"><img width="600" height="400" src="https://images.unsplash.com/photo-1551524559-8af4e6624178?w=600&q=80" alt="Best Ski & Winter Travel Destinations 2026" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">15 Mar 2026</span><h4>Best Ski & Winter Travel Destinations 2026</h4></div>
     </a>
     <a href="best-european-city-breaks-2026.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Best European City Breaks 2026" loading="lazy" decoding="async"></div>
+      <div class="related-img"><img width="600" height="400" src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Best European City Breaks 2026" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">8 Apr 2026</span><h4>Best European City Breaks 2026</h4></div>
     </a>
     <a href="top-adventure-travel-destinations-2026.html" class="related-card">
-      <div class="related-img"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Top Adventure Travel Destinations 2026" loading="lazy" decoding="async"></div>
+      <div class="related-img"><img width="600" height="400" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Top Adventure Travel Destinations 2026" loading="lazy" decoding="async"></div>
       <div class="related-body"><span class="related-date">2 Apr 2026</span><h4>Top Adventure Travel Destinations 2026</h4></div>
     </a>
   </div>
@@ -359,6 +364,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="https://x.com/zentrevo_travel" target="_blank" rel="noopener me" aria-label="Zentrevo on X"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
         <a href="https://www.facebook.com/profile.php?id=61592436556939" target="_blank" rel="noopener me" aria-label="Zentrevo on Facebook"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M13.6 21.8V13.6H16L16.4 10.6H13.6V8.7C13.6 7.86 13.83 7.3 15.03 7.3H16.5V4.6C16.24 4.57 15.36 4.5 14.33 4.5C12.18 4.5 10.7 5.8 10.7 8.22V10.6H8.3V13.6H10.7V21.8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></a>
         <a href="https://www.linkedin.com/company/zentrevo" target="_blank" rel="noopener me" aria-label="Zentrevo on LinkedIn"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.6"/><circle cx="7.2" cy="7.5" r="1.3" fill="currentColor"/><rect x="6.2" y="10.5" width="2" height="7.5" fill="currentColor"/><path d="M11 10.5H12.9V11.6C13.3 10.9 14.1 10.3 15.4 10.3C17.5 10.3 18.1 11.6 18.1 13.7V18H16.1V14.1C16.1 12.9 15.8 12.2 14.9 12.2C13.7 12.2 13 13 13 14.1V18H11V10.5Z" fill="currentColor"/></svg></a>
+        <a href="https://www.youtube.com/@zentrevo_travel" target="_blank" rel="noopener me" aria-label="Zentrevo on YouTube"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5.5" width="20" height="13" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M10.2 9.3L14.8 12L10.2 14.7V9.3Z" fill="currentColor"/></svg></a>
         <a href="https://bsky.app/profile/zentrevo.bsky.social" target="_blank" rel="noopener me" aria-label="Zentrevo on Bluesky"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8.5C11 6.2 8.5 4.2 6.2 4C5 3.9 4 4.3 4 5.6C4 8.2 5.3 12.3 8.7 14C9.5 14.4 10.4 14.6 11.2 14.4C10 14.7 8.7 15.4 8.7 16.8C8.7 18.2 10.2 19 12 19C13.8 19 15.3 18.2 15.3 16.8C15.3 15.4 14 14.7 12.8 14.4C13.6 14.6 14.5 14.4 15.3 14C18.7 12.3 20 8.2 20 5.6C20 4.3 19 3.9 17.8 4C15.5 4.2 13 6.2 12 8.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
         <a href="https://www.pinterest.com/zentrevoofficial/" target="_blank" rel="noopener me" aria-label="Zentrevo on Pinterest"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M9.5 18C10 16.2 11 12.4 11 12.4M12.1 14.5C13.7 14.5 15.3 13.2 15.3 10.8C15.3 8.7 13.6 7 11.7 7C9.2 7 7.9 8.8 7.9 10.4C7.9 11.3 8.3 12.1 9 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="https://www.tumblr.com/blog/zentervo" target="_blank" rel="noopener me" aria-label="Zentrevo on Tumblr"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M13.2 5.5V8.3H15.6V10.6H13.2V14.7C13.2 15.7 13.6 16.2 14.5 16.2C14.9 16.2 15.3 16.15 15.6 16.05V18.3C15.1 18.5 14.4 18.6 13.6 18.6C11.6 18.6 10.5 17.4 10.5 15.1V10.6H9V8.3H10.5C10.7 7.1 11.4 6 13.2 5.5Z" fill="currentColor"/></svg></a>
@@ -380,6 +386,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="../faq.html">FAQs</a></li>
         <li><a href="../privacy-policy.html">Privacy Policy</a></li>
         <li><a href="../terms.html">Terms & Conditions</a></li>
+        <li><a href="../sitemap.html">Sitemap</a></li>
       </ul>
     </div>
     <div>
