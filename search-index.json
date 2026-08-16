@@ -356,5 +356,17 @@
   "url": "blog/is-uber-available-in-bali.html",
   "desc": "Uber doesn't operate in Indonesia. Here's what actually works to get around the island.",
   "type": "blog"
+ },
+ {
+  "title": "Is It Worth Renting a Car in Italy?",
+  "url": "blog/is-it-worth-renting-a-car-in-italy.html",
+  "desc": "Depends where you're going — here's when a rental genuinely helps and when it's a headache.",
+  "type": "blog"
+ },
+ {
+  "title": "Do You Need Travel Insurance for a Cruise?",
+  "url": "blog/do-you-need-travel-insurance-for-a-cruise.html",
+  "desc": "What standard health insurance doesn't cover at sea, and why cruise-specific coverage matters.",
+  "type": "blog"
  }
 ]
