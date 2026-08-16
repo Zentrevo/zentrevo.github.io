@@ -368,5 +368,11 @@
   "url": "blog/do-you-need-travel-insurance-for-a-cruise.html",
   "desc": "What standard health insurance doesn't cover at sea, and why cruise-specific coverage matters.",
   "type": "blog"
+ },
+ {
+  "title": "Japan Travel Guide",
+  "url": "blog/japan-travel-guide.html",
+  "desc": "Everything to know before your first trip to Japan — timing, budget, transport, and etiquette.",
+  "type": "blog"
  }
 ]
