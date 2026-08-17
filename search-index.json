@@ -374,5 +374,17 @@
   "url": "blog/japan-travel-guide.html",
   "desc": "Everything to know before your first trip to Japan — timing, budget, transport, and etiquette.",
   "type": "blog"
+ },
+ {
+  "title": "Italy Travel Guide",
+  "url": "blog/italy-travel-guide.html",
+  "desc": "When to go, how to get around, what to budget, and mistakes most first-time visitors make.",
+  "type": "blog"
+ },
+ {
+  "title": "Africa Safari Guide",
+  "url": "blog/africa-safari-guide.html",
+  "desc": "Best countries, when to go, what to budget, and how to choose between different safari styles.",
+  "type": "blog"
  }
 ]
