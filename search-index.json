@@ -386,5 +386,11 @@
   "url": "blog/africa-safari-guide.html",
   "desc": "Best countries, when to go, what to budget, and how to choose between different safari styles.",
   "type": "blog"
+ },
+ {
+  "title": "Bali Travel Guide",
+  "url": "blog/bali-travel-guide.html",
+  "desc": "When to go, where to stay, how to get around, and what first-time visitors get wrong.",
+  "type": "blog"
  }
 ]
