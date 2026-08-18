@@ -95,7 +95,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 /* ── GLOBE ── */
 .hero-right{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:55%;max-width:720px;z-index:5}
 .globe-wrap{position:relative;width:100%;padding-bottom:100%}
-canvas#globe{position:absolute;inset:0;width:100%!important;height:100%!important}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 0 60px rgba(200,151,42,0.25),0 0 0 1px rgba(200,151,42,0.15)}
 
 /* ── DESTINATIONS BAR ── */
 
@@ -279,7 +279,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="hero-right">
     <div class="globe-wrap">
-      <canvas id="globe"></canvas>
+      <video class="hero-video" autoplay muted loop playsinline poster="video/hero-earth-poster.jpg" aria-label="Rotating Earth animation">
+        <source src="video/hero-earth.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
@@ -491,127 +493,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       ctx.fillStyle=`rgba(200,151,42,${s.o})`;
       ctx.fill();
     });
-    requestAnimationFrame(draw);
-  }
-  draw();
-})();
-
-/* ── GLOBE ── */
-(function(){
-  const canvas = document.getElementById('globe');
-  const wrap = canvas.parentElement;
-  function resize(){
-    const w = wrap.offsetWidth;
-    canvas.width = w; canvas.height = w;
-  }
-  resize();
-  window.addEventListener('resize', resize);
-  const ctx = canvas.getContext('2d');
-  let rot = 0;
-
-  const dots = [];
-  for(let i=0;i<200;i++){
-    const lat=(Math.random()-0.5)*Math.PI;
-    const lng=Math.random()*Math.PI*2;
-    dots.push({lat,lng});
-  }
-
-  const lines = [
-    {lat1:0.6,lng1:0,lat2:-0.3,lng2:1.2},
-    {lat1:0.8,lng1:2,lat2:0.1,lng2:3.5},
-    {lat1:-0.4,lng1:1,lat2:0.5,lng2:2.8},
-    {lat1:0.2,lng1:0.5,lat2:-0.6,lng2:2.2},
-  ];
-
-  const hotspots = [
-    {lat:0.6,lng:0.3,label:'Tokyo'},
-    {lat:0.8,lng:2.1,label:'Paris'},
-    {lat:-0.3,lng:1.2,label:'Dubai'},
-    {lat:0.1,lng:2.9,label:'NYC'},
-    {lat:-0.5,lng:2.0,label:'Bali'},
-  ];
-
-  function project(lat,lng,R,cx,cy){
-    const x3 = R*Math.cos(lat)*Math.sin(lng+rot);
-    const y3 = R*Math.sin(lat);
-    const z3 = R*Math.cos(lat)*Math.cos(lng+rot);
-    return {x:cx+x3, y:cy-y3, visible:z3>0};
-  }
-
-  function draw(){
-    const w = canvas.width, h = canvas.height;
-    const cx=w/2, cy=h/2, R=w*0.44;
-    ctx.clearRect(0,0,w,h);
-
-    // Glow bg
-    const grd = ctx.createRadialGradient(cx,cy,R*0.1,cx,cy,R);
-    grd.addColorStop(0,'rgba(14,124,139,0.18)');
-    grd.addColorStop(0.5,'rgba(14,124,139,0.06)');
-    grd.addColorStop(1,'rgba(14,124,139,0)');
-    ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);
-    ctx.fillStyle=grd;ctx.fill();
-
-    // Globe circle
-    ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);
-    ctx.strokeStyle='rgba(200,151,42,0.15)';ctx.lineWidth=1;ctx.stroke();
-
-    // Grid lines
-    ctx.lineWidth=0.4;
-    for(let lat=-75;lat<=75;lat+=15){
-      const la=lat*Math.PI/180;
-      ctx.beginPath();
-      let first=true;
-      for(let lng=0;lng<=360;lng+=3){
-        const p=project(la,lng*Math.PI/180,R,cx,cy);
-        if(p.visible){first?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y);first=false;}
-        else first=true;
-      }
-      ctx.strokeStyle='rgba(200,151,42,0.12)';ctx.stroke();
-    }
-    for(let lng=0;lng<360;lng+=20){
-      const ln=lng*Math.PI/180;
-      ctx.beginPath();
-      let first=true;
-      for(let lat=-90;lat<=90;lat+=3){
-        const p=project(lat*Math.PI/180,ln,R,cx,cy);
-        if(p.visible){first?ctx.moveTo(p.x,p.y):ctx.lineTo(p.x,p.y);first=false;}
-        else first=true;
-      }
-      ctx.strokeStyle='rgba(200,151,42,0.12)';ctx.stroke();
-    }
-
-    // Flight lines
-    lines.forEach(l=>{
-      const p1=project(l.lat1,l.lng1,R,cx,cy);
-      const p2=project(l.lat2,l.lng2,R,cx,cy);
-      if(p1.visible&&p2.visible){
-        const mx=(p1.x+p2.x)/2, my=(p1.y+p2.y)/2 - R*0.18;
-        ctx.beginPath();ctx.moveTo(p1.x,p1.y);ctx.quadraticCurveTo(mx,my,p2.x,p2.y);
-        ctx.strokeStyle='rgba(200,151,42,0.35)';ctx.lineWidth=0.8;ctx.stroke();
-      }
-    });
-
-    // Dots
-    dots.forEach(d=>{
-      const p=project(d.lat,d.lng,R,cx,cy);
-      if(p.visible){
-        ctx.beginPath();ctx.arc(p.x,p.y,0.8,0,Math.PI*2);
-        ctx.fillStyle='rgba(200,151,42,0.4)';ctx.fill();
-      }
-    });
-
-    // Hotspots
-    hotspots.forEach(h=>{
-      const p=project(h.lat,h.lng,R,cx,cy);
-      if(p.visible){
-        ctx.beginPath();ctx.arc(p.x,p.y,4,0,Math.PI*2);
-        ctx.fillStyle='rgba(200,151,42,0.9)';ctx.fill();
-        ctx.beginPath();ctx.arc(p.x,p.y,7,0,Math.PI*2);
-        ctx.strokeStyle='rgba(200,151,42,0.35)';ctx.lineWidth=1;ctx.stroke();
-      }
-    });
-
-    rot += 0.003;
     requestAnimationFrame(draw);
   }
   draw();
