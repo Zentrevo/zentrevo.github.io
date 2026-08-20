@@ -392,5 +392,17 @@
   "url": "blog/bali-travel-guide.html",
   "desc": "When to go, where to stay, how to get around, and what first-time visitors get wrong.",
   "type": "blog"
+ },
+ {
+  "title": "What to Pack for a Safari",
+  "url": "blog/what-to-pack-for-a-safari.html",
+  "desc": "The complete checklist — clothing, gear, and health items, plus the mistakes first-timers make.",
+  "type": "blog"
+ },
+ {
+  "title": "Is It Safe to Travel to Colombia?",
+  "url": "blog/is-it-safe-to-travel-to-colombia.html",
+  "desc": "An honest, current answer — the real risks, where they concentrate, and what actually matters.",
+  "type": "blog"
  }
 ]
