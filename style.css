@@ -333,10 +333,15 @@ footer {
   color: var(--cream);
   font-family: var(--font-sans);
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.form-input:hover, .form-textarea:hover, .form-select:hover {
+  border-color: rgba(212,168,83,0.5);
 }
 .form-input:focus, .form-textarea:focus, .form-select:focus {
   border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212,168,83,0.12);
+  background: rgba(15,32,64,0.95);
 }
 .form-input::placeholder, .form-textarea::placeholder { color: rgba(240,236,227,0.3); }
 .form-textarea { min-height: 130px; resize: vertical; }

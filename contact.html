@@ -22,19 +22,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zentrevo.github.io/contact.html">
   <meta property="og:site_name" content="Zentrevo">
-  <meta property="og:locale" content="en_IN">
+  <meta property="og:locale" content="en_US">
 
   <!-- ═══ TWITTER CARD ═══ -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@zentrevo">
+  <meta name="twitter:site" content="@zentrevo_travel">
   <title>Contact Us — Zentrevo | Plan Your Dream Trip</title>
 
   <meta property="og:title" content="Contact Us — Zentrevo | Plan Your Dream Trip">
   <meta property="og:description" content="Get in touch with Zentrevo travel experts to plan your perfect holiday. Email us or fill out our enquiry form — we respond within 24 hours.">
-  <meta property="og:image" content="https://zentrevo.github.io/og-image.jpg">
+  <meta property="og:image" content="https://zentrevo.github.io/og-image.png">
   <meta name="twitter:title" content="Contact Us — Zentrevo | Plan Your Dream Trip">
   <meta name="twitter:description" content="Get in touch with Zentrevo travel experts to plan your perfect holiday. Email us or fill out our enquiry form — we respond within 24 hours.">
-  <meta name="twitter:image" content="https://zentrevo.github.io/og-image.jpg">
+  <meta name="twitter:image" content="https://zentrevo.github.io/og-image.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,10 +46,82 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico">
   <style>
+    .contact-hero { padding: 0; border-bottom: none; }
+    .contact-hero-bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center 30%;
+      transform: scale(1.02);
+    }
+    .contact-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(10,22,40,0.88) 0%, rgba(10,22,40,0.94) 55%, var(--navy) 100%);
+    }
+    .contact-hero-content {
+      position: relative;
+      padding: 100px 60px 56px;
+      max-width: 720px;
+    }
+    .trust-badges { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+    .trust-badge {
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(212,168,83,0.08);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 30px;
+      padding: 9px 16px 9px 12px;
+      font-size: 12px;
+      color: var(--cream-dim);
+      white-space: nowrap;
+    }
+    .trust-badge svg { width: 16px; height: 16px; color: var(--gold); flex-shrink: 0; }
+
+    .how-it-works { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 48px 0 72px; }
+    .how-step { position: relative; padding: 8px 4px; }
+    .how-step-num {
+      font-family: var(--font-serif); font-size: 40px; font-weight: 700;
+      color: transparent; -webkit-text-stroke: 1px var(--gold-dim);
+      line-height: 1; margin-bottom: 14px;
+    }
+    .how-step h3 { font-family: var(--font-serif); font-size: 18px; color: var(--cream); margin-bottom: 8px; }
+    .how-step p { font-size: 13px; color: var(--cream-dim); line-height: 1.65; }
+    .how-step:not(:last-child)::after {
+      content: '';
+      position: absolute; top: 24px; right: -12px;
+      width: 24px; height: 0.5px; background: var(--gold-dim);
+      display: none;
+    }
+    @media (min-width: 901px) { .how-step:not(:last-child)::after { display: block; } }
+
+    .contact-info-box { position: relative; overflow: hidden; }
+    .contact-info-box::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, transparent 100%);
+    }
+    .form-box { position: relative; overflow: hidden; }
+    .form-box::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent 0%, var(--gold-light) 50%, var(--gold) 100%);
+    }
+    .form-input, .form-select, .form-textarea { transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212,168,83,0.12);
+      background: rgba(15,32,64,0.95);
+      outline: none;
+    }
+    .btn-primary { position: relative; overflow: hidden; }
+    .btn-primary::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.25) 50%, transparent 70%);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+    .btn-primary:hover::after { transform: translateX(100%); }
+    .form-note { font-size: 11px; color: var(--cream-dim); text-align: center; margin-top: 14px; opacity: 0.75; }
+
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1.5fr;
-      gap: 48px;
+      gap: 32px;
       align-items: start;
     }
     .contact-info-box {
@@ -57,6 +129,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       border: 0.5px solid var(--gold-dim);
       border-radius: 16px;
       padding: 40px 32px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-info-box:hover {
+      border-color: rgba(212,168,83,0.35);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.25);
     }
     .contact-item {
       display: flex;
@@ -64,17 +141,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       gap: 16px;
       padding: 20px 0;
       border-bottom: 0.5px solid var(--gold-dim);
+      transition: transform 0.25s cubic-bezier(0.2,0.8,0.2,1);
     }
+    .contact-item:hover { transform: translateX(4px); }
     .contact-item:last-child { border-bottom: none; }
     .contact-icon {
-      font-size: 22px;
       width: 44px; height: 44px;
       background: rgba(212,168,83,0.1);
       border: 0.5px solid var(--gold-dim);
       border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
+      color: var(--gold);
+      transition: background 0.25s ease, transform 0.25s ease;
     }
+    .contact-item:hover .contact-icon { background: rgba(212,168,83,0.18); transform: scale(1.06); }
+    .contact-icon svg { width: 20px; height: 20px; }
     .contact-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
     .contact-value { font-size: 14px; color: var(--cream); }
     .contact-value a { color: var(--cream); text-decoration: none; }
@@ -85,6 +167,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       border: 0.5px solid var(--gold-dim);
       border-radius: 16px;
       padding: 40px 36px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .form-box:hover {
+      border-color: rgba(212,168,83,0.3);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.22);
     }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .form-success {
@@ -102,8 +189,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       border: 0.5px solid var(--gold-dim);
       border-radius: 12px;
       padding: 28px;
+      transition: transform 0.3s cubic-bezier(0.2,0.8,0.2,1), border-color 0.3s ease, box-shadow 0.3s ease;
     }
-    .office-icon { font-size: 28px; margin-bottom: 12px; }
+    .office-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212,168,83,0.4);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.3);
+    }
+    .office-icon {
+      width: 48px; height: 48px;
+      background: rgba(212,168,83,0.1);
+      border: 0.5px solid var(--gold-dim);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+      color: var(--gold);
+      transition: background 0.25s ease;
+    }
+    .office-card:hover .office-icon { background: rgba(212,168,83,0.18); }
+    .office-icon svg { width: 22px; height: 22px; }
     .office-city { font-family: var(--font-serif); font-size: 18px; color: var(--cream); margin-bottom: 6px; }
     .office-addr { font-size: 13px; color: var(--cream-dim); line-height: 1.65; }
 
@@ -113,7 +217,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       border: 0.5px solid var(--gold-dim);
       border-radius: 10px;
       overflow: hidden;
+      transition: border-color 0.25s ease;
     }
+    .faq-item:hover { border-color: rgba(212,168,83,0.3); }
     .faq-q {
       padding: 18px 22px;
       font-size: 14px;
@@ -122,9 +228,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       display: flex;
       justify-content: space-between;
       align-items: center;
+      transition: color 0.2s;
     }
     .faq-q:hover { color: var(--gold); }
-    .faq-arrow { color: var(--gold); font-size: 18px; transition: transform 0.2s; }
+    .faq-arrow { color: var(--gold); font-size: 18px; transition: transform 0.25s ease; flex-shrink: 0; margin-left: 12px; }
     .faq-a {
       padding: 0 22px;
       font-size: 13px;
@@ -136,6 +243,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .faq-item.open .faq-a { max-height: 200px; padding-bottom: 18px; }
     .faq-item.open .faq-arrow { transform: rotate(45deg); }
+
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+      .office-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .how-it-works { grid-template-columns: 1fr; gap: 32px; }
+      .contact-hero-content { padding: 80px 32px 44px; }
+    }
+    @media (max-width: 640px) {
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      .office-grid { grid-template-columns: 1fr; }
+      .contact-info-box, .form-box { padding: 28px 22px; }
+      .office-card { padding: 22px; }
+      .page-hero h1 { font-size: 32px !important; }
+      .contact-hero-content { padding: 72px 20px 40px; }
+      .trust-badges { gap: 10px; }
+      .trust-badge { font-size: 11px; padding: 7px 12px 7px 10px; }
+      .how-it-works { margin: 36px 0 56px; }
+    }
+    @media (max-width: 400px) {
+      .contact-hero-content { padding: 64px 16px 36px; }
+      .page-hero h1 { font-size: 27px !important; }
+      .section-sub { font-size: 13px !important; }
+      .trust-badge { width: 100%; justify-content: center; }
+      .contact-info-box, .form-box { padding: 24px 16px; }
+    }
   </style>
 <link rel="stylesheet" href="search.css">
 </head>
@@ -173,13 +305,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </button>
   </nav>
 
-  <div class="page-hero">
-    <div class="section-tag fade-in">Get In Touch</div>
-    <h1 class="section-title fade-in" style="font-size:48px;">Let's Plan Your <em style="font-style:italic;color:var(--gold);">Adventure</em></h1>
-    <p class="section-sub fade-in">Have a destination in mind? A budget? A dream? Tell us — our travel experts will craft something extraordinary just for you.</p>
+  <div class="page-hero contact-hero">
+    <div class="contact-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&q=75')"></div>
+    <div class="contact-hero-overlay"></div>
+    <div class="contact-hero-content">
+      <div class="section-tag fade-in">Get In Touch</div>
+      <h1 class="section-title fade-in" style="font-size:48px;">Let's Plan Your <em style="font-style:italic;color:var(--gold);">Adventure</em></h1>
+      <p class="section-sub fade-in">Have a destination in mind? A budget? A dream? Tell us — our travel experts will craft something extraordinary just for you.</p>
+      <div class="trust-badges fade-in">
+        <div class="trust-badge"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7V12L15.5 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Reply within 24 hours</div>
+        <div class="trust-badge"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L4 6.5V11C4 15.5 7.5 19.7 12 21C16.5 19.7 20 15.5 20 11V6.5L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>No spam, ever</div>
+        <div class="trust-badge"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Real people, real replies</div>
+      </div>
+    </div>
   </div>
 
-  <section class="section">
+  <section class="section" style="padding-bottom:0;">
+    <div class="how-it-works">
+      <div class="how-step fade-in">
+        <div class="how-step-num">01</div>
+        <h3>Tell Us Your Dream</h3>
+        <p>Share your destination, dates, budget, and travel style through the form below — the more detail, the better we can tailor things.</p>
+      </div>
+      <div class="how-step fade-in">
+        <div class="how-step-num">02</div>
+        <h3>We Design Your Trip</h3>
+        <p>A real travel specialist builds a personalized itinerary around your priorities and sends it back within 24 hours.</p>
+      </div>
+      <div class="how-step fade-in">
+        <div class="how-step-num">03</div>
+        <h3>Refine and Book</h3>
+        <p>Adjust anything that isn't quite right, then confirm — we handle the logistics while you get ready to travel.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
     <div class="contact-grid">
 
       <!-- LEFT: Contact Info -->
@@ -187,14 +348,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="contact-info-box fade-in">
           <div class="section-tag" style="margin-bottom:20px;">Reach Us</div>
           <div class="contact-item">
-            <div class="contact-icon">📧</div>
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div>
               <div class="contact-label">Email</div>
               <div class="contact-value"><a href="mailto:zentrevo.official@outlook.com">zentrevo.official@outlook.com</a></div>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">🕐</div>
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7V12L15.5 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div>
               <div class="contact-label">Working Hours</div>
               <div class="contact-value">Mon–Sat: 9 AM – 8 PM IST</div>
@@ -269,10 +430,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="form-group">
             <label class="form-label">Budget (per person)</label>
             <select class="form-select" name="budget">
-              <option>₹30,000 – ₹60,000</option>
-              <option>₹60,000 – ₹1,00,000</option>
-              <option>₹1,00,000 – ₹2,00,000</option>
-              <option>₹2,00,000+</option>
+              <option>Under $1,500</option>
+              <option>$1,500 – $3,000</option>
+              <option>$3,000 – $6,000</option>
+              <option>$6,000+</option>
             </select>
           </div>
           <div class="form-group">
@@ -306,7 +467,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="office-card fade-in">
           <div class="office-icon">🌐</div>
           <div class="office-city">Social Media</div>
-          <div class="office-addr">Follow along and message us on Instagram, Pinterest, Tumblr, or Mastodon.</div>
+          <div class="office-addr">Follow along and message us across Instagram, X, Facebook, LinkedIn, YouTube, Bluesky, Pinterest, Tumblr, and Mastodon.</div>
         </div>
         <div class="office-card fade-in">
           <div class="office-icon">📝</div>
@@ -323,23 +484,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-list">
         <div class="faq-item fade-in">
           <div class="faq-q">How far in advance should I book? <span class="faq-arrow">+</span></div>
-          <div class="faq-a">We recommend booking at least 6–8 weeks in advance for international trips, and 4 weeks for domestic. However, we can accommodate last-minute requests — just contact us!</div>
+          <div class="faq-a">We recommend starting the conversation 6–8 weeks ahead for international trips, and around 4 weeks for domestic ones. That said, we can often accommodate shorter timelines — just get in touch and we'll let you know what's realistic.</div>
         </div>
         <div class="faq-item fade-in">
           <div class="faq-q">Is travel insurance included? <span class="faq-arrow">+</span></div>
-          <div class="faq-a">Yes! All Zentrevo packages include comprehensive travel insurance covering medical emergencies, trip cancellation, lost baggage, and more.</div>
+          <div class="faq-a">Travel insurance isn't automatically bundled into every package, but we can point you toward suitable coverage for your trip and destination — just ask when we're planning your itinerary.</div>
         </div>
         <div class="faq-item fade-in">
           <div class="faq-q">Can I customise a package? <span class="faq-arrow">+</span></div>
-          <div class="faq-a">Absolutely. Every package can be tailored to your needs — different hotels, extra nights, added experiences, solo vs group travel. Just tell us what you want!</div>
+          <div class="faq-a">Absolutely. Every itinerary can be tailored — different hotels, extra nights, added experiences, solo vs. group travel. Just tell us what you want and we'll build around it.</div>
         </div>
         <div class="faq-item fade-in">
           <div class="faq-q">What payment options are available? <span class="faq-arrow">+</span></div>
-          <div class="faq-a">We accept all major credit/debit cards, UPI, net banking, and offer 0% EMI options across leading banks. A 25% deposit secures your booking.</div>
+          <div class="faq-a">Payment methods depend on your destination and booking, and we'll walk you through exactly what's accepted once your itinerary is finalized — we work with travelers worldwide, so options vary by region.</div>
         </div>
         <div class="faq-item fade-in">
           <div class="faq-q">What is your cancellation policy? <span class="faq-arrow">+</span></div>
-          <div class="faq-a">Cancellations made 30+ days before travel receive a full refund. 15–29 days: 75% refund. Under 15 days: subject to supplier terms. Travel insurance covers most scenarios.</div>
+          <div class="faq-a">Cancellation terms depend on the specific hotels, airlines, and operators in your itinerary, since each sets its own policy. We'll always explain the exact terms clearly before you confirm a booking.</div>
         </div>
       </div>
     </div>
@@ -387,7 +548,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Zentrevo. All rights reserved.</span>
+      <span>© 2026 Zentrevo. All rights reserved.</span>
       <span>Made with ❤ for travelers</span>
     </div>
   </footer>
