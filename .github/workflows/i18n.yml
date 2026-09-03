@@ -1,0 +1,60 @@
+name: Translate site & rebuild sitemaps
+
+on:
+  push:
+    branches: [main]
+    paths:
+      # Only run when a real source page changes - ignore the folders/files
+      # this workflow itself generates, to avoid triggering itself in a loop.
+      - "**/*.html"
+      - "!es/**"
+      - "!fr/**"
+      - "!de/**"
+      - "!pt/**"
+      - "!ru/**"
+      - "!ja/**"
+      - "!sitemap.html"
+  workflow_dispatch: {} # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: i18n-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Translate pages via DeepL
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: npm run translate
+
+      - name: Regenerate sitemap.xml and sitemap.html
+        run: npm run sitemaps
+
+      - name: Regenerate llms.txt
+        run: npm run llms-txt
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "No changes to commit." && exit 0
+          git commit -m "chore(i18n): auto-translate pages & rebuild sitemaps [skip ci]"
+          git push
