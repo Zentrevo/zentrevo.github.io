@@ -57,6 +57,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 html{scroll-behavior:smooth}
 body{background:var(--navy);color:var(--text);font-family:var(--ff-body);overflow-x:hidden;line-height:1.6}
 
+/* ── INTRO SPLASH ── */
+#intro-splash{position:fixed;inset:0;z-index:9999;background:var(--navy);display:flex;align-items:center;justify-content:center;transition:opacity 0.8s ease;overflow:hidden}
+#intro-splash.hide{opacity:0;pointer-events:none}
+#intro-splash .intro-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(14,124,139,0.15) 0%,transparent 65%),var(--navy)}
+#intro-enter{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:1.6rem;cursor:pointer;background:none;border:none;color:var(--text)}
+#intro-enter .intro-ring{width:110px;height:110px;border-radius:50%;border:1px solid rgba(200,151,42,0.4);display:flex;align-items:center;justify-content:center;transition:border-color 0.3s,transform 0.3s}
+#intro-enter:hover .intro-ring{border-color:var(--gold);transform:scale(1.06)}
+#intro-enter .intro-play{width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:22px solid var(--gold);margin-left:6px}
+#intro-enter .intro-label{font-family:var(--ff-body);font-size:0.72rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted)}
+#intro-enter .intro-title{font-family:var(--ff-display);font-size:1.4rem;font-weight:700;color:var(--white)}
+#intro-video-wrap{position:relative;z-index:2;width:min(520px,80vw);display:none;align-items:center;justify-content:center}
+#intro-video-wrap.active{display:flex}
+#intro-video{width:100%;border-radius:12px;box-shadow:0 0 60px rgba(200,151,42,0.2)}
+#intro-skip{position:absolute;bottom:2.2rem;right:2.2rem;z-index:3;background:none;border:1px solid rgba(232,234,240,0.25);color:var(--text-muted);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.55rem 1.1rem;cursor:pointer;transition:all 0.2s}
+#intro-skip:hover{color:var(--gold);border-color:var(--gold)}
+body.intro-active{overflow:hidden}
+
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(10,15,30,0.92);border-bottom:1px solid rgba(200,151,42,0.12);backdrop-filter:blur(20px)}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.4rem;z-index:210}
@@ -218,12 +235,27 @@ footer{background:var(--navy-2);border-top:1px solid rgba(200,151,42,0.12);paddi
 </style>
 <link rel="stylesheet" href="search.css">
 </head>
-<body>
+<body class="intro-active">
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PF5TGZJ5"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<!-- INTRO SPLASH: click to start, plays countdown video, then reveals site -->
+<div id="intro-splash">
+  <div class="intro-bg"></div>
+  <button id="intro-enter" aria-label="Click to enter Zentrevo">
+    <div class="intro-ring"><div class="intro-play"></div></div>
+    <div class="intro-title">ZENTR<span style="color:var(--gold)">EVO</span></div>
+    <div class="intro-label">Click to Begin</div>
+  </button>
+  <div id="intro-video-wrap">
+    <video id="intro-video" playsinline>
+      <source src="video/3_Seconds_Animated_Countdown_Timer_Video_With_Sound.mp4" type="video/mp4">
+    </video>
+  </div>
+  <button id="intro-skip">Skip Intro →</button>
+</div>
 
 <div class="search-overlay">
   <div class="search-box">
@@ -471,6 +503,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script>
+/* ── INTRO SPLASH LOGIC ── */
+(function(){
+  const splash = document.getElementById('intro-splash');
+  const enterBtn = document.getElementById('intro-enter');
+  const videoWrap = document.getElementById('intro-video-wrap');
+  const video = document.getElementById('intro-video');
+  const skipBtn = document.getElementById('intro-skip');
+
+  function closeIntro(){
+    splash.classList.add('hide');
+    document.body.classList.remove('intro-active');
+    setTimeout(()=>{ splash.style.display='none'; }, 850);
+  }
+
+  enterBtn.addEventListener('click',()=>{
+    enterBtn.style.display='none';
+    videoWrap.classList.add('active');
+    video.play().catch(()=>{ closeIntro(); });
+  });
+
+  video.addEventListener('ended', closeIntro);
+  skipBtn.addEventListener('click', closeIntro);
+
+  // If a returning visitor already saw it this session, skip straight in
+  if (sessionStorage.getItem('zentrevoIntroSeen')) {
+    closeIntro();
+    splash.style.display='none';
+  } else {
+    video.addEventListener('play', ()=> sessionStorage.setItem('zentrevoIntroSeen','1'));
+  }
+})();
+
 /* ── STARS BACKGROUND ── */
 (function(){
   const c = document.getElementById('stars-canvas');
