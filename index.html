@@ -57,21 +57,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 html{scroll-behavior:smooth}
 body{background:var(--navy);color:var(--text);font-family:var(--ff-body);overflow-x:hidden;line-height:1.6}
 
-/* ── INTRO SPLASH ── */
-#intro-splash{position:fixed;inset:0;z-index:9999;background:var(--navy);display:flex;align-items:center;justify-content:center;transition:opacity 0.8s ease;overflow:hidden}
+/* ── INTRO SPLASH (full-screen, autoplay) ── */
+#intro-splash{position:fixed;inset:0;z-index:9999;background:#000;display:flex;align-items:center;justify-content:center;transition:opacity 0.7s ease;overflow:hidden}
 #intro-splash.hide{opacity:0;pointer-events:none}
-#intro-splash .intro-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(14,124,139,0.15) 0%,transparent 65%),var(--navy)}
-#intro-enter{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:1.6rem;cursor:pointer;background:none;border:none;color:var(--text)}
-#intro-enter .intro-ring{width:110px;height:110px;border-radius:50%;border:1px solid rgba(200,151,42,0.4);display:flex;align-items:center;justify-content:center;transition:border-color 0.3s,transform 0.3s}
-#intro-enter:hover .intro-ring{border-color:var(--gold);transform:scale(1.06)}
-#intro-enter .intro-play{width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:22px solid var(--gold);margin-left:6px}
-#intro-enter .intro-label{font-family:var(--ff-body);font-size:0.72rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted)}
-#intro-enter .intro-title{font-family:var(--ff-display);font-size:1.4rem;font-weight:700;color:var(--white)}
-#intro-video-wrap{position:relative;z-index:2;width:min(520px,80vw);display:none;align-items:center;justify-content:center}
-#intro-video-wrap.active{display:flex}
-#intro-video{width:100%;border-radius:12px;box-shadow:0 0 60px rgba(200,151,42,0.2)}
-#intro-skip{position:absolute;bottom:2.2rem;right:2.2rem;z-index:3;background:none;border:1px solid rgba(232,234,240,0.25);color:var(--text-muted);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.55rem 1.1rem;cursor:pointer;transition:all 0.2s}
+#intro-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#intro-skip{position:absolute;bottom:2rem;right:2rem;z-index:3;background:rgba(10,15,30,0.5);border:1px solid rgba(232,234,240,0.3);color:var(--text);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.55rem 1.1rem;cursor:pointer;transition:all 0.2s;backdrop-filter:blur(6px)}
 #intro-skip:hover{color:var(--gold);border-color:var(--gold)}
+#intro-unmute{position:absolute;bottom:2rem;left:2rem;z-index:3;background:rgba(10,15,30,0.5);border:1px solid rgba(232,234,240,0.3);color:var(--text);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.55rem 1.1rem;cursor:pointer;transition:all 0.2s;backdrop-filter:blur(6px);display:none}
+#intro-unmute.show{display:block}
 body.intro-active{overflow:hidden}
 
 /* ── NAV ── */
@@ -191,7 +184,7 @@ section{padding:6rem 3rem}
 
 /* ── CTA ── */
 .cta{position:relative;padding:8rem 3rem;text-align:center;overflow:hidden}
-.cta-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1800&q=80') center/cover no-repeat;filter:brightness(0.18)}
+.cta-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1400&q=70&auto=format&fm=webp') center/cover no-repeat;filter:brightness(0.18)}
 .cta-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(14,124,139,0.2) 0%,transparent 70%)}
 .cta-content{position:relative}
 .cta h2{font-family:var(--ff-display);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--white);margin-bottom:1rem;line-height:1.15}
@@ -241,20 +234,13 @@ footer{background:var(--navy-2);border-top:1px solid rgba(200,151,42,0.12);paddi
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<!-- INTRO SPLASH: click to start, plays countdown video, then reveals site -->
+<!-- INTRO SPLASH: full-screen autoplay countdown, then reveals site -->
 <div id="intro-splash">
-  <div class="intro-bg"></div>
-  <button id="intro-enter" aria-label="Click to enter Zentrevo">
-    <div class="intro-ring"><div class="intro-play"></div></div>
-    <div class="intro-title">ZENTR<span style="color:var(--gold)">EVO</span></div>
-    <div class="intro-label">Click to Begin</div>
-  </button>
-  <div id="intro-video-wrap">
-    <video id="intro-video" playsinline>
-      <source src="video/3_Seconds_Animated_Countdown_Timer_Video_With_Sound.mp4" type="video/mp4">
-    </video>
-  </div>
-  <button id="intro-skip">Skip Intro →</button>
+  <video id="intro-video" autoplay muted playsinline preload="auto">
+    <source src="video/countdown-optimized.mp4" type="video/mp4">
+  </video>
+  <button id="intro-unmute">🔊 Unmute</button>
+  <button id="intro-skip">Skip →</button>
 </div>
 
 <div class="search-overlay">
@@ -370,7 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="why-img-wrap reveal">
-    <img width="900" height="600" src="https://images.unsplash.com/photo-1682687981674-0509eb5efca5?w=900&q=80" alt="Travel experience" fetchpriority="high">
+    <img width="900" height="600" src="https://images.unsplash.com/photo-1682687981674-0509eb5efca5?w=900&q=80&auto=format&fm=webp" alt="Travel experience" loading="lazy" decoding="async">
     <div class="why-img-badge">
       <span class="big">1:1</span>
       <span class="small">Personal Planning</span>
@@ -421,7 +407,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="blog-grid">
     <a href="blog/discovering-island-life-beyond-luxury.html" class="blog-card reveal">
-      <div class="blog-img"><img width="800" height="534" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Island" loading="lazy" decoding="async"></div>
+      <div class="blog-img"><img width="800" height="534" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=75&auto=format&fm=webp" alt="Island" loading="lazy" decoding="async"></div>
       <div class="blog-body">
         <span class="blog-date">27 Jan 2026</span>
         <h4>Discovering Island Life Beyond Luxury</h4>
@@ -430,7 +416,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </a>
     <a href="blog/experiencing-europe-beyond-tourist-routes.html" class="blog-card reveal reveal-delay-1">
-      <div class="blog-img"><img width="800" height="534" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80" alt="Europe" loading="lazy" decoding="async"></div>
+      <div class="blog-img"><img width="800" height="534" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=75&auto=format&fm=webp" alt="Europe" loading="lazy" decoding="async"></div>
       <div class="blog-body">
         <span class="blog-date">2 Feb 2026</span>
         <h4>Experiencing Europe Beyond Tourist Routes</h4>
@@ -503,36 +489,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script>
-/* ── INTRO SPLASH LOGIC ── */
+/* ── INTRO SPLASH LOGIC (full-screen autoplay) ── */
 (function(){
   const splash = document.getElementById('intro-splash');
-  const enterBtn = document.getElementById('intro-enter');
-  const videoWrap = document.getElementById('intro-video-wrap');
   const video = document.getElementById('intro-video');
   const skipBtn = document.getElementById('intro-skip');
+  const unmuteBtn = document.getElementById('intro-unmute');
+
+  // Skip entirely for returning visitors this session
+  if (sessionStorage.getItem('zentrevoIntroSeen')) {
+    splash.style.display = 'none';
+    document.body.classList.remove('intro-active');
+    return;
+  }
+  sessionStorage.setItem('zentrevoIntroSeen','1');
 
   function closeIntro(){
     splash.classList.add('hide');
     document.body.classList.remove('intro-active');
-    setTimeout(()=>{ splash.style.display='none'; }, 850);
+    setTimeout(()=>{ splash.style.display='none'; }, 750);
   }
 
-  enterBtn.addEventListener('click',()=>{
-    enterBtn.style.display='none';
-    videoWrap.classList.add('active');
-    video.play().catch(()=>{ closeIntro(); });
+  // Browsers block autoplay-with-sound, so we autoplay muted and offer a one-tap unmute
+  video.play().catch(()=>{ /* even muted autoplay blocked (rare) — video stays paused, skip still works */ });
+  unmuteBtn.classList.add('show');
+  unmuteBtn.addEventListener('click', ()=>{
+    video.muted = false;
+    unmuteBtn.classList.remove('show');
   });
 
   video.addEventListener('ended', closeIntro);
   skipBtn.addEventListener('click', closeIntro);
-
-  // If a returning visitor already saw it this session, skip straight in
-  if (sessionStorage.getItem('zentrevoIntroSeen')) {
-    closeIntro();
-    splash.style.display='none';
-  } else {
-    video.addEventListener('play', ()=> sessionStorage.setItem('zentrevoIntroSeen','1'));
-  }
+  // Safety net in case the video fails to load at all
+  video.addEventListener('error', closeIntro);
+  setTimeout(closeIntro, 6000);
 })();
 
 /* ── STARS BACKGROUND ── */
