@@ -112,7 +112,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 /* ── DESTINATIONS BAR ── */
 
 /* ── SECTION COMMONS ── */
-section{padding:7.5rem 3rem}
+section{padding:7.5rem 3rem;scroll-margin-top:90px}
 .sec-tag{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.68rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem}
 .sec-tag::before{content:'';width:24px;height:1px;background:var(--gold);opacity:0.7}
 .sec-title{font-family:var(--ff-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--white);line-height:1.15;margin-bottom:1rem}
@@ -260,6 +260,45 @@ section{padding:7.5rem 3rem}
 .cta h2 em{font-style:italic;color:var(--gold)}
 .cta p{color:rgba(232,234,240,0.6);font-size:0.98rem;margin-bottom:2.5rem;font-weight:300}
 
+/* ── TRUST BAR ── */
+.trust-bar{background:var(--navy-2);border-top:1px solid rgba(200,151,42,0.1);border-bottom:1px solid rgba(200,151,42,0.1);padding:2.6rem 3rem}
+.trust-stats{display:flex;justify-content:center;flex-wrap:wrap;gap:3.5rem 4.5rem;max-width:1100px;margin:0 auto}
+.trust-stat{text-align:center}
+.trust-stat .num{font-family:var(--ff-display);font-size:2.1rem;font-weight:700;color:var(--gold);display:block;line-height:1}
+.trust-stat .label{font-size:0.7rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.4rem;display:block}
+
+/* ── DETAIL MODAL (Tours / Visa / Destinations) ── */
+.detail-modal{position:fixed;inset:0;z-index:800;display:none;align-items:center;justify-content:center;padding:1.5rem}
+.detail-modal.open{display:flex}
+.detail-modal-backdrop{position:absolute;inset:0;background:rgba(5,8,16,0.85);backdrop-filter:blur(4px)}
+.detail-modal-inner{position:relative;background:var(--navy-3);border:1px solid rgba(200,151,42,0.25);max-width:560px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 30px 70px rgba(0,0,0,0.5);animation:modal-in 0.25s ease}
+@keyframes modal-in{from{opacity:0;transform:translateY(16px) scale(0.98)}to{opacity:1;transform:none}}
+.detail-modal-close{position:absolute;top:0.9rem;right:0.9rem;z-index:3;width:38px;height:38px;border-radius:50%;background:rgba(10,15,30,0.6);border:1px solid rgba(232,234,240,0.3);color:var(--white);font-size:1.3rem;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.detail-modal-close:hover{border-color:var(--gold);color:var(--gold)}
+.detail-modal-img{height:240px;overflow:hidden}
+.detail-modal-img img{width:100%;height:100%;object-fit:cover}
+.detail-modal-body{padding:1.8rem}
+.detail-modal-tag{display:inline-block;font-size:0.65rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,151,42,0.4);padding:0.3rem 0.8rem;margin-bottom:1rem}
+.detail-modal-body h3{font-family:var(--ff-display);font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:0.8rem;line-height:1.25}
+.detail-modal-meta{font-size:0.75rem;color:var(--text-muted);letter-spacing:0.05em;margin-bottom:1rem}
+.detail-modal-list{list-style:none;display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.2rem}
+.detail-modal-list li{font-size:0.72rem;color:var(--text-muted);background:rgba(232,234,240,0.05);border:1px solid rgba(232,234,240,0.08);padding:0.3rem 0.75rem}
+.detail-modal-desc{font-size:0.88rem;color:var(--text);line-height:1.75;margin-bottom:1.4rem}
+.detail-modal-desc p{margin-bottom:1rem}
+.detail-modal-desc p:last-child{margin-bottom:0}
+.detail-modal-price{font-family:var(--ff-display);font-size:1.4rem;font-weight:700;color:var(--gold);margin-bottom:1.2rem}
+.detail-modal-price span{font-size:0.7rem;font-family:var(--ff-body);font-weight:400;color:var(--text-muted)}
+@media(max-width:768px){.detail-modal-img{height:190px}.detail-modal-body{padding:1.4rem}}
+
+/* ── TRUST BADGES ── */
+.trust-badges{background:var(--navy-2);padding:3rem 3rem;border-bottom:1px solid rgba(200,151,42,0.08)}
+.trust-badges-grid{display:flex;justify-content:center;flex-wrap:wrap;gap:2.2rem 3rem;max-width:1200px;margin:0 auto}
+.trust-badge{display:flex;align-items:center;gap:0.7rem}
+.trust-badge svg{width:26px;height:26px;fill:none;stroke:var(--gold);stroke-width:1.4;flex-shrink:0}
+.trust-badge span{font-size:0.78rem;color:var(--text-muted);font-weight:500;letter-spacing:0.02em}
+.secure-note{display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:1.2rem;font-size:0.72rem;color:var(--text-muted);letter-spacing:0.03em}
+.secure-note svg{width:14px;height:14px;fill:none;stroke:var(--gold);stroke-width:1.8}
+
 /* ── TICKER ── */
 .ticker{background:var(--gold);overflow:hidden;padding:0.65rem 0}
 .ticker-track{display:flex;gap:3rem;animation:ticker 28s linear infinite;white-space:nowrap;width:max-content}
@@ -293,7 +332,7 @@ footer{background:var(--navy-2);border-top:1px solid rgba(200,151,42,0.12);paddi
 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){.hero-right{width:50%;right:-40px}.why{grid-template-columns:1fr;gap:3rem}.why-img-badge{left:0}}
-@media(max-width:768px){nav{padding:1rem 1.5rem;padding-left:calc(1.5rem + env(safe-area-inset-left));padding-right:calc(1.5rem + env(safe-area-inset-right))}.nav-toggle{display:block}.nav-links{display:none;position:fixed;top:64px;left:0;right:0;flex-direction:column;background:rgba(10,15,30,0.98);backdrop-filter:blur(20px);padding:1.5rem;gap:0.5rem;border-bottom:1px solid rgba(200,151,42,0.15);text-align:center;max-height:calc(100vh - 64px);max-height:calc(100dvh - 64px);overflow-y:auto}.nav-links.nav-open{display:flex}.nav-links a{display:block;padding:0.9rem;min-height:44px;line-height:1.2}.nav-book{padding:0.6rem 1.1rem;font-size:0.72rem}section{padding:3.5rem 1.5rem}.hero{flex-direction:column;padding:6rem 1.5rem 2.5rem;text-align:center;justify-content:flex-start}.hero-left{max-width:100%;padding-top:0}.hero-right{position:relative;width:100%;right:0;top:0;transform:none;max-width:300px;margin:1.5rem auto 0}.hero-btns{justify-content:center;width:100%}.hero-btns a{flex:1;min-width:140px;text-align:center}.hero-stats{justify-content:center;flex-wrap:wrap;gap:1.5rem 2rem}.pkg-card{flex-basis:78vw}.visa-card{flex-basis:78vw}.dest-card{flex-basis:78vw;height:320px}.test-grid{grid-template-columns:1fr}.nav-dropdown-menu{position:static;transform:none;background:transparent;border:none;box-shadow:none;padding:0 0 0 1rem}.nav-dropdown-menu a{padding:0.6rem}.blog-grid{grid-template-columns:1fr}.blog-header{flex-direction:column;align-items:flex-start;gap:1rem}.blog-layout{grid-template-columns:1fr;gap:1.5rem}.blog-featured-img{height:220px}.blog-featured h4{font-size:1.25rem}.footer-top{grid-template-columns:1fr 1fr;gap:2rem}.footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}.why-features{grid-template-columns:1fr}.why-img-wrap img{height:360px}.why-img-badge{left:0;bottom:1rem;padding:1rem 1.3rem}.cta{padding:5rem 1.5rem}}
+@media(max-width:768px){nav{padding:1rem 1.5rem;padding-left:calc(1.5rem + env(safe-area-inset-left));padding-right:calc(1.5rem + env(safe-area-inset-right));backdrop-filter:blur(10px)}.nav-toggle{display:block}.nav-links{display:none;position:fixed;top:64px;left:0;right:0;flex-direction:column;background:rgba(10,15,30,0.98);backdrop-filter:blur(20px);padding:1.5rem;gap:0.5rem;border-bottom:1px solid rgba(200,151,42,0.15);text-align:center;max-height:calc(100vh - 64px);max-height:calc(100dvh - 64px);overflow-y:auto}.nav-links.nav-open{display:flex}.nav-links a{display:block;padding:0.9rem;min-height:44px;line-height:1.2}.nav-book{padding:0.6rem 1.1rem;font-size:0.72rem}section{padding:3.5rem 1.5rem}.hero{flex-direction:column;padding:6rem 1.5rem 2.5rem;text-align:center;justify-content:flex-start}.hero-left{max-width:100%;padding-top:0}.hero-right{position:relative;width:100%;right:0;top:0;transform:none;max-width:300px;margin:1.5rem auto 0}.hero-btns{justify-content:center;width:100%}.hero-btns a{flex:1;min-width:140px;text-align:center}.hero-stats{justify-content:center;flex-wrap:wrap;gap:1.5rem 2rem}.pkg-card{flex-basis:78vw}.visa-card{flex-basis:78vw}.dest-card{flex-basis:78vw;height:320px}.test-grid{grid-template-columns:1fr}.nav-dropdown-menu{position:static;transform:none;background:transparent;border:none;box-shadow:none;padding:0 0 0 1rem}.nav-dropdown-menu a{padding:0.6rem}.blog-grid{grid-template-columns:1fr}.blog-header{flex-direction:column;align-items:flex-start;gap:1rem}.blog-layout{grid-template-columns:1fr;gap:1.5rem}.blog-featured-img{height:220px}.blog-featured h4{font-size:1.25rem}.footer-top{grid-template-columns:1fr 1fr;gap:2rem}.footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}.why-features{grid-template-columns:1fr}.why-img-wrap img{height:360px}.why-img-badge{left:0;bottom:1rem;padding:1rem 1.3rem}.cta{padding:5rem 1.5rem}.trust-bar{padding:2rem 1.5rem}.trust-stats{gap:1.8rem 2.2rem}.trust-stat .num{font-size:1.6rem}.trust-badges{padding:2rem 1.5rem}.trust-badges-grid{gap:1.4rem 1.8rem}.trust-badge span{font-size:0.72rem}}
 @media(max-width:480px){.hero h1{font-size:2.2rem}.hero-badge{font-size:0.62rem;padding:0.4rem 0.9rem}.hero p{font-size:0.92rem}.hero-btns{flex-direction:column}.hero-btns a{width:100%}.hero-stats{gap:1.2rem 1.6rem}.stat-num{font-size:1.5rem}.footer-top{grid-template-columns:1fr;gap:2rem}.sec-title{font-size:1.6rem}.test-card,.pkg-body,.blog-body{padding:1.2rem}}
 @media(hover:none){.pkg-card:hover,.blog-featured:hover,.test-card:hover,.why-feat:hover{transform:none;border-color:rgba(200,151,42,0.1)}.pkg-card:hover .pkg-img img,.blog-featured:hover .blog-featured-img img{transform:none}}
 </style>
@@ -330,6 +369,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="tours.html">Tours</a></li>
         <li><a href="visa.html">Visa</a></li>
         <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </li>
     <li><a href="blog.html">Blog</a></li>
@@ -396,6 +436,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="ticker-item">🏨 Hotel Bookings</span>
     <span class="ticker-item">🚗 Transfers & Rentals</span>
     <span class="ticker-item">⭐ Personalized Planning</span>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar reveal">
+  <div class="trust-stats">
+    <div class="trust-stat">
+      <span class="num">12+</span>
+      <span class="label">Years Experience</span>
+    </div>
+    <div class="trust-stat">
+      <span class="num">25,000+</span>
+      <span class="label">Happy Travelers</span>
+    </div>
+    <div class="trust-stat">
+      <span class="num">50+</span>
+      <span class="label">Destinations Covered</span>
+    </div>
+    <div class="trust-stat">
+      <span class="num">4.9★</span>
+      <span class="label">Average Rating</span>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST BADGES -->
+<div class="trust-badges reveal">
+  <div class="trust-badges-grid">
+    <div class="trust-badge">
+      <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V7C8 4.8 9.8 3 12 3S16 4.8 16 7V11" stroke-linejoin="round"/></svg>
+      <span>Secure Payments</span>
+    </div>
+    <div class="trust-badge">
+      <svg viewBox="0 0 24 24"><path d="M12 3L19 6V11C19 15.4 16 19.3 12 21C8 19.3 5 15.4 5 11V6L12 3Z" stroke-linejoin="round"/><path d="M9 12L11 14L15 10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Licensed Travel Agency</span>
+    </div>
+    <div class="trust-badge">
+      <svg viewBox="0 0 24 24"><path d="M12 17.3L6.2 20.5L7.4 14L2.8 9.6L9.1 8.7L12 3L14.9 8.7L21.2 9.6L16.6 14L17.8 20.5Z" stroke-linejoin="round"/></svg>
+      <span>Verified Traveler Reviews</span>
+    </div>
+    <div class="trust-badge">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6.5V12L16 14.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>24/7 Support</span>
+    </div>
+    <div class="trust-badge">
+      <svg viewBox="0 0 24 24"><path d="M12 21C12 21 3 15 3 8.7C3 5.8 5.2 3.5 8 3.5C9.7 3.5 11.2 4.4 12 5.7C12.8 4.4 14.3 3.5 16 3.5C18.8 3.5 21 5.8 21 8.7C21 15 12 21 12 21Z"/></svg>
+      <span>Best Price Guarantee</span>
+    </div>
+  </div>
+  <div class="secure-note">
+    <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V7C8 4.8 9.8 3 12 3S16 4.8 16 7V11" stroke-linejoin="round"/></svg>
+    <span>SSL Secured Checkout · No Hidden Fees · Trusted by Travelers Worldwide</span>
   </div>
 </div>
 
@@ -872,6 +964,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="tours-slider">
   <div class="pkg-track" id="dest-track">
     <div class="dest-card reveal">
+      <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=700&q=75&auto=format&fm=webp" alt="Istanbul Turkey skyline mosque" loading="lazy" decoding="async">
+      <div class="dest-overlay">
+        <span class="dest-country">Türkiye</span>
+        <h4>Turkey</h4>
+        <p>Istanbul's skyline of domes and minarets bridges Europe and Asia, while Cappadocia's fairy chimneys drift past hundreds of sunrise hot-air balloons.</p>
+        <div class="dest-full-desc" hidden><p>Turkey is a country that sits, quite literally, between two worlds — the European and Asian continents meet across the Bosphorus Strait in Istanbul, and that sense of crossroads runs through everything the country offers. It is one of the most historically layered destinations on earth, having been home to the Byzantine and Ottoman Empires, and its cities carry the fingerprints of both.</p><p>Istanbul is usually where a Turkey trip begins. The Hagia Sophia, once a Byzantine cathedral and later an Ottoman mosque, sits almost across the square from the Blue Mosque with its six soaring minarets and cascading domes. Nearby, Topkapi Palace holds centuries of royal history, while the Grand Bazaar — one of the oldest and largest covered markets in the world — is a maze of lantern shops, spice stalls, and hand-woven carpets. A sunset cruise along the Bosphorus, with the call to prayer drifting over the water and the skyline lit gold, is one of those travel moments people remember for years.</p><p>Beyond Istanbul, Cappadocia is Turkey's other unmissable icon. Its surreal landscape of "fairy chimney" rock formations was shaped over millions of years by volcanic ash and erosion, and centuries ago, entire underground cities and cave churches were carved into the soft stone. Today, many of those cave dwellings have been converted into boutique hotels, and the region is famous worldwide for its sunrise hot-air balloon flights — hundreds of balloons drifting silently over the valleys is a sight that rarely fails to move even well-travelled visitors.</p><p>The Turkish coastline adds an entirely different mood to the trip. Along the Aegean and Mediterranean, towns like Bodrum, Fethiye, and Antalya offer turquoise water, relaxed beach clubs, and ancient ruins scattered along the shoreline — including Ephesus, one of the best-preserved classical cities anywhere in the world, where marble streets once walked by Romans are still intact enough to wander today.</p><p>Food is central to any Turkish itinerary. Expect slow-cooked kebabs and köfte, warm flatbreads straight from a clay oven, mezze spreads of smoky eggplant and yoghurt-based dips, and Turkish tea served constantly, in small tulip-shaped glasses, wherever you go. No trip is complete without baklava from a proper pastry shop, and a strong, unfiltered Turkish coffee at the end of a meal — traditionally followed by someone offering to read your fortune from the grounds left in the cup.</p><p>Turkey is also a genuinely practical destination for travellers: it's visa-friendly for many nationalities, well connected by direct flights, has a mature tourism infrastructure, and offers a wide range of experiences from five-star resorts to family-run guesthouses, so it suits everyone from first-time international travellers to seasoned explorers looking for something with real depth.</p><p>The best time to visit depends on what you're after: spring (April to May) and early autumn (September to October) bring mild weather that's ideal for both Istanbul sightseeing and Cappadocia's balloon season, while summer suits the coast if a beach holiday is the priority. Winter, though quieter, has its own charm — Istanbul's mosques and bazaars are far less crowded, and snow occasionally dusts Cappadocia's rock formations for a strikingly different look.</p><p>Getting around is straightforward with a bit of planning: Istanbul's tram and ferry network makes the historic core easy to navigate on foot and by water, while domestic flights connect the city to Cappadocia and the coast in under an hour and a half. Zentrevo builds each Turkey itinerary around how much time you have and what you want to prioritise — whether that's a culture-heavy week centred on Istanbul and Ephesus, a Cappadocia-and-coast combination, or a longer trip that covers all three regions at a comfortable pace.</p></div>
+        <a class="pkg-whatsapp" target="_blank" rel="noopener" href="https://wa.me/918619928710?text=Hi%2C%20I%27m%20interested%20in%20visiting%20Turkey."><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.7 5 2 7.1L3 29l6.6-2.2c2 1.1 4.2 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3zm0 22.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.3 1.3-3.9-.3-.4a10 10 0 0 1-1.7-5.6C5.3 9.9 10.1 5.3 16 5.3S26.7 9.9 26.7 15.5 21.9 25.7 16 25.7zm5.8-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7.1a8.4 8.4 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5s-.7-1.6-1-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3 1.9 3 4.7 4.2c.6.3 1.1.4 1.5.6.6.2 1.2.1 1.6.1.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2c0-.1-.2-.2-.5-.4z"/></svg> Enquire via WhatsApp</a>
+      </div>
+    </div>
+    <div class="dest-card reveal">
+      <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=700&q=75&auto=format&fm=webp" alt="Taj Mahal Agra India" loading="lazy" decoding="async">
+      <div class="dest-overlay">
+        <span class="dest-country">India</span>
+        <h4>Agra</h4>
+        <p>Home to the Taj Mahal, a monument of eternal love.</p>
+        <a class="pkg-whatsapp" target="_blank" rel="noopener" href="https://wa.me/918619928710?text=Hi%2C%20I%27m%20interested%20in%20visiting%20Agra."><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.7 5 2 7.1L3 29l6.6-2.2c2 1.1 4.2 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3zm0 22.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.3 1.3-3.9-.3-.4a10 10 0 0 1-1.7-5.6C5.3 9.9 10.1 5.3 16 5.3S26.7 9.9 26.7 15.5 21.9 25.7 16 25.7zm5.8-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7.1a8.4 8.4 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5s-.7-1.6-1-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3 1.9 3 4.7 4.2c.6.3 1.1.4 1.5.6.6.2 1.2.1 1.6.1.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2c0-.1-.2-.2-.5-.4z"/></svg> Enquire via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="dest-card reveal">
+      <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f3?w=700&q=75&auto=format&fm=webp" alt="Goa beach India" loading="lazy" decoding="async">
+      <div class="dest-overlay">
+        <span class="dest-country">India</span>
+        <h4>Goa</h4>
+        <p>Golden beaches, Portuguese charm, and laid-back nightlife.</p>
+        <a class="pkg-whatsapp" target="_blank" rel="noopener" href="https://wa.me/918619928710?text=Hi%2C%20I%27m%20interested%20in%20visiting%20Goa."><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.7 5 2 7.1L3 29l6.6-2.2c2 1.1 4.2 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3zm0 22.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.3 1.3-3.9-.3-.4a10 10 0 0 1-1.7-5.6C5.3 9.9 10.1 5.3 16 5.3S26.7 9.9 26.7 15.5 21.9 25.7 16 25.7zm5.8-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7.1a8.4 8.4 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5s-.7-1.6-1-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3 1.9 3 4.7 4.2c.6.3 1.1.4 1.5.6.6.2 1.2.1 1.6.1.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2c0-.1-.2-.2-.5-.4z"/></svg> Enquire via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="dest-card reveal">
+      <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=700&q=75&auto=format&fm=webp" alt="Kerala backwaters houseboat" loading="lazy" decoding="async">
+      <div class="dest-overlay">
+        <span class="dest-country">India</span>
+        <h4>Kerala Backwaters</h4>
+        <p>Houseboats gliding through palm-lined lagoons.</p>
+        <a class="pkg-whatsapp" target="_blank" rel="noopener" href="https://wa.me/918619928710?text=Hi%2C%20I%27m%20interested%20in%20visiting%20Kerala%20Backwaters."><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.7 5 2 7.1L3 29l6.6-2.2c2 1.1 4.2 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3zm0 22.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.3 1.3-3.9-.3-.4a10 10 0 0 1-1.7-5.6C5.3 9.9 10.1 5.3 16 5.3S26.7 9.9 26.7 15.5 21.9 25.7 16 25.7zm5.8-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7.1a8.4 8.4 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5s-.7-1.6-1-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3 1.9 3 4.7 4.2c.6.3 1.1.4 1.5.6.6.2 1.2.1 1.6.1.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2c0-.1-.2-.2-.5-.4z"/></svg> Enquire via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="dest-card reveal">
+      <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=700&q=75&auto=format&fm=webp" alt="Hawa Mahal Jaipur India" loading="lazy" decoding="async">
+      <div class="dest-overlay">
+        <span class="dest-country">India</span>
+        <h4>Jaipur</h4>
+        <p>The Pink City of forts, palaces and bazaars.</p>
+        <a class="pkg-whatsapp" target="_blank" rel="noopener" href="https://wa.me/918619928710?text=Hi%2C%20I%27m%20interested%20in%20visiting%20Jaipur."><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.7 5 2 7.1L3 29l6.6-2.2c2 1.1 4.2 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3zm0 22.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.3 1.3-3.9-.3-.4a10 10 0 0 1-1.7-5.6C5.3 9.9 10.1 5.3 16 5.3S26.7 9.9 26.7 15.5 21.9 25.7 16 25.7zm5.8-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7.1a8.4 8.4 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5s-.7-1.6-1-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3 1.9 3 4.7 4.2c.6.3 1.1.4 1.5.6.6.2 1.2.1 1.6.1.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2c0-.1-.2-.2-.5-.4z"/></svg> Enquire via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="dest-card reveal">
+      <img src="https://images.unsplash.com/photo-1591018188414-3e9ff23dc4b4?w=700&q=75&auto=format&fm=webp" alt="Ladakh mountains India" loading="lazy" decoding="async">
+      <div class="dest-overlay">
+        <span class="dest-country">India</span>
+        <h4>Ladakh</h4>
+        <p>High-altitude deserts and monasteries in the clouds.</p>
+        <a class="pkg-whatsapp" target="_blank" rel="noopener" href="https://wa.me/918619928710?text=Hi%2C%20I%27m%20interested%20in%20visiting%20Ladakh."><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.7 5 2 7.1L3 29l6.6-2.2c2 1.1 4.2 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3zm0 22.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.3 1.3-3.9-.3-.4a10 10 0 0 1-1.7-5.6C5.3 9.9 10.1 5.3 16 5.3S26.7 9.9 26.7 15.5 21.9 25.7 16 25.7zm5.8-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7.1a8.4 8.4 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5s-.7-1.6-1-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3 1.9 3 4.7 4.2c.6.3 1.1.4 1.5.6.6.2 1.2.1 1.6.1.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2c0-.1-.2-.2-.5-.4z"/></svg> Enquire via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="dest-card reveal">
+      <img src="https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=700&q=75&auto=format&fm=webp" alt="Varanasi ghats India" loading="lazy" decoding="async">
+      <div class="dest-overlay">
+        <span class="dest-country">India</span>
+        <h4>Varanasi</h4>
+        <p>Ancient ghats along the sacred Ganges river.</p>
+        <a class="pkg-whatsapp" target="_blank" rel="noopener" href="https://wa.me/918619928710?text=Hi%2C%20I%27m%20interested%20in%20visiting%20Varanasi."><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.7 5 2 7.1L3 29l6.6-2.2c2 1.1 4.2 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3zm0 22.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.3 1.3-3.9-.3-.4a10 10 0 0 1-1.7-5.6C5.3 9.9 10.1 5.3 16 5.3S26.7 9.9 26.7 15.5 21.9 25.7 16 25.7zm5.8-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7.1a8.4 8.4 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5s-.7-1.6-1-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3 1.9 3 4.7 4.2c.6.3 1.1.4 1.5.6.6.2 1.2.1 1.6.1.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2c0-.1-.2-.2-.5-.4z"/></svg> Enquire via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="dest-card reveal">
+      <img src="https://images.unsplash.com/photo-1600100397608-f74b1e1cad9f?w=700&q=75&auto=format&fm=webp" alt="Rishikesh Ganges India" loading="lazy" decoding="async">
+      <div class="dest-overlay">
+        <span class="dest-country">India</span>
+        <h4>Rishikesh</h4>
+        <p>The yoga capital, set where the Ganges meets the hills.</p>
+        <a class="pkg-whatsapp" target="_blank" rel="noopener" href="https://wa.me/918619928710?text=Hi%2C%20I%27m%20interested%20in%20visiting%20Rishikesh."><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.7 5 2 7.1L3 29l6.6-2.2c2 1.1 4.2 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3zm0 22.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.3 1.3-3.9-.3-.4a10 10 0 0 1-1.7-5.6C5.3 9.9 10.1 5.3 16 5.3S26.7 9.9 26.7 15.5 21.9 25.7 16 25.7zm5.8-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7.1a8.4 8.4 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5s-.7-1.6-1-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3 1.9 3 4.7 4.2c.6.3 1.1.4 1.5.6.6.2 1.2.1 1.6.1.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2c0-.1-.2-.2-.5-.4z"/></svg> Enquire via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="dest-card reveal">
+      <img src="https://images.unsplash.com/photo-1609948543331-3922eb2a9a02?w=700&q=75&auto=format&fm=webp" alt="Udaipur City Palace India" loading="lazy" decoding="async">
+      <div class="dest-overlay">
+        <span class="dest-country">India</span>
+        <h4>Udaipur</h4>
+        <p>The City of Lakes, framed by palaces and hills.</p>
+        <a class="pkg-whatsapp" target="_blank" rel="noopener" href="https://wa.me/918619928710?text=Hi%2C%20I%27m%20interested%20in%20visiting%20Udaipur."><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.7 5 2 7.1L3 29l6.6-2.2c2 1.1 4.2 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3zm0 22.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.3 1.3-3.9-.3-.4a10 10 0 0 1-1.7-5.6C5.3 9.9 10.1 5.3 16 5.3S26.7 9.9 26.7 15.5 21.9 25.7 16 25.7zm5.8-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7.1a8.4 8.4 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5s-.7-1.6-1-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3 1.9 3 4.7 4.2c.6.3 1.1.4 1.5.6.6.2 1.2.1 1.6.1.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2c0-.1-.2-.2-.5-.4z"/></svg> Enquire via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="dest-card reveal">
+      <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=700&q=75&auto=format&fm=webp" alt="Andaman Islands beach India" loading="lazy" decoding="async">
+      <div class="dest-overlay">
+        <span class="dest-country">India</span>
+        <h4>Andaman Islands</h4>
+        <p>Turquoise waters and coral reefs in the Bay of Bengal.</p>
+        <a class="pkg-whatsapp" target="_blank" rel="noopener" href="https://wa.me/918619928710?text=Hi%2C%20I%27m%20interested%20in%20visiting%20Andaman%20Islands."><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.7 5 2 7.1L3 29l6.6-2.2c2 1.1 4.2 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3zm0 22.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.3 1.3-3.9-.3-.4a10 10 0 0 1-1.7-5.6C5.3 9.9 10.1 5.3 16 5.3S26.7 9.9 26.7 15.5 21.9 25.7 16 25.7zm5.8-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7.1a8.4 8.4 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5s-.7-1.6-1-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3 1.9 3 4.7 4.2c.6.3 1.1.4 1.5.6.6.2 1.2.1 1.6.1.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2c0-.1-.2-.2-.5-.4z"/></svg> Enquire via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="dest-card reveal">
+      <img src="https://images.unsplash.com/photo-1580889240911-e08fbcbe2a29?w=700&q=75&auto=format&fm=webp" alt="Munnar tea plantations India" loading="lazy" decoding="async">
+      <div class="dest-overlay">
+        <span class="dest-country">India</span>
+        <h4>Munnar</h4>
+        <p>Rolling tea plantations in the Western Ghats.</p>
+        <a class="pkg-whatsapp" target="_blank" rel="noopener" href="https://wa.me/918619928710?text=Hi%2C%20I%27m%20interested%20in%20visiting%20Munnar."><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.7 5 2 7.1L3 29l6.6-2.2c2 1.1 4.2 1.7 6.4 1.7 7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3zm0 22.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.3 1.3-3.9-.3-.4a10 10 0 0 1-1.7-5.6C5.3 9.9 10.1 5.3 16 5.3S26.7 9.9 26.7 15.5 21.9 25.7 16 25.7zm5.8-7.4c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7.1a8.4 8.4 0 0 1-2.5-1.5 9.3 9.3 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5s-.7-1.6-1-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3 1.9 3 4.7 4.2c.6.3 1.1.4 1.5.6.6.2 1.2.1 1.6.1.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2c0-.1-.2-.2-.5-.4z"/></svg> Enquire via WhatsApp</a>
+      </div>
+    </div>
+    <div class="dest-card reveal">
       <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=700&q=75&auto=format&fm=webp" alt="Eiffel Tower Paris" loading="lazy" decoding="async">
       <div class="dest-overlay">
         <span class="dest-country">France</span>
@@ -1279,7 +1480,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="why-img-wrap reveal">
-    <img width="900" height="600" src="https://images.unsplash.com/photo-1682687981674-0509eb5efca5?w=900&q=80&auto=format&fm=webp" alt="Travel experience" loading="lazy" decoding="async">
+    <img width="900" height="600" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900&q=80&auto=format&fm=webp" alt="Travel experience" loading="lazy" decoding="async">
     <div class="why-img-badge">
       <span class="big">1:1</span>
       <span class="small">Personal Planning</span>
@@ -1391,6 +1592,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>Turn Your Travel Dreams<br>Into <em>Reality</em></h2>
     <p>From the first idea to the final detail, we design journeys you'll remember forever.</p>
     <a href="#contact" class="btn-gold" style="font-size:0.9rem;padding:1rem 2.8rem">Book a Trip Today</a>
+    <div class="secure-note" style="margin-top:1.6rem"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V7C8 4.8 9.8 3 12 3S16 4.8 16 7V11" stroke-linejoin="round"/></svg><span>Secure Booking · Verified Reviews · No Hidden Fees</span></div>
   </div>
 </section>
 
@@ -1462,6 +1664,109 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   },{threshold:0.15});
   io.observe(v.closest('.cta'));
+})();
+
+/* ── DETAIL MODAL (Tours / Visa / Destinations) ── */
+(function(){
+  const modal = document.getElementById('detail-modal');
+  if(!modal) return;
+  const imgEl = document.getElementById('detail-modal-img');
+  const tagEl = document.getElementById('detail-modal-tag');
+  const titleEl = document.getElementById('detail-modal-title');
+  const metaEl = document.getElementById('detail-modal-meta');
+  const listEl = document.getElementById('detail-modal-list');
+  const descEl = document.getElementById('detail-modal-desc');
+  const priceEl = document.getElementById('detail-modal-price');
+  const ctaEl = document.getElementById('detail-modal-cta');
+  const closeBtn = document.getElementById('detail-modal-close');
+  const backdrop = document.getElementById('detail-modal-backdrop');
+
+  function openModal(card){
+    const img = card.querySelector('img');
+    const title = card.querySelector('h4')?.textContent.trim() || '';
+    const waLink = card.querySelector('.pkg-whatsapp');
+    imgEl.src = img ? img.src : '';
+    imgEl.alt = img ? img.alt : title;
+    titleEl.textContent = title;
+    listEl.innerHTML = '';
+    metaEl.textContent = '';
+    priceEl.textContent = '';
+    priceEl.style.display = 'none';
+    descEl.innerHTML = '';
+
+    if (card.classList.contains('pkg-card')) {
+      const tag = card.querySelector('.pkg-tag')?.textContent.trim() || '';
+      const duration = card.querySelector('.pkg-duration')?.textContent.trim() || '';
+      const includes = Array.from(card.querySelectorAll('.pkg-inc')).map(i => i.textContent.trim());
+      const priceHTML = card.querySelector('.pkg-price')?.innerHTML || '';
+      tagEl.textContent = tag;
+      tagEl.style.display = tag ? 'inline-block' : 'none';
+      metaEl.textContent = duration;
+      includes.forEach(inc => {
+        const li = document.createElement('li');
+        li.textContent = inc;
+        listEl.appendChild(li);
+      });
+      priceEl.innerHTML = priceHTML;
+      priceEl.style.display = priceHTML ? 'block' : 'none';
+      descEl.textContent = `A thoughtfully curated ${duration.toLowerCase()} experience featuring ${includes.join(', ').toLowerCase()}. Every detail — from stays to local guides — is arranged by our specialists so all you have to do is enjoy the journey.`;
+      ctaEl.textContent = 'Book via WhatsApp';
+    } else if (card.classList.contains('visa-card')) {
+      tagEl.style.display = 'none';
+      metaEl.textContent = 'Visa Assistance';
+      descEl.textContent = card.querySelector('p')?.textContent.trim() || '';
+      ctaEl.textContent = 'Enquire via WhatsApp';
+    } else if (card.classList.contains('dest-card')) {
+      const country = card.querySelector('.dest-country')?.textContent.trim() || '';
+      const fullDesc = card.querySelector('.dest-full-desc');
+      const about = fullDesc ? fullDesc.innerHTML : (card.querySelector('.dest-overlay p')?.textContent.trim() || '');
+      tagEl.textContent = country;
+      tagEl.style.display = country ? 'inline-block' : 'none';
+      metaEl.textContent = '';
+      ['Flights','Hotels','Transfers','Guided Experiences'].forEach(inc => {
+        const li = document.createElement('li');
+        li.textContent = inc;
+        listEl.appendChild(li);
+      });
+      const aboutHTML = fullDesc ? about : `<p style="margin-bottom:1rem">${about}</p>`;
+      descEl.innerHTML = `${aboutHTML}<p>Zentrevo arranges your flights, hotels, transfers and guided experiences in ${title} — everything handled end-to-end so all you have to do is enjoy the trip.</p>`;
+      ctaEl.textContent = 'Enquire via WhatsApp';
+    }
+
+    ctaEl.href = waLink ? waLink.getAttribute('href') : '#';
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(){
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.pkg-card, .visa-card, .dest-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.pkg-like') || e.target.closest('.pkg-whatsapp')) return;
+      openModal(card);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+})();
+
+/* ── IMAGE FALLBACK (graceful degrade if a photo fails to load) ── */
+(function(){
+  document.querySelectorAll('img').forEach(img=>{
+    img.addEventListener('error', function(){
+      this.style.background = 'linear-gradient(135deg, rgba(200,151,42,0.15), rgba(14,124,139,0.15))';
+      this.style.minHeight = '100%';
+      this.style.objectFit = 'cover';
+      this.onerror = null;
+    }, {once:true});
+  });
 })();
 
 /* ── NAV SERVICES DROPDOWN ── */
@@ -1579,6 +1884,24 @@ document.querySelectorAll('.nav-links a').forEach(a=>{
   });
 });
 </script>
+<!-- DETAIL MODAL -->
+<div class="detail-modal" id="detail-modal">
+  <div class="detail-modal-backdrop" id="detail-modal-backdrop"></div>
+  <div class="detail-modal-inner">
+    <button class="detail-modal-close" id="detail-modal-close" aria-label="Close">&times;</button>
+    <div class="detail-modal-img"><img id="detail-modal-img" src="" alt=""></div>
+    <div class="detail-modal-body">
+      <span class="detail-modal-tag" id="detail-modal-tag"></span>
+      <h3 id="detail-modal-title"></h3>
+      <div class="detail-modal-meta" id="detail-modal-meta"></div>
+      <ul class="detail-modal-list" id="detail-modal-list"></ul>
+      <p class="detail-modal-desc" id="detail-modal-desc"></p>
+      <div class="detail-modal-price" id="detail-modal-price"></div>
+      <a class="pkg-whatsapp" id="detail-modal-cta" target="_blank" rel="noopener"></a>
+    </div>
+  </div>
+</div>
+
 <script src="search.js"></script>
 </body>
 </html>
