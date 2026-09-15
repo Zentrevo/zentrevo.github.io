@@ -446,5 +446,26 @@
     "type": "blog",
     "url": "blog/rajasthan-tour-for-foreign-tourists.html",
     "date": "2026-09-06"
+  },
+  {
+    "title": "Luxury India Tour for International Travelers",
+    "desc": "Zentrevo designs luxury India tours for international travelers — premium hotels, private transport, and expert guides, planned around you.",
+    "type": "blog",
+    "url": "blog/luxury-india-tour-for-international-travelers.html",
+    "date": "2026-09-07"
+  },
+  {
+    "title": "Goa Travel Tips for American Tourists",
+    "desc": "Planning a first trip to Goa from the US? Practical tips on timing, beaches, getting around, and staying safe.",
+    "type": "blog",
+    "url": "blog/goa-travel-tips-for-american-tourists.html",
+    "date": "2026-09-08"
+  },
+  {
+    "title": "Kerala Travel Tips for American Tourists",
+    "desc": "Planning a first trip to Kerala from the US? Practical tips on timing, backwaters, food, and getting around.",
+    "type": "blog",
+    "url": "blog/kerala-travel-tips-for-american-tourists.html",
+    "date": "2026-09-09"
   }
 ]
