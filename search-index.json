@@ -1,471 +1,867 @@
 [
-  {
-    "title": "Home",
-    "url": "index.html",
-    "desc": "Zentrevo — crafting personalized, extraordinary travel experiences worldwide.",
-    "type": "page"
-  },
-  {
-    "title": "About Us",
-    "url": "about.html",
-    "desc": "Learn our story, meet our team, and see what we stand for.",
-    "type": "page"
-  },
-  {
-    "title": "Contact Us",
-    "url": "contact.html",
-    "desc": "Get in touch to plan your perfect trip.",
-    "type": "page"
-  },
-  {
-    "title": "Travel Blog",
-    "url": "blog.html",
-    "desc": "Expert destination guides, budget tips, and travel inspiration.",
-    "type": "page"
-  },
-  {
-    "title": "FAQs",
-    "url": "faq.html",
-    "desc": "Frequently asked questions about booking and traveling with Zentrevo.",
-    "type": "page"
-  },
-  {
-    "title": "Sitemap",
-    "url": "sitemap.html",
-    "desc": "Every page and travel guide on Zentrevo, organized in one place.",
-    "type": "page"
-  },
-  {
-    "title": "Privacy Policy",
-    "url": "privacy-policy.html",
-    "desc": "How Zentrevo collects, uses, and protects your information.",
-    "type": "page"
-  },
-  {
-    "title": "Terms & Conditions",
-    "url": "terms.html",
-    "desc": "The rules and guidelines for using Zentrevo's website and services.",
-    "type": "page"
-  },
-  {
-    "title": "Best African Safari Experiences 2026 Travel Guide",
-    "url": "blog/best-african-safari-experiences-2026.html",
-    "desc": "The best African safari experiences for 2026, from Serengeti migrations to Okavango Delta water safaris, with best-time-to-visit and lodge r",
-    "type": "blog",
-    "date": "2026-03-09"
-  },
-  {
-    "title": "Best All-Inclusive Resort Destinations 2026",
-    "url": "blog/best-all-inclusive-resorts-2026.html",
-    "desc": "The best all-inclusive resort destinations for 2026, covering the Caribbean, Mexico, and the Maldives, with what's actually included and wha",
-    "type": "blog",
-    "date": "2026-04-20"
-  },
-  {
-    "title": "Best Budget Travel Destinations 2026 | Explore More, Spend Less",
-    "url": "blog/best-budget-travel-destinations-2026.html",
-    "desc": "Discover the 7 best budget travel destinations for 2026. From Vietnam to Portugal, explore amazing places where your money goes further. Tip",
-    "type": "blog",
-    "date": ""
-  },
-  {
-    "title": "Best Digital Nomad Destinations 2026 — Where to Work & Travel",
-    "url": "blog/best-digital-nomad-destinations-2026.html",
-    "desc": "The 8 best digital nomad destinations for 2026, ranked by wifi speed, visa access, cost of living, and community. Includes visa requirements",
-    "type": "blog",
-    "date": "2026-02-26"
-  },
-  {
-    "title": "Best European City Breaks 2026 — Weekend Trip Guide",
-    "url": "blog/best-european-city-breaks-2026.html",
-    "desc": "The best European city breaks for 2026 — perfect 2-3 day weekend trip destinations with flight time, budget, and itinerary tips.",
-    "type": "blog",
-    "date": "2026-04-08"
-  },
-  {
-    "title": "Best Family Travel Destinations 2026",
-    "url": "blog/best-family-travel-destinations-2026.html",
-    "desc": "From Bali to Africa safari, the world's most kid-friendly, memory-making destinations for families of all ages. Best family travel destinati",
-    "type": "blog",
-    "date": "2026-02-20"
-  },
-  {
-    "title": "Best Food Travel Destinations 2026",
-    "url": "blog/best-food-travel-destinations-2026.html",
-    "desc": "The best food travel destinations for 2026, from Osaka's street food to Oaxaca's mole culture, with market tips and what to actually order.",
-    "type": "blog",
-    "date": "2026-05-02"
-  },
-  {
-    "title": "Best Honeymoon Alternatives 2026 — Beyond the Beach",
-    "url": "blog/best-honeymoon-alternatives-2026.html",
-    "desc": "Looking beyond the traditional beach honeymoon? The best honeymoon alternatives for 2026, from safari lodges to European train journeys.",
-    "type": "blog",
-    "date": "2026-05-20"
-  },
-  {
-    "title": "Best Honeymoon Destinations 2026",
-    "url": "blog/best-honeymoon-destinations-2026.html",
-    "desc": "Planning your honeymoon in 2026? Discover the most romantic destinations worldwide — from Maldives overwater villas to Santorini sunsets. Ex",
-    "type": "blog",
-    "date": "2026-01-21"
-  },
-  {
-    "title": "Best National Parks to Visit in 2026",
-    "url": "blog/best-national-parks-to-visit-2026.html",
-    "desc": "The best national parks to visit in 2026, from Yellowstone to Torres del Paine, with permit tips, best seasons, and crowd-avoidance strategi",
-    "type": "blog",
-    "date": "2026-05-08"
-  },
-  {
-    "title": "Best Neighborhoods to Stay in New York City (2026)",
-    "url": "blog/best-neighborhoods-to-stay-in-new-york-city.html",
-    "desc": "The best neighborhoods to stay in New York City for first-time visitors — where to base yourself depending on your trip style and budget.",
-    "type": "blog",
-    "date": "2026-07-30"
-  },
-  {
-    "title": "Best Photography Travel Destinations 2026",
-    "url": "blog/best-photography-travel-destinations-2026.html",
-    "desc": "The best photography travel destinations for 2026, from Iceland's ice caves to Morocco's desert dunes, with golden hour timing and gear tips",
-    "type": "blog",
-    "date": "2026-05-14"
-  },
-  {
-    "title": "25 Best Places to Visit in 2026 Travel Guide",
-    "url": "blog/best-places-to-visit-2026.html",
-    "desc": "Discover the 25 best places to visit in 2026. From hidden gems to iconic destinations, our expert travel guide covers top-rated destinations",
-    "type": "blog",
-    "date": "2026-01-15"
-  },
-  {
-    "title": "Best Road Trip Routes 2026 Travel Guide",
-    "url": "blog/best-road-trip-routes-2026.html",
-    "desc": "The best road trip routes for 2026, from California's Highway 1 to Scotland's North Coast 500, with drive times, seasonal tips, and rental a",
-    "type": "blog",
-    "date": "2026-04-26"
-  },
-  {
-    "title": "Best Ski & Winter Travel Destinations 2026",
-    "url": "blog/best-ski-winter-destinations-2026.html",
-    "desc": "The best ski and winter travel destinations for the 2026 season, from the Swiss Alps to Japan's powder snow, with resort tips and best-value",
-    "type": "blog",
-    "date": "2026-03-15"
-  },
-  {
-    "title": "Best Time to Book Flights for the Cheapest Prices (2026)",
-    "url": "blog/best-time-to-book-flights-for-cheapest-prices.html",
-    "desc": "When is the best time to book flights for the cheapest prices? Real booking windows by trip type, best days to buy, and myths worth ignoring",
-    "type": "blog",
-    "date": "2026-06-13"
-  },
-  {
-    "title": "Best Way to Get from CDG to Paris City Center (2026)",
-    "url": "blog/best-way-to-get-from-cdg-to-paris-city-center.html",
-    "desc": "The best way to get from Charles de Gaulle Airport to Paris city center in 2026 — RER B train, taxi, shuttle, and Uber compared by cost and ",
-    "type": "blog",
-    "date": "2026-08-05"
-  },
-  {
-    "title": "Best Wellness & Spa Retreats 2026 Travel Guide",
-    "url": "blog/best-wellness-spa-retreats-2026.html",
-    "desc": "The best wellness and spa retreats around the world for 2026, from Thai detox programs to Icelandic geothermal spas, with cost and program d",
-    "type": "blog",
-    "date": "2026-03-27"
-  },
-  {
-    "title": "Discovering Island Life Beyond Luxury",
-    "url": "blog/discovering-island-life-beyond-luxury.html",
-    "desc": "What happens when you trade five-star resorts for barefoot villages and unphotographed sunsets? A look at authentic island life beyond the r",
-    "type": "blog",
-    "date": "2026-01-27"
-  },
-  {
-    "title": "Do You Need a Visa to Visit Vietnam? (2026 Guide)",
-    "url": "blog/do-you-need-a-visa-to-visit-vietnam.html",
-    "desc": "Do you need a visa to visit Vietnam? A clear breakdown of Vietnam's e-visa system, visa-exempt countries, and how long you can actually stay",
-    "type": "blog",
-    "date": "2026-07-24"
-  },
-  {
-    "title": "Does a Schengen Visa Require Travel Insurance?",
-    "url": "blog/does-schengen-visa-require-travel-insurance.html",
-    "desc": "Does a Schengen visa require travel insurance? Yes — here's the exact coverage minimum, what counts as valid proof, and how to get it right ",
-    "type": "blog",
-    "date": "2026-03-03"
-  },
-  {
-    "title": "Experiencing Europe Beyond Tourist Routes",
-    "url": "blog/experiencing-europe-beyond-tourist-routes.html",
-    "desc": "The real Europe is one street off the main road. A guide to experiencing Europe beyond the tourist routes, from local markets to overlooked ",
-    "type": "blog",
-    "date": "2026-02-02"
-  },
-  {
-    "title": "How Early Should You Arrive at the Airport for International Flights?",
-    "url": "blog/how-early-should-you-arrive-at-the-airport-for-international-flights.html",
-    "desc": "How early should you arrive at the airport for international flights? A realistic breakdown by airport size, season, and travel document sta",
-    "type": "blog",
-    "date": "2026-04-07"
-  },
-  {
-    "title": "How Many Days Do You Need in Japan? A First-Timer's Guide",
-    "url": "blog/how-many-days-do-you-need-in-japan.html",
-    "desc": "Planning your first Japan trip? Here's exactly how many days you need for Tokyo, Kyoto, and beyond, based on your travel style and budget.",
-    "type": "blog",
-    "date": "2026-05-26"
-  },
-  {
-    "title": "How Much Money Do You Need for a Week in Thailand?",
-    "url": "blog/how-much-money-do-you-need-for-a-week-in-thailand.html",
-    "desc": "How much money do you need for a week in Thailand? Real daily costs for budget, mid-range, and comfortable trips, broken down by category.",
-    "type": "blog",
-    "date": "2026-03-17"
-  },
-  {
-    "title": "How to Avoid Jet Lag on Long Flights (2026 Guide)",
-    "url": "blog/how-to-avoid-jet-lag-on-long-flights.html",
-    "desc": "How to avoid jet lag on long flights — pre-flight prep, in-flight habits, and what actually works to reset your body clock faster, backed by",
-    "type": "blog",
-    "date": "2026-07-18"
-  },
-  {
-    "title": "How to See the Northern Lights in Iceland (2026 Guide)",
-    "url": "blog/how-to-see-the-northern-lights-in-iceland.html",
-    "desc": "How to see the Northern Lights in Iceland — best months, where to go outside Reykjavik light pollution, and what the aurora forecast actuall",
-    "type": "blog",
-    "date": "2026-07-12"
-  },
-  {
-    "title": "How to Spend 3 Days in Rome: A First-Timer's Itinerary",
-    "url": "blog/how-to-spend-3-days-in-rome.html",
-    "desc": "How to spend 3 days in Rome, day by day — the Colosseum, Vatican, and Trastevere without rushing, plus what to skip and where to eat.",
-    "type": "blog",
-    "date": "2026-06-18"
-  },
-  {
-    "title": "Is Bali Safe for Solo Female Travelers? (2026 Honest Guide)",
-    "url": "blog/is-bali-safe-for-solo-female-travelers.html",
-    "desc": "Is Bali safe for solo female travelers? An honest look at real safety considerations, best areas to stay, and practical tips from experience",
-    "type": "blog",
-    "date": "2026-06-24"
-  },
-  {
-    "title": "Is It Cheaper to Book Flight and Hotel Together?",
-    "url": "blog/is-it-cheaper-to-book-flight-and-hotel-together.html",
-    "desc": "Is it cheaper to book flight and hotel together? Sometimes — here's when bundling actually saves money and when booking separately wins.",
-    "type": "blog",
-    "date": "2026-03-24"
-  },
-  {
-    "title": "Is It Safe to Travel to Thailand Alone? (2026 Guide)",
-    "url": "blog/is-it-safe-to-travel-to-thailand-alone.html",
-    "desc": "Is it safe to travel to Thailand alone? A realistic look at solo travel safety in Thailand — common scams, safest regions, and what to actua",
-    "type": "blog",
-    "date": "2026-06-30"
-  },
-  {
-    "title": "Is Travel Insurance Worth It for Short Trips?",
-    "url": "blog/is-travel-insurance-worth-it-short-trips.html",
-    "desc": "Is travel insurance worth it for a 3-5 day trip? Here's a clear breakdown of when it actually pays off and when you can reasonably skip it.",
-    "type": "blog",
-    "date": "2026-06-01"
-  },
-  {
-    "title": "Luxury Travel Guide 2026 — Worth Every Penny",
-    "url": "blog/luxury-travel-guide-2026.html",
-    "desc": "The world's finest travel experiences for 2026 — private island retreats, five-star safari lodges, and exclusive access most travelers never",
-    "type": "blog",
-    "date": "2026-02-14"
-  },
-  {
-    "title": "Solo Female Travel Safety Guide 2026",
-    "url": "blog/solo-female-travel-safety-guide-2026.html",
-    "desc": "A practical solo female travel safety guide for 2026 covering destination research, accommodation choices, packing, and real safety tips fro",
-    "type": "blog",
-    "date": "2026-03-04"
-  },
-  {
-    "title": "Southeast Asia Island Hopping Guide 2026",
-    "url": "blog/southeast-asia-island-hopping-guide-2026.html",
-    "desc": "The ultimate Southeast Asia island hopping guide for 2026, covering the Philippines, Thailand, and Indonesia with routes, ferry tips, and co",
-    "type": "blog",
-    "date": "2026-04-14"
-  },
-  {
-    "title": "Top Adventure Travel Destinations 2026",
-    "url": "blog/top-adventure-travel-destinations-2026.html",
-    "desc": "The top adventure travel destinations for 2026, from Patagonia trekking to Nepal's Himalayan trails, with difficulty levels and best-season ",
-    "type": "blog",
-    "date": "2026-04-02"
-  },
-  {
-    "title": "Ultimate Cruise Vacation Guide 2026",
-    "url": "blog/ultimate-cruise-vacation-guide-2026.html",
-    "desc": "Everything to know before booking a cruise in 2026 — how to choose an itinerary, cabin selection tips, hidden costs, and the best cruise lin",
-    "type": "blog",
-    "date": "2026-03-21"
-  },
-  {
-    "title": "The Ultimate Solo Travel Guide for 2026",
-    "url": "blog/ultimate-solo-travel-guide-2026.html",
-    "desc": "Safe destinations, smart packing, and why traveling alone is one of the most transformative things you can do. The ultimate solo travel guid",
-    "type": "blog",
-    "date": "2026-02-08"
-  },
-  {
-    "title": "What Currency to Use in Switzerland (2026 Guide)",
-    "url": "blog/what-currency-to-use-in-switzerland.html",
-    "desc": "What currency to use in Switzerland — why it's Swiss francs and not euros, current exchange tips, and where cards are accepted vs. cash-only",
-    "type": "blog",
-    "date": "2026-07-06"
-  },
-  {
-    "title": "What to Pack for a Two-Week Europe Trip (2026 Checklist)",
-    "url": "blog/what-to-pack-for-a-two-week-europe-trip.html",
-    "desc": "A complete packing checklist for a two-week Europe trip in 2026 — what actually fits in a carry-on, seasonal layers, and the items first-tim",
-    "type": "blog",
-    "date": "2026-06-07"
-  },
-  {
-    "title": "Do You Need a Visa to Visit Turkey?",
-    "url": "blog/do-you-need-a-visa-to-visit-turkey.html",
-    "desc": "Most nationalities need Turkey's e-visa. How to apply, what it costs, and common mistakes to avoid.",
-    "type": "blog"
-  },
-  {
-    "title": "Is It Safe to Drink Tap Water in Mexico?",
-    "url": "blog/is-it-safe-to-drink-tap-water-in-mexico.html",
-    "desc": "The honest answer, plus what restaurants actually serve and when to stick to bottled water.",
-    "type": "blog"
-  },
-  {
-    "title": "How Much Should You Tip in Europe?",
-    "url": "blog/how-much-should-you-tip-in-europe.html",
-    "desc": "It varies more than you'd think by country — a practical country-by-country tipping guide.",
-    "type": "blog"
-  },
-  {
-    "title": "Best Time to Visit Iceland to Avoid Crowds",
-    "url": "blog/best-time-to-visit-iceland-to-avoid-crowds.html",
-    "desc": "The classic sights are getting busier every year. Here's when to actually go for space to yourself.",
-    "type": "blog"
-  },
-  {
-    "title": "Is Uber Available in Bali? What to Use Instead",
-    "url": "blog/is-uber-available-in-bali.html",
-    "desc": "Uber doesn't operate in Indonesia. Here's what actually works to get around the island.",
-    "type": "blog"
-  },
-  {
-    "title": "Is It Worth Renting a Car in Italy?",
-    "url": "blog/is-it-worth-renting-a-car-in-italy.html",
-    "desc": "Depends where you're going — here's when a rental genuinely helps and when it's a headache.",
-    "type": "blog"
-  },
-  {
-    "title": "Do You Need Travel Insurance for a Cruise?",
-    "url": "blog/do-you-need-travel-insurance-for-a-cruise.html",
-    "desc": "What standard health insurance doesn't cover at sea, and why cruise-specific coverage matters.",
-    "type": "blog"
-  },
-  {
-    "title": "Japan Travel Guide",
-    "url": "blog/japan-travel-guide.html",
-    "desc": "Everything to know before your first trip to Japan — timing, budget, transport, and etiquette.",
-    "type": "blog"
-  },
-  {
-    "title": "Italy Travel Guide",
-    "url": "blog/italy-travel-guide.html",
-    "desc": "When to go, how to get around, what to budget, and mistakes most first-time visitors make.",
-    "type": "blog"
-  },
-  {
-    "title": "Africa Safari Guide",
-    "url": "blog/africa-safari-guide.html",
-    "desc": "Best countries, when to go, what to budget, and how to choose between different safari styles.",
-    "type": "blog"
-  },
-  {
-    "title": "Bali Travel Guide",
-    "url": "blog/bali-travel-guide.html",
-    "desc": "When to go, where to stay, how to get around, and what first-time visitors get wrong.",
-    "type": "blog"
-  },
-  {
-    "title": "What to Pack for a Safari",
-    "url": "blog/what-to-pack-for-a-safari.html",
-    "desc": "The complete checklist — clothing, gear, and health items, plus the mistakes first-timers make.",
-    "type": "blog"
-  },
-  {
-    "title": "Is It Safe to Travel to Colombia?",
-    "url": "blog/is-it-safe-to-travel-to-colombia.html",
-    "desc": "An honest, current answer — the real risks, where they concentrate, and what actually matters.",
-    "type": "blog"
-  },
-  {
-    "title": "Greece Travel Guide",
-    "desc": "A complete Greece travel guide for 2026 — Santorini vs Mykonos vs Crete, when to go, ferry logistics, and budget tips for first-timers.",
-    "type": "blog",
-    "url": "blog/greece-travel-guide.html",
-    "date": "2026-08-28"
-  },
-  {
-    "title": "India Tour Packages for Foreign Tourists",
-    "desc": "Zentrevo creates custom India tour packages for foreign tourists — private transport, local guides, and itineraries built around your trip.",
-    "type": "blog",
-    "url": "blog/india-tour-packages-for-foreign-tourists.html",
-    "date": "2026-09-02"
-  },
-  {
-    "title": "India Private Tour with Driver",
-    "desc": "Explore India with your own private driver and vehicle. Zentrevo plans flexible, custom itineraries with local guides for foreign travelers.",
-    "type": "blog",
-    "url": "blog/india-private-tour-with-driver.html",
-    "date": "2026-09-03"
-  },
-  {
-    "title": "Custom India Tour for Foreigners",
-    "desc": "Zentrevo builds custom India tours for foreign travelers — your dates, pace, and interests, our planning. Private transport and local guides included.",
-    "type": "blog",
-    "url": "blog/custom-india-tour-for-foreigners.html",
-    "date": "2026-09-04"
-  },
-  {
-    "title": "Best India Itinerary for 10 Days for Foreigners",
-    "desc": "A realistic 10-day India itinerary for first-time foreign travelers — Delhi, Agra, Jaipur, and Varanasi, with practical pacing and travel advice.",
-    "type": "blog",
-    "url": "blog/best-india-itinerary-10-days-foreigners.html",
-    "date": "2026-09-05"
-  },
-  {
-    "title": "Rajasthan Tour for Foreign Tourists",
-    "desc": "Zentrevo plans private Rajasthan tours for foreign tourists — Jaipur, Udaipur, Jodhpur, Jaisalmer, heritage stays, and local guides.",
-    "type": "blog",
-    "url": "blog/rajasthan-tour-for-foreign-tourists.html",
-    "date": "2026-09-06"
-  },
-  {
-    "title": "Luxury India Tour for International Travelers",
-    "desc": "Zentrevo designs luxury India tours for international travelers — premium hotels, private transport, and expert guides, planned around you.",
-    "type": "blog",
-    "url": "blog/luxury-india-tour-for-international-travelers.html",
-    "date": "2026-09-07"
-  },
-  {
-    "title": "Goa Travel Tips for American Tourists",
-    "desc": "Planning a first trip to Goa from the US? Practical tips on timing, beaches, getting around, and staying safe.",
-    "type": "blog",
-    "url": "blog/goa-travel-tips-for-american-tourists.html",
-    "date": "2026-09-08"
-  },
-  {
-    "title": "Kerala Travel Tips for American Tourists",
-    "desc": "Planning a first trip to Kerala from the US? Practical tips on timing, backwaters, food, and getting around.",
-    "type": "blog",
-    "url": "blog/kerala-travel-tips-for-american-tourists.html",
-    "date": "2026-09-09"
-  }
+ {
+  "title": "Home",
+  "url": "index.html",
+  "desc": "Zentrevo — crafting personalized, extraordinary travel experiences worldwide.",
+  "type": "page"
+ },
+ {
+  "title": "About Us",
+  "url": "about.html",
+  "desc": "Learn our story, meet our team, and see what we stand for.",
+  "type": "page"
+ },
+ {
+  "title": "Contact Us",
+  "url": "contact.html",
+  "desc": "Get in touch to plan your perfect trip.",
+  "type": "page"
+ },
+ {
+  "title": "Travel Blog",
+  "url": "blog.html",
+  "desc": "Expert destination guides, budget tips, and travel inspiration.",
+  "type": "page"
+ },
+ {
+  "title": "FAQs",
+  "url": "faq.html",
+  "desc": "Frequently asked questions about booking and traveling with Zentrevo.",
+  "type": "page"
+ },
+ {
+  "title": "Sitemap",
+  "url": "sitemap.html",
+  "desc": "Every page and travel guide on Zentrevo, organized in one place.",
+  "type": "page"
+ },
+ {
+  "title": "Privacy Policy",
+  "url": "privacy-policy.html",
+  "desc": "How Zentrevo collects, uses, and protects your information.",
+  "type": "page"
+ },
+ {
+  "title": "Terms & Conditions",
+  "url": "terms.html",
+  "desc": "The rules and guidelines for using Zentrevo's website and services.",
+  "type": "page"
+ },
+ {
+  "title": "Best African Safari Experiences 2026 Travel Guide",
+  "url": "blog/best-african-safari-experiences-2026.html",
+  "desc": "The best African safari experiences for 2026, from Serengeti migrations to Okavango Delta water safaris, with best-time-to-visit and lodge r",
+  "type": "blog",
+  "date": "2026-03-09"
+ },
+ {
+  "title": "Best All-Inclusive Resort Destinations 2026",
+  "url": "blog/best-all-inclusive-resorts-2026.html",
+  "desc": "The best all-inclusive resort destinations for 2026, covering the Caribbean, Mexico, and the Maldives, with what's actually included and wha",
+  "type": "blog",
+  "date": "2026-04-20"
+ },
+ {
+  "title": "Best Budget Travel Destinations 2026 | Explore More, Spend Less",
+  "url": "blog/best-budget-travel-destinations-2026.html",
+  "desc": "Discover the 7 best budget travel destinations for 2026. From Vietnam to Portugal, explore amazing places where your money goes further. Tip",
+  "type": "blog",
+  "date": ""
+ },
+ {
+  "title": "Best Digital Nomad Destinations 2026 — Where to Work & Travel",
+  "url": "blog/best-digital-nomad-destinations-2026.html",
+  "desc": "The 8 best digital nomad destinations for 2026, ranked by wifi speed, visa access, cost of living, and community. Includes visa requirements",
+  "type": "blog",
+  "date": "2026-02-26"
+ },
+ {
+  "title": "Best European City Breaks 2026 — Weekend Trip Guide",
+  "url": "blog/best-european-city-breaks-2026.html",
+  "desc": "The best European city breaks for 2026 — perfect 2-3 day weekend trip destinations with flight time, budget, and itinerary tips.",
+  "type": "blog",
+  "date": "2026-04-08"
+ },
+ {
+  "title": "Best Family Travel Destinations 2026",
+  "url": "blog/best-family-travel-destinations-2026.html",
+  "desc": "From Bali to Africa safari, the world's most kid-friendly, memory-making destinations for families of all ages. Best family travel destinati",
+  "type": "blog",
+  "date": "2026-02-20"
+ },
+ {
+  "title": "Best Food Travel Destinations 2026",
+  "url": "blog/best-food-travel-destinations-2026.html",
+  "desc": "The best food travel destinations for 2026, from Osaka's street food to Oaxaca's mole culture, with market tips and what to actually order.",
+  "type": "blog",
+  "date": "2026-05-02"
+ },
+ {
+  "title": "Best Honeymoon Alternatives 2026 — Beyond the Beach",
+  "url": "blog/best-honeymoon-alternatives-2026.html",
+  "desc": "Looking beyond the traditional beach honeymoon? The best honeymoon alternatives for 2026, from safari lodges to European train journeys.",
+  "type": "blog",
+  "date": "2026-05-20"
+ },
+ {
+  "title": "Best Honeymoon Destinations 2026",
+  "url": "blog/best-honeymoon-destinations-2026.html",
+  "desc": "Planning your honeymoon in 2026? Discover the most romantic destinations worldwide — from Maldives overwater villas to Santorini sunsets. Ex",
+  "type": "blog",
+  "date": "2026-01-21"
+ },
+ {
+  "title": "Best National Parks to Visit in 2026",
+  "url": "blog/best-national-parks-to-visit-2026.html",
+  "desc": "The best national parks to visit in 2026, from Yellowstone to Torres del Paine, with permit tips, best seasons, and crowd-avoidance strategi",
+  "type": "blog",
+  "date": "2026-05-08"
+ },
+ {
+  "title": "Best Neighborhoods to Stay in New York City (2026)",
+  "url": "blog/best-neighborhoods-to-stay-in-new-york-city.html",
+  "desc": "The best neighborhoods to stay in New York City for first-time visitors — where to base yourself depending on your trip style and budget.",
+  "type": "blog",
+  "date": "2026-07-30"
+ },
+ {
+  "title": "Best Photography Travel Destinations 2026",
+  "url": "blog/best-photography-travel-destinations-2026.html",
+  "desc": "The best photography travel destinations for 2026, from Iceland's ice caves to Morocco's desert dunes, with golden hour timing and gear tips",
+  "type": "blog",
+  "date": "2026-05-14"
+ },
+ {
+  "title": "25 Best Places to Visit in 2026 Travel Guide",
+  "url": "blog/best-places-to-visit-2026.html",
+  "desc": "Discover the 25 best places to visit in 2026. From hidden gems to iconic destinations, our expert travel guide covers top-rated destinations",
+  "type": "blog",
+  "date": "2026-01-15"
+ },
+ {
+  "title": "Best Road Trip Routes 2026 Travel Guide",
+  "url": "blog/best-road-trip-routes-2026.html",
+  "desc": "The best road trip routes for 2026, from California's Highway 1 to Scotland's North Coast 500, with drive times, seasonal tips, and rental a",
+  "type": "blog",
+  "date": "2026-04-26"
+ },
+ {
+  "title": "Best Ski & Winter Travel Destinations 2026",
+  "url": "blog/best-ski-winter-destinations-2026.html",
+  "desc": "The best ski and winter travel destinations for the 2026 season, from the Swiss Alps to Japan's powder snow, with resort tips and best-value",
+  "type": "blog",
+  "date": "2026-03-15"
+ },
+ {
+  "title": "Best Time to Book Flights for the Cheapest Prices (2026)",
+  "url": "blog/best-time-to-book-flights-for-cheapest-prices.html",
+  "desc": "When is the best time to book flights for the cheapest prices? Real booking windows by trip type, best days to buy, and myths worth ignoring",
+  "type": "blog",
+  "date": "2026-06-13"
+ },
+ {
+  "title": "Best Way to Get from CDG to Paris City Center (2026)",
+  "url": "blog/best-way-to-get-from-cdg-to-paris-city-center.html",
+  "desc": "The best way to get from Charles de Gaulle Airport to Paris city center in 2026 — RER B train, taxi, shuttle, and Uber compared by cost and ",
+  "type": "blog",
+  "date": "2026-08-05"
+ },
+ {
+  "title": "Best Wellness & Spa Retreats 2026 Travel Guide",
+  "url": "blog/best-wellness-spa-retreats-2026.html",
+  "desc": "The best wellness and spa retreats around the world for 2026, from Thai detox programs to Icelandic geothermal spas, with cost and program d",
+  "type": "blog",
+  "date": "2026-03-27"
+ },
+ {
+  "title": "Discovering Island Life Beyond Luxury",
+  "url": "blog/discovering-island-life-beyond-luxury.html",
+  "desc": "What happens when you trade five-star resorts for barefoot villages and unphotographed sunsets? A look at authentic island life beyond the r",
+  "type": "blog",
+  "date": "2026-01-27"
+ },
+ {
+  "title": "Do You Need a Visa to Visit Vietnam? (2026 Guide)",
+  "url": "blog/do-you-need-a-visa-to-visit-vietnam.html",
+  "desc": "Do you need a visa to visit Vietnam? A clear breakdown of Vietnam's e-visa system, visa-exempt countries, and how long you can actually stay",
+  "type": "blog",
+  "date": "2026-07-24"
+ },
+ {
+  "title": "Does a Schengen Visa Require Travel Insurance?",
+  "url": "blog/does-schengen-visa-require-travel-insurance.html",
+  "desc": "Does a Schengen visa require travel insurance? Yes — here's the exact coverage minimum, what counts as valid proof, and how to get it right ",
+  "type": "blog",
+  "date": "2026-03-03"
+ },
+ {
+  "title": "Experiencing Europe Beyond Tourist Routes",
+  "url": "blog/experiencing-europe-beyond-tourist-routes.html",
+  "desc": "The real Europe is one street off the main road. A guide to experiencing Europe beyond the tourist routes, from local markets to overlooked ",
+  "type": "blog",
+  "date": "2026-02-02"
+ },
+ {
+  "title": "How Early Should You Arrive at the Airport for International Flights?",
+  "url": "blog/how-early-should-you-arrive-at-the-airport-for-international-flights.html",
+  "desc": "How early should you arrive at the airport for international flights? A realistic breakdown by airport size, season, and travel document sta",
+  "type": "blog",
+  "date": "2026-04-07"
+ },
+ {
+  "title": "How Many Days Do You Need in Japan? A First-Timer's Guide",
+  "url": "blog/how-many-days-do-you-need-in-japan.html",
+  "desc": "Planning your first Japan trip? Here's exactly how many days you need for Tokyo, Kyoto, and beyond, based on your travel style and budget.",
+  "type": "blog",
+  "date": "2026-05-26"
+ },
+ {
+  "title": "How Much Money Do You Need for a Week in Thailand?",
+  "url": "blog/how-much-money-do-you-need-for-a-week-in-thailand.html",
+  "desc": "How much money do you need for a week in Thailand? Real daily costs for budget, mid-range, and comfortable trips, broken down by category.",
+  "type": "blog",
+  "date": "2026-03-17"
+ },
+ {
+  "title": "How to Avoid Jet Lag on Long Flights (2026 Guide)",
+  "url": "blog/how-to-avoid-jet-lag-on-long-flights.html",
+  "desc": "How to avoid jet lag on long flights — pre-flight prep, in-flight habits, and what actually works to reset your body clock faster, backed by",
+  "type": "blog",
+  "date": "2026-07-18"
+ },
+ {
+  "title": "How to See the Northern Lights in Iceland (2026 Guide)",
+  "url": "blog/how-to-see-the-northern-lights-in-iceland.html",
+  "desc": "How to see the Northern Lights in Iceland — best months, where to go outside Reykjavik light pollution, and what the aurora forecast actuall",
+  "type": "blog",
+  "date": "2026-07-12"
+ },
+ {
+  "title": "How to Spend 3 Days in Rome: A First-Timer's Itinerary",
+  "url": "blog/how-to-spend-3-days-in-rome.html",
+  "desc": "How to spend 3 days in Rome, day by day — the Colosseum, Vatican, and Trastevere without rushing, plus what to skip and where to eat.",
+  "type": "blog",
+  "date": "2026-06-18"
+ },
+ {
+  "title": "Is Bali Safe for Solo Female Travelers? (2026 Honest Guide)",
+  "url": "blog/is-bali-safe-for-solo-female-travelers.html",
+  "desc": "Is Bali safe for solo female travelers? An honest look at real safety considerations, best areas to stay, and practical tips from experience",
+  "type": "blog",
+  "date": "2026-06-24"
+ },
+ {
+  "title": "Is It Cheaper to Book Flight and Hotel Together?",
+  "url": "blog/is-it-cheaper-to-book-flight-and-hotel-together.html",
+  "desc": "Is it cheaper to book flight and hotel together? Sometimes — here's when bundling actually saves money and when booking separately wins.",
+  "type": "blog",
+  "date": "2026-03-24"
+ },
+ {
+  "title": "Is It Safe to Travel to Thailand Alone? (2026 Guide)",
+  "url": "blog/is-it-safe-to-travel-to-thailand-alone.html",
+  "desc": "Is it safe to travel to Thailand alone? A realistic look at solo travel safety in Thailand — common scams, safest regions, and what to actua",
+  "type": "blog",
+  "date": "2026-06-30"
+ },
+ {
+  "title": "Is Travel Insurance Worth It for Short Trips?",
+  "url": "blog/is-travel-insurance-worth-it-short-trips.html",
+  "desc": "Is travel insurance worth it for a 3-5 day trip? Here's a clear breakdown of when it actually pays off and when you can reasonably skip it.",
+  "type": "blog",
+  "date": "2026-06-01"
+ },
+ {
+  "title": "Luxury Travel Guide 2026 — Worth Every Penny",
+  "url": "blog/luxury-travel-guide-2026.html",
+  "desc": "The world's finest travel experiences for 2026 — private island retreats, five-star safari lodges, and exclusive access most travelers never",
+  "type": "blog",
+  "date": "2026-02-14"
+ },
+ {
+  "title": "Solo Female Travel Safety Guide 2026",
+  "url": "blog/solo-female-travel-safety-guide-2026.html",
+  "desc": "A practical solo female travel safety guide for 2026 covering destination research, accommodation choices, packing, and real safety tips fro",
+  "type": "blog",
+  "date": "2026-03-04"
+ },
+ {
+  "title": "Southeast Asia Island Hopping Guide 2026",
+  "url": "blog/southeast-asia-island-hopping-guide-2026.html",
+  "desc": "The ultimate Southeast Asia island hopping guide for 2026, covering the Philippines, Thailand, and Indonesia with routes, ferry tips, and co",
+  "type": "blog",
+  "date": "2026-04-14"
+ },
+ {
+  "title": "Top Adventure Travel Destinations 2026",
+  "url": "blog/top-adventure-travel-destinations-2026.html",
+  "desc": "The top adventure travel destinations for 2026, from Patagonia trekking to Nepal's Himalayan trails, with difficulty levels and best-season ",
+  "type": "blog",
+  "date": "2026-04-02"
+ },
+ {
+  "title": "Ultimate Cruise Vacation Guide 2026",
+  "url": "blog/ultimate-cruise-vacation-guide-2026.html",
+  "desc": "Everything to know before booking a cruise in 2026 — how to choose an itinerary, cabin selection tips, hidden costs, and the best cruise lin",
+  "type": "blog",
+  "date": "2026-03-21"
+ },
+ {
+  "title": "The Ultimate Solo Travel Guide for 2026",
+  "url": "blog/ultimate-solo-travel-guide-2026.html",
+  "desc": "Safe destinations, smart packing, and why traveling alone is one of the most transformative things you can do. The ultimate solo travel guid",
+  "type": "blog",
+  "date": "2026-02-08"
+ },
+ {
+  "title": "What Currency to Use in Switzerland (2026 Guide)",
+  "url": "blog/what-currency-to-use-in-switzerland.html",
+  "desc": "What currency to use in Switzerland — why it's Swiss francs and not euros, current exchange tips, and where cards are accepted vs. cash-only",
+  "type": "blog",
+  "date": "2026-07-06"
+ },
+ {
+  "title": "What to Pack for a Two-Week Europe Trip (2026 Checklist)",
+  "url": "blog/what-to-pack-for-a-two-week-europe-trip.html",
+  "desc": "A complete packing checklist for a two-week Europe trip in 2026 — what actually fits in a carry-on, seasonal layers, and the items first-tim",
+  "type": "blog",
+  "date": "2026-06-07"
+ },
+ {
+  "title": "Do You Need a Visa to Visit Turkey?",
+  "url": "blog/do-you-need-a-visa-to-visit-turkey.html",
+  "desc": "Most nationalities need Turkey's e-visa. How to apply, what it costs, and common mistakes to avoid.",
+  "type": "blog"
+ },
+ {
+  "title": "Is It Safe to Drink Tap Water in Mexico?",
+  "url": "blog/is-it-safe-to-drink-tap-water-in-mexico.html",
+  "desc": "The honest answer, plus what restaurants actually serve and when to stick to bottled water.",
+  "type": "blog"
+ },
+ {
+  "title": "How Much Should You Tip in Europe?",
+  "url": "blog/how-much-should-you-tip-in-europe.html",
+  "desc": "It varies more than you'd think by country — a practical country-by-country tipping guide.",
+  "type": "blog"
+ },
+ {
+  "title": "Best Time to Visit Iceland to Avoid Crowds",
+  "url": "blog/best-time-to-visit-iceland-to-avoid-crowds.html",
+  "desc": "The classic sights are getting busier every year. Here's when to actually go for space to yourself.",
+  "type": "blog"
+ },
+ {
+  "title": "Is Uber Available in Bali? What to Use Instead",
+  "url": "blog/is-uber-available-in-bali.html",
+  "desc": "Uber doesn't operate in Indonesia. Here's what actually works to get around the island.",
+  "type": "blog"
+ },
+ {
+  "title": "Is It Worth Renting a Car in Italy?",
+  "url": "blog/is-it-worth-renting-a-car-in-italy.html",
+  "desc": "Depends where you're going — here's when a rental genuinely helps and when it's a headache.",
+  "type": "blog"
+ },
+ {
+  "title": "Do You Need Travel Insurance for a Cruise?",
+  "url": "blog/do-you-need-travel-insurance-for-a-cruise.html",
+  "desc": "What standard health insurance doesn't cover at sea, and why cruise-specific coverage matters.",
+  "type": "blog"
+ },
+ {
+  "title": "Japan Travel Guide",
+  "url": "blog/japan-travel-guide.html",
+  "desc": "Everything to know before your first trip to Japan — timing, budget, transport, and etiquette.",
+  "type": "blog"
+ },
+ {
+  "title": "Italy Travel Guide",
+  "url": "blog/italy-travel-guide.html",
+  "desc": "When to go, how to get around, what to budget, and mistakes most first-time visitors make.",
+  "type": "blog"
+ },
+ {
+  "title": "Africa Safari Guide",
+  "url": "blog/africa-safari-guide.html",
+  "desc": "Best countries, when to go, what to budget, and how to choose between different safari styles.",
+  "type": "blog"
+ },
+ {
+  "title": "Bali Travel Guide",
+  "url": "blog/bali-travel-guide.html",
+  "desc": "When to go, where to stay, how to get around, and what first-time visitors get wrong.",
+  "type": "blog"
+ },
+ {
+  "title": "What to Pack for a Safari",
+  "url": "blog/what-to-pack-for-a-safari.html",
+  "desc": "The complete checklist — clothing, gear, and health items, plus the mistakes first-timers make.",
+  "type": "blog"
+ },
+ {
+  "title": "Is It Safe to Travel to Colombia?",
+  "url": "blog/is-it-safe-to-travel-to-colombia.html",
+  "desc": "An honest, current answer — the real risks, where they concentrate, and what actually matters.",
+  "type": "blog"
+ },
+ {
+  "title": "Greece Travel Guide",
+  "desc": "A complete Greece travel guide for 2026 — Santorini vs Mykonos vs Crete, when to go, ferry logistics, and budget tips for first-timers.",
+  "type": "blog",
+  "url": "blog/greece-travel-guide.html",
+  "date": "2026-08-28"
+ },
+ {
+  "title": "India Tour Packages for Foreign Tourists",
+  "desc": "Zentrevo creates custom India tour packages for foreign tourists — private transport, local guides, and itineraries built around your trip.",
+  "type": "blog",
+  "url": "blog/india-tour-packages-for-foreign-tourists.html",
+  "date": "2026-09-02"
+ },
+ {
+  "title": "India Private Tour with Driver",
+  "desc": "Explore India with your own private driver and vehicle. Zentrevo plans flexible, custom itineraries with local guides for foreign travelers.",
+  "type": "blog",
+  "url": "blog/india-private-tour-with-driver.html",
+  "date": "2026-09-03"
+ },
+ {
+  "title": "Custom India Tour for Foreigners",
+  "desc": "Zentrevo builds custom India tours for foreign travelers — your dates, pace, and interests, our planning. Private transport and local guides included.",
+  "type": "blog",
+  "url": "blog/custom-india-tour-for-foreigners.html",
+  "date": "2026-09-04"
+ },
+ {
+  "title": "Best India Itinerary for 10 Days for Foreigners",
+  "desc": "A realistic 10-day India itinerary for first-time foreign travelers — Delhi, Agra, Jaipur, and Varanasi, with practical pacing and travel advice.",
+  "type": "blog",
+  "url": "blog/best-india-itinerary-10-days-foreigners.html",
+  "date": "2026-09-05"
+ },
+ {
+  "title": "Rajasthan Tour for Foreign Tourists",
+  "desc": "Zentrevo plans private Rajasthan tours for foreign tourists — Jaipur, Udaipur, Jodhpur, Jaisalmer, heritage stays, and local guides.",
+  "type": "blog",
+  "url": "blog/rajasthan-tour-for-foreign-tourists.html",
+  "date": "2026-09-06"
+ },
+ {
+  "title": "Luxury India Tour for International Travelers",
+  "desc": "Zentrevo designs luxury India tours for international travelers — premium hotels, private transport, and expert guides, planned around you.",
+  "type": "blog",
+  "url": "blog/luxury-india-tour-for-international-travelers.html",
+  "date": "2026-09-07"
+ },
+ {
+  "title": "Goa Travel Tips for American Tourists",
+  "desc": "Planning a first trip to Goa from the US? Practical tips on timing, beaches, getting around, and staying safe.",
+  "type": "blog",
+  "url": "blog/goa-travel-tips-for-american-tourists.html",
+  "date": "2026-09-08"
+ },
+ {
+  "title": "Kerala Travel Tips for American Tourists",
+  "desc": "Planning a first trip to Kerala from the US? Practical tips on timing, backwaters, food, and getting around.",
+  "type": "blog",
+  "url": "blog/kerala-travel-tips-for-american-tourists.html",
+  "date": "2026-09-09"
+ },
+ {
+  "title": "Australia Visa",
+  "url": "visa/australia-visa.html",
+  "desc": "eVisitor and tourist visa support for Australia. At Zentrevo, australia visa applications are handled as a complete service rather than a ch",
+  "type": "visa"
+ },
+ {
+  "title": "Business Visa",
+  "url": "visa/business-visa.html",
+  "desc": "For meetings, conferences and corporate travel needs. At Zentrevo, business visa applications are handled as a complete service rather than ",
+  "type": "visa"
+ },
+ {
+  "title": "Canada Visa",
+  "url": "visa/canada-visa.html",
+  "desc": "Visitor visa and eTA assistance for Canada. At Zentrevo, canada visa applications are handled as a complete service rather than a checklist ",
+  "type": "visa"
+ },
+ {
+  "title": "Conference & Event Visa",
+  "url": "visa/conference-event-visa.html",
+  "desc": "For attending seminars, expos and short-term events. At Zentrevo, conference &amp; event visa applications are handled as a complete service",
+  "type": "visa"
+ },
+ {
+  "title": "Digital Nomad Visa",
+  "url": "visa/digital-nomad-visa.html",
+  "desc": "For remote professionals working while living abroad. At Zentrevo, digital nomad visa applications are handled as a complete service rather ",
+  "type": "visa"
+ },
+ {
+  "title": "Family / Dependent Visa",
+  "url": "visa/family-dependent-visa.html",
+  "desc": "For joining a spouse, parent or family member overseas. At Zentrevo, family / dependent visa applications are handled as a complete service ",
+  "type": "visa"
+ },
+ {
+  "title": "Japan Visa",
+  "url": "visa/japan-visa.html",
+  "desc": "Tourist visa guidance for travel to Japan. At Zentrevo, japan visa applications are handled as a complete service rather than a checklist yo",
+  "type": "visa"
+ },
+ {
+  "title": "Medical Visa",
+  "url": "visa/medical-visa.html",
+  "desc": "For treatment and consultation at hospitals abroad. At Zentrevo, medical visa applications are handled as a complete service rather than a c",
+  "type": "visa"
+ },
+ {
+  "title": "New Zealand Visa",
+  "url": "visa/new-zealand-visa.html",
+  "desc": "Visitor visa (NZeTA) assistance for New Zealand. At Zentrevo, new zealand visa applications are handled as a complete service rather than a ",
+  "type": "visa"
+ },
+ {
+  "title": "Schengen (Europe) Visa",
+  "url": "visa/schengen-europe-visa.html",
+  "desc": "Single visa covering 27 European countries for travel. At Zentrevo, schengen (europe) visa applications are handled as a complete service ra",
+  "type": "visa"
+ },
+ {
+  "title": "Singapore Visa",
+  "url": "visa/singapore-visa.html",
+  "desc": "Fast tourist visa processing for Singapore. At Zentrevo, singapore visa applications are handled as a complete service rather than a checkli",
+  "type": "visa"
+ },
+ {
+  "title": "South Korea Visa",
+  "url": "visa/south-korea-visa.html",
+  "desc": "Tourist and short-visit visa support for South Korea. At Zentrevo, south korea visa applications are handled as a complete service rather th",
+  "type": "visa"
+ },
+ {
+  "title": "Student Visa",
+  "url": "visa/student-visa.html",
+  "desc": "For admissions and study programs at international institutions. At Zentrevo, student visa applications are handled as a complete service ra",
+  "type": "visa"
+ },
+ {
+  "title": "Tourist Visa",
+  "url": "visa/tourist-visa.html",
+  "desc": "For leisure travel, sightseeing and holiday trips abroad. At Zentrevo, tourist visa applications are handled as a complete service rather th",
+  "type": "visa"
+ },
+ {
+  "title": "Transit Visa",
+  "url": "visa/transit-visa.html",
+  "desc": "For short layovers when passing through a country. At Zentrevo, transit visa applications are handled as a complete service rather than a ch",
+  "type": "visa"
+ },
+ {
+  "title": "UAE / Dubai Visa",
+  "url": "visa/uae-dubai-visa.html",
+  "desc": "Tourist and transit visa processing for the UAE. At Zentrevo, uae / dubai visa applications are handled as a complete service rather than a ",
+  "type": "visa"
+ },
+ {
+  "title": "UK Visa",
+  "url": "visa/uk-visa.html",
+  "desc": "Standard visitor visa support for the United Kingdom. At Zentrevo, uk visa applications are handled as a complete service rather than a chec",
+  "type": "visa"
+ },
+ {
+  "title": "USA Visa",
+  "url": "visa/usa-visa.html",
+  "desc": "B1/B2 tourist &amp; business visa assistance for the United States. At Zentrevo, usa visa applications are handled as a complete service rat",
+  "type": "visa"
+ },
+ {
+  "title": "Visa-on-Arrival Assistance",
+  "url": "visa/visa-on-arrival-assistance.html",
+  "desc": "Guidance and documentation support for on-arrival visas. At Zentrevo, visa-on-arrival assistance applications are handled as a complete serv",
+  "type": "visa"
+ },
+ {
+  "title": "Work Visa",
+  "url": "visa/work-visa.html",
+  "desc": "For overseas employment and long-term work assignments. At Zentrevo, work visa applications are handled as a complete service rather than a ",
+  "type": "visa"
+ },
+ {
+  "title": "Agra Travel Guide",
+  "url": "destinations/agra.html",
+  "desc": "Home to the Taj Mahal, a monument of eternal love. It&#x27;s the kind of destination that tends to exceed the version of it people carry in ",
+  "type": "destination"
+ },
+ {
+  "title": "Andaman Islands Travel Guide",
+  "url": "destinations/andaman-islands.html",
+  "desc": "Turquoise waters and coral reefs in the Bay of Bengal. It&#x27;s the kind of destination that tends to exceed the version of it people carry",
+  "type": "destination"
+ },
+ {
+  "title": "Bali Travel Guide",
+  "url": "destinations/bali.html",
+  "desc": "Rice terraces, temples, and laid-back island calm. It&#x27;s the kind of destination that tends to exceed the version of it people carry in ",
+  "type": "destination"
+ },
+ {
+  "title": "Cairo Travel Guide",
+  "url": "destinations/cairo.html",
+  "desc": "Pyramids and pharaohs beside the Nile River. It&#x27;s the kind of destination that tends to exceed the version of it people carry in their ",
+  "type": "destination"
+ },
+ {
+  "title": "Dubai Travel Guide",
+  "url": "destinations/dubai.html",
+  "desc": "Futuristic skylines meeting golden desert dunes. It&#x27;s the kind of destination that tends to exceed the version of it people carry in th",
+  "type": "destination"
+ },
+ {
+  "title": "Goa Travel Guide",
+  "url": "destinations/goa.html",
+  "desc": "Golden beaches, Portuguese charm, and laid-back nightlife. It&#x27;s the kind of destination that tends to exceed the version of it people c",
+  "type": "destination"
+ },
+ {
+  "title": "Jaipur Travel Guide",
+  "url": "destinations/jaipur.html",
+  "desc": "The Pink City of forts, palaces and bazaars. It&#x27;s the kind of destination that tends to exceed the version of it people carry in their ",
+  "type": "destination"
+ },
+ {
+  "title": "Kerala Backwaters Travel Guide",
+  "url": "destinations/kerala-backwaters.html",
+  "desc": "Houseboats gliding through palm-lined lagoons. It&#x27;s the kind of destination that tends to exceed the version of it people carry in thei",
+  "type": "destination"
+ },
+ {
+  "title": "Ladakh Travel Guide",
+  "url": "destinations/ladakh.html",
+  "desc": "High-altitude deserts and monasteries in the clouds. It&#x27;s the kind of destination that tends to exceed the version of it people carry i",
+  "type": "destination"
+ },
+ {
+  "title": "London Travel Guide",
+  "url": "destinations/london.html",
+  "desc": "Royal history and modern culture on the Thames. It&#x27;s the kind of destination that tends to exceed the version of it people carry in the",
+  "type": "destination"
+ },
+ {
+  "title": "Maldives Travel Guide",
+  "url": "destinations/maldives.html",
+  "desc": "Overwater villas above turquoise lagoons. It&#x27;s the kind of destination that tends to exceed the version of it people carry in their hea",
+  "type": "destination"
+ },
+ {
+  "title": "Munnar Travel Guide",
+  "url": "destinations/munnar.html",
+  "desc": "Rolling tea plantations in the Western Ghats. It&#x27;s the kind of destination that tends to exceed the version of it people carry in their",
+  "type": "destination"
+ },
+ {
+  "title": "New York Travel Guide",
+  "url": "destinations/new-york.html",
+  "desc": "The city that never sleeps, in the heart of it all. It&#x27;s the kind of destination that tends to exceed the version of it people carry in",
+  "type": "destination"
+ },
+ {
+  "title": "Paris Travel Guide",
+  "url": "destinations/paris.html",
+  "desc": "The city of romance, art, and timeless boulevards. It&#x27;s the kind of destination that tends to exceed the version of it people carry in ",
+  "type": "destination"
+ },
+ {
+  "title": "Phuket Travel Guide",
+  "url": "destinations/phuket.html",
+  "desc": "Limestone cliffs, island hopping, and warm seas. It&#x27;s the kind of destination that tends to exceed the version of it people carry in th",
+  "type": "destination"
+ },
+ {
+  "title": "Reykjavik Travel Guide",
+  "url": "destinations/reykjavik.html",
+  "desc": "Glaciers, geysers, and the dancing northern lights. It&#x27;s the kind of destination that tends to exceed the version of it people carry in",
+  "type": "destination"
+ },
+ {
+  "title": "Rishikesh Travel Guide",
+  "url": "destinations/rishikesh.html",
+  "desc": "The yoga capital, set where the Ganges meets the hills. It&#x27;s the kind of destination that tends to exceed the version of it people carr",
+  "type": "destination"
+ },
+ {
+  "title": "Rome Travel Guide",
+  "url": "destinations/rome.html",
+  "desc": "Ancient ruins living alongside modern-day life. It&#x27;s the kind of destination that tends to exceed the version of it people carry in the",
+  "type": "destination"
+ },
+ {
+  "title": "Santorini Travel Guide",
+  "url": "destinations/santorini.html",
+  "desc": "Whitewashed cliffs over a deep blue Aegean sea. It&#x27;s the kind of destination that tends to exceed the version of it people carry in the",
+  "type": "destination"
+ },
+ {
+  "title": "Singapore Travel Guide",
+  "url": "destinations/singapore.html",
+  "desc": "A futuristic garden city between East and West. It&#x27;s the kind of destination that tends to exceed the version of it people carry in the",
+  "type": "destination"
+ },
+ {
+  "title": "Swiss Alps Travel Guide",
+  "url": "destinations/swiss-alps.html",
+  "desc": "Snow-capped peaks and postcard-perfect villages. It&#x27;s the kind of destination that tends to exceed the version of it people carry in th",
+  "type": "destination"
+ },
+ {
+  "title": "Sydney Travel Guide",
+  "url": "destinations/sydney.html",
+  "desc": "An iconic harbour city framed by golden beaches. It&#x27;s the kind of destination that tends to exceed the version of it people carry in th",
+  "type": "destination"
+ },
+ {
+  "title": "Tokyo Travel Guide",
+  "url": "destinations/tokyo.html",
+  "desc": "Neon streets and centuries-old temples side by side. It&#x27;s the kind of destination that tends to exceed the version of it people carry i",
+  "type": "destination"
+ },
+ {
+  "title": "Turkey Travel Guide",
+  "url": "destinations/turkey.html",
+  "desc": "Istanbul&#x27;s skyline of domes and minarets bridges Europe and Asia, while Cappadocia&#x27;s fairy chimneys drift past hundreds of sunrise",
+  "type": "destination"
+ },
+ {
+  "title": "Udaipur Travel Guide",
+  "url": "destinations/udaipur.html",
+  "desc": "The City of Lakes, framed by palaces and hills. It&#x27;s the kind of destination that tends to exceed the version of it people carry in the",
+  "type": "destination"
+ },
+ {
+  "title": "Varanasi Travel Guide",
+  "url": "destinations/varanasi.html",
+  "desc": "Ancient ghats along the sacred Ganges river. It&#x27;s the kind of destination that tends to exceed the version of it people carry in their ",
+  "type": "destination"
+ },
+ {
+  "title": "Australia Outback & Reef",
+  "url": "tours/australia-outback-reef.html",
+  "desc": "Australia Outback &amp; Reef is for travelers who measure a trip by how alive it made them feel, not how many photos they took by a landmark",
+  "type": "tour"
+ },
+ {
+  "title": "Bali Cultural Retreat",
+  "url": "tours/bali-cultural-retreat.html",
+  "desc": "To really understand a place, you have to slow down enough to notice it — and that is exactly what Bali Cultural Retreat is designed for. Ov",
+  "type": "tour"
+ },
+ {
+  "title": "Costa Rica Rainforest Escape",
+  "url": "tours/costa-rica-rainforest-escape.html",
+  "desc": "Costa Rica Rainforest Escape is for travelers who measure a trip by how alive it made them feel, not how many photos they took by a landmark",
+  "type": "tour"
+ },
+ {
+  "title": "Dubai City & Desert Escape",
+  "url": "tours/dubai-city-desert-escape.html",
+  "desc": "There is a certain quiet confidence to Dubai City &amp; Desert Escape — the kind of trip where nothing is left to chance and every detail ha",
+  "type": "tour"
+ },
+ {
+  "title": "East Africa Safari Trail",
+  "url": "tours/east-africa-safari-trail.html",
+  "desc": "East Africa Safari Trail is for travelers who measure a trip by how alive it made them feel, not how many photos they took by a landmark. Sp",
+  "type": "tour"
+ },
+ {
+  "title": "Egypt Ancient Wonders",
+  "url": "tours/egypt-ancient-wonders.html",
+  "desc": "To really understand a place, you have to slow down enough to notice it — and that is exactly what Egypt Ancient Wonders is designed for. Ov",
+  "type": "tour"
+ },
+ {
+  "title": "Iceland Northern Lights Tour",
+  "url": "tours/iceland-northern-lights-tour.html",
+  "desc": "Iceland Northern Lights Tour is for travelers who measure a trip by how alive it made them feel, not how many photos they took by a landmark",
+  "type": "tour"
+ },
+ {
+  "title": "Japan Heritage Journey",
+  "url": "tours/japan-heritage-journey.html",
+  "desc": "To really understand a place, you have to slow down enough to notice it — and that is exactly what Japan Heritage Journey is designed for. O",
+  "type": "tour"
+ },
+ {
+  "title": "Maldives Overwater Escape",
+  "url": "tours/maldives-overwater-escape.html",
+  "desc": "There is a certain quiet confidence to Maldives Overwater Escape — the kind of trip where nothing is left to chance and every detail has alr",
+  "type": "tour"
+ },
+ {
+  "title": "Mauritius Beach Bliss",
+  "url": "tours/mauritius-beach-bliss.html",
+  "desc": "There is a certain quiet confidence to Mauritius Beach Bliss — the kind of trip where nothing is left to chance and every detail has already",
+  "type": "tour"
+ },
+ {
+  "title": "Morocco Desert & Medina Tour",
+  "url": "tours/morocco-desert-medina-tour.html",
+  "desc": "To really understand a place, you have to slow down enough to notice it — and that is exactly what Morocco Desert &amp; Medina Tour is desig",
+  "type": "tour"
+ },
+ {
+  "title": "New Zealand Adventure Trail",
+  "url": "tours/new-zealand-adventure-trail.html",
+  "desc": "New Zealand Adventure Trail is for travelers who measure a trip by how alive it made them feel, not how many photos they took by a landmark.",
+  "type": "tour"
+ },
+ {
+  "title": "Paris Romantic Getaway",
+  "url": "tours/paris-romantic-getaway.html",
+  "desc": "Paris Romantic Getaway is built around a simple idea — that a trip taken together should feel different from any other kind of travel. Over ",
+  "type": "tour"
+ },
+ {
+  "title": "Patagonia Trekking Expedition",
+  "url": "tours/patagonia-trekking-expedition.html",
+  "desc": "Patagonia Trekking Expedition is for travelers who measure a trip by how alive it made them feel, not how many photos they took by a landmar",
+  "type": "tour"
+ },
+ {
+  "title": "Peru Machu Picchu Trek",
+  "url": "tours/peru-machu-picchu-trek.html",
+  "desc": "Peru Machu Picchu Trek is for travelers who measure a trip by how alive it made them feel, not how many photos they took by a landmark. Spre",
+  "type": "tour"
+ },
+ {
+  "title": "Santorini Honeymoon",
+  "url": "tours/santorini-honeymoon.html",
+  "desc": "Santorini Honeymoon is built around a simple idea — that a trip taken together should feel different from any other kind of travel. Over 6 d",
+  "type": "tour"
+ },
+ {
+  "title": "Scotland Highlands Explorer",
+  "url": "tours/scotland-highlands-explorer.html",
+  "desc": "To really understand a place, you have to slow down enough to notice it — and that is exactly what Scotland Highlands Explorer is designed f",
+  "type": "tour"
+ },
+ {
+  "title": "Swiss Alps Retreat",
+  "url": "tours/swiss-alps-retreat.html",
+  "desc": "There is a certain quiet confidence to Swiss Alps Retreat — the kind of trip where nothing is left to chance and every detail has already be",
+  "type": "tour"
+ },
+ {
+  "title": "Thailand Island Hopping",
+  "url": "tours/thailand-island-hopping.html",
+  "desc": "There is a certain quiet confidence to Thailand Island Hopping — the kind of trip where nothing is left to chance and every detail has alrea",
+  "type": "tour"
+ },
+ {
+  "title": "Vietnam Discovery Journey",
+  "url": "tours/vietnam-discovery-journey.html",
+  "desc": "Vietnam Discovery Journey is for travelers who measure a trip by how alive it made them feel, not how many photos they took by a landmark. S",
+  "type": "tour"
+ }
 ]
